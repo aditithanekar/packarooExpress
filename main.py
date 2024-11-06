@@ -1,10 +1,15 @@
+from datetime import datetime
+import pytz
+from container import container
 
 def main():
-    manifest_data = parseManifest("sampleManifest.txt")
-    for container in manifest_data:
-        print(container)
+    # updateLog()
+    manifestData = parseManifest("sampleManifest.txt")
+    for container in manifestData:
+        container.printContainer()
         
 def parseManifest(filePath):
+    # stores container objects
     manifest = []
 
     with open(filePath, 'r') as file:
@@ -12,10 +17,13 @@ def parseManifest(filePath):
         for line in file:
             line = line.strip()
             locationPart, weightPart, descriptionPart = line.split(", ")
+            
             location = tuple(map(int, locationPart.strip("[]").split(',')))
             weight = int(weightPart.strip("{}"))
             description = descriptionPart
-            manifest.append([location, weight, description])
+
+            newContainer = container(location, weight, description)
+            manifest.append(newContainer)
 
     return manifest
 
@@ -31,8 +39,12 @@ def parseManifest(filePath):
 # def balance():
 #     # insert code
 
-# def updateLog():
-#     # insert code
+def updateLog():
+    pstTimezone = pytz.timezone('America/Los_Angeles')
+    pstTime = datetime.now(pstTimezone)
+    pstTimeFormatted = pstTime.strftime('%Y-%m-%d %H:%M:%S %Z%z')
+
+    print(pstTimeFormatted)
 
 # def getMoves():
 #     # insert code

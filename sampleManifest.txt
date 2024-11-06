@@ -1,21 +1,21 @@
 [01,01], {00000}, NAN
 [01,02], {00000}, NAN
-[01,03], {00000}, UNUSED
+[01,03], {08311}, TacoBell Beans
 [01,04], {00000}, UNUSED
 [01,05], {00000}, UNUSED
-[01,06], {00000}, John Deere Parts (call Sue at Ohio office)
+[01,06], {18154}, John Deere Parts (call Sue at Ohio office)
 [01,07], {00000}, UNUSED
 [01,08], {00000}, UNUSED
 [01,09], {00000}, UNUSED
-[01,10], {00000}, UNUSED
+[01,10], {02408}, Toyota Car Parts
 [01,11], {00000}, NAN
 [01,12], {00000}, NAN
 [02,01], {00000}, UNUSED
 [02,02], {00000}, UNUSED
-[02,03], {00000}, UNUSED
+[02,03], {00202}, Michael's Art Supplies
 [02,04], {00000}, UNUSED
 [02,05], {00000}, UNUSED
-[02,06], {00000}, Walmart Fishing Rods
+[02,06], {03405}, Walmart Fishing Rods
 [02,07], {00000}, UNUSED
 [02,08], {00000}, UNUSED
 [02,09], {00000}, UNUSED
