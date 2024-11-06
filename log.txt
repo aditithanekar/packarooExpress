@@ -1,0 +1,4 @@
+November 6th 2024: 15:28 Insert Message to log.txt
+November 6th 2024: 15:28 Manifest sampleManifest.txt is opened
+November 6th 2024: 15:31 Insert Message to log.txt
+November 6th 2024: 15:31 Manifest sampleManifest.txt is opened
