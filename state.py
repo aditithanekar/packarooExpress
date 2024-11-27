@@ -12,7 +12,7 @@ class State:
         return [[None] * num_rows for _ in range(num_cols)]
     
     def init_start_state(self):
-        self.state_representation = self._initialize_empty_ship(num_rows=12, num_cols=12)
+        self.state_representation = self._initialize_empty_ship(num_rows=8, num_cols=12)
         
         for container in MANIFEST:
             position = container.get_position()
