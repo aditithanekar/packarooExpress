@@ -2,3 +2,37 @@ November 6th 2024: 15:28 Insert Message to log.txt
 November 6th 2024: 15:28 Manifest sampleManifest.txt is opened
 November 6th 2024: 15:31 Insert Message to log.txt
 November 6th 2024: 15:31 Manifest sampleManifest.txt is opened
+November 25th 2024: 18:07 hihi signed in
+November 26th 2024: 13:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+November 26th 2024: 13:09 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+November 26th 2024: 13:25 bobsigned in
+November 26th 2024: 13:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+November 26th 2024: 13:45 bobsigned in
+November 26th 2024: 13:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+November 26th 2024: 16:48 bob signed in
+November 26th 2024: 16:48 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+November 26th 2024: 16:51 Bob signed in
+November 26th 2024: 16:51 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 26th 2024: 16:53 Bob signed in
+November 26th 2024: 16:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 26th 2024: 22:19 Bob signed in
+November 26th 2024: 22:19 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 26th 2024: 22:53 bob signed in
+November 26th 2024: 22:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 27th 2024: 00:27 Insert Message to log.txt
+November 27th 2024: 00:27 Manifest sampleManifest.txt is opened
+November 27th 2024: 00:29 Bob signed in
+November 27th 2024: 00:29 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 27th 2024: 00:30 Ada signed in
+November 27th 2024: 01:10 Insert Message to log.txt
+November 27th 2024: 01:10 Manifest sampleManifest.txt is opened
+November 27th 2024: 01:10 hihi signed in
+November 27th 2024: 01:10 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 27th 2024: 01:12 hihi signed in
+November 27th 2024: 01:13 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 27th 2024: 01:19 adad signed in
+November 27th 2024: 01:19 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 27th 2024: 01:21 gihi signed in
+November 27th 2024: 01:21 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 27th 2024: 14:45 Bob signed in
+November 27th 2024: 14:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
