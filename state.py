@@ -12,7 +12,7 @@ class State:
         return [[None] * num_rows for _ in range(num_cols)]
     
     def init_start_state(self):
-        self.state_representation = self._initialize_empty_ship(num_rows=8, num_cols=12)
+        self.state_representation = self._initialize_empty_ship(num_rows=12, num_cols=12)
         
         for container in MANIFEST:
             position = container.get_position()
@@ -36,6 +36,18 @@ class State:
                 else:
                     row_repr.append("(Empty)".ljust(cell_width))
             print(" | ".join(row_repr))
+
+    def get_state_representation(self):
+        """
+        Returns a deep copy of the state representation 
+        
+        Returns:
+            list: A 2D list representing the current state of the ship's container arrangement
+        """
+        if self.state_representation is None:
+            return None
+    
+        return [row.copy() for row in self.state_representation]
 
 
         
