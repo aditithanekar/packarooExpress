@@ -36,19 +36,32 @@ def load(start_state, load_list):
         #center of the ship
         source = [7,0]
 
-        for col in start_state.state_representation:
-            for container in col:
-            # Check if the container exists and has 'UNUSED' description
+        for col_index, col in enumerate(start_state.state_representation):
+            for row_index, container in enumerate(col):
+                 # Check if the container exists and has 'UNUSED' description
                 if container is not None and container.get_description() == 'UNUSED':
-                    print("unused")
-                    #target = [row,0]
-                    #time = abs(source[0] - target[0]) + abs(source[1] - target[1]) + 2
-                    #state_rep = start_state.get_state_representation()
+                    #print("unused")
+                    target = [row_index, 0]
+                    time = abs(source[0] - target[0]) + abs(source[1] - target[1]) + 2
+                    state_rep = start_state.get_state_representation()
+                    state_rep[row_index][0] = node
 
+                    #new state object with the new and updated representation
+                    new_state = State(
+                        state_rep,                #updated state representation
+                        start_state.depth,        #depth is same
+                        [None, None],             
+                        start_state.time + time,  
+                        start_state,              #link back to the parent state
+                        time,                     #time taken for THIS action
+                        0,                        
+                        [-1, -1],                 
+                        target                    #target location of the loaded container
+                    )
 
+                    start_state = new_state
 
-        
-            
+                    break
 
     return start_state
 

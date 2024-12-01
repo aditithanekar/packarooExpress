@@ -5,8 +5,26 @@ MANIFEST = parseManifest("sampleManifest.txt")
 
 class State:
     
-    def __init__(self) -> None:
-        self.state_representation = None
+    def __init__(self, 
+                 state_representation=None, 
+                 depth=0, 
+                 last_moved_container=None, 
+                 time=0, 
+                 parent_state=None, 
+                 move_time=0, 
+                 num_moves=0, 
+                 last_moved_location=None, 
+                 target_location=None) -> None:
+        
+        self.state_representation = state_representation
+        self.depth = depth
+        self.last_moved_container = last_moved_container if last_moved_container is not None else [None, None]
+        self.time = time
+        self.parent_state = parent_state
+        self.move_time = move_time
+        self.num_moves = num_moves
+        self.last_moved_location = last_moved_location if last_moved_location is not None else [-1, -1]
+        self.target_location = target_location
     
     def _initialize_empty_ship(self, num_rows: int, num_cols: int):
         return [[None] * num_rows for _ in range(num_cols)]
