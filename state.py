@@ -30,6 +30,7 @@ class State:
         return [[None] * num_rows for _ in range(num_cols)]
     
     def init_start_state(self):
+        # Doesn't run if changed to 8x12?
         self.state_representation = self._initialize_empty_ship(num_rows=12, num_cols=12)
         
         for container in MANIFEST:
@@ -37,7 +38,6 @@ class State:
             row, col = position[0] - 1, position[1] - 1
             self.state_representation[row][col] = container
                     
-        # see if ship can balance here before return
         return self
     
     def print_state_representation(self):
