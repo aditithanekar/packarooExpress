@@ -62,3 +62,79 @@ November 27th 2024: 01:21 gihi signed in
 November 27th 2024: 01:21 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
 November 27th 2024: 14:45 Bob signed in
 November 27th 2024: 14:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 17:30 Manifest sampleManifest.txt is opened
+November 28th 2024: 17:31 Manifest sampleManifest.txt is opened
+November 28th 2024: 17:32 Manifest sampleManifest.txt is opened
+November 28th 2024: 17:32 bob signed in
+November 28th 2024: 17:32 Manifest sampleManifest.txt is opened
+November 28th 2024: 17:33 Bob signed in
+November 28th 2024: 17:33 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 17:35 Manifest sampleManifest.txt is opened
+November 28th 2024: 17:35 Bobby signed in
+November 28th 2024: 17:35 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:24 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:25 Bob signed in
+November 28th 2024: 21:25 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:34 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:34 Joe signed in
+November 28th 2024: 21:34 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:36 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:37 eli signed in
+November 28th 2024: 21:37 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:37 Loading container: Lowes with weight 902
+November 28th 2024: 21:37 Loading container: Lowes with weight 902
+November 28th 2024: 21:52 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:53 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:53 bill signed in
+November 28th 2024: 21:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:54 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:54 Aditi signed in
+November 28th 2024: 21:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:56 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:56 adi signed in
+November 28th 2024: 21:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:56 Loading container: bananas with weight 223
+November 28th 2024: 21:59 Manifest sampleManifest.txt is opened
+November 28th 2024: 21:59 elli signed in
+November 28th 2024: 21:59 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 21:59 Loading container: Target with weight 223
+November 28th 2024: 22:00 Loading container: Bananas with weight 998
+November 28th 2024: 22:00 Loading container: Rice with weight 7634
+November 28th 2024: 22:00 Loading container: Eggs with weight 67668
+November 28th 2024: 22:09 Manifest sampleManifest.txt is opened
+November 28th 2024: 22:09 Manifest sampleManifest.txt is opened
+November 28th 2024: 22:09 Ria signed in
+November 28th 2024: 22:09 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 22:10 Loading container: Target with weight 985
+November 28th 2024: 22:10 Loading container: Pants with weight 47621
+November 28th 2024: 22:10 Loading container: Juice with weight 4750
+November 28th 2024: 22:17 Manifest sampleManifest.txt is opened
+November 28th 2024: 22:18 Bob signed in
+November 28th 2024: 22:18 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+November 28th 2024: 22:18 Loading container: Bananas with weight 12932
+December 5th 2024: 12:41 Manifest sampleManifest.txt is opened
+December 5th 2024: 12:41 Bob signed in
+December 5th 2024: 12:41 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 5th 2024: 12:42 Manifest sampleManifest.txt is opened
+December 5th 2024: 12:42 Bob signed in
+December 5th 2024: 12:42 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 5th 2024: 12:43 Loading container: Potato with weight 9899
+December 5th 2024: 15:11 Manifest sampleManifest.txt is opened
+December 5th 2024: 15:11 bob signed in
+December 5th 2024: 15:11 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 5th 2024: 15:11 Loading container: potato with weight 780
+December 5th 2024: 15:11 Loading container: truck parts with weight 6780
+December 5th 2024: 15:12 Loading container: bananas with weight 796
+December 5th 2024: 15:22 Loading container: milk with weight 567
+December 5th 2024: 15:30 Manifest sampleManifest.txt is opened
+December 5th 2024: 15:30 bill signed in
+December 5th 2024: 15:30 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 5th 2024: 15:31 Loading container: beans with weight 780
+December 5th 2024: 18:55 Manifest sampleManifest.txt is opened
+December 5th 2024: 18:56 Billy signed in
+December 5th 2024: 18:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 5th 2024: 19:53 Manifest sampleManifest.txt is opened
+December 5th 2024: 19:53 Bob signed in
+December 5th 2024: 19:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 5th 2024: 19:54 Loading container: Potatoes with weight 8904
+December 5th 2024: 19:54 Loading container: Taco Bell with weight 4238
