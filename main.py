@@ -11,6 +11,7 @@ from tkinter import filedialog
 chosen_option = None
 containers_to_load = [] #load list global
 containers_to_unload = []
+parsed_manifest = [] # this doesn't really work as a global properly but it's passed as an arg
 
 
 #may have to delete line below!! MANIFEST cuz we open it in state.py!
@@ -86,14 +87,15 @@ def load(start_state, load_list):
 
     return start_state
 
-
-# def unload():
-#     # insert code
+#dummy placeholder unload function
+def unload(start_state, load_list):
+    return
+    # insert code
 
 # def balance():
 #     # insert code
 
-
+#displays choice for choosing load/unload or balance
 def go_to_option_selection():
     global chosen_option
     chosen_option = None  # Reset chosen option
@@ -113,7 +115,8 @@ def set_option_and_go(option, next_screen_func):
     global chosen_option
     chosen_option = option
     next_screen_func()
-   
+  
+#displays the 8X12 grid color coded  
 def display_grid(parsed_data):
     for widget in root.winfo_children():
         widget.destroy()
@@ -125,7 +128,9 @@ def display_grid(parsed_data):
     cell_height = 50
     rows = 8
     cols = 12
-
+    current_containers_on_ship = [] # this is a list of green containers, possibly unloadable ones
+    
+    #makes it so that NAN spots are gray, UNUSED are blue, and filled containers are green
     color_mapping = {
         "NAN": "gray",
         "UNUSED": "lightblue"
@@ -142,6 +147,8 @@ def display_grid(parsed_data):
         adjusted_y = rows - 1 - x
 
         color = color_mapping.get(description, "lightgreen" if weight > 0 else "white")
+        if color == "lightgreen":
+            current_containers_on_ship.append(container)#add to unloadable list
 
         x1 = adjusted_x * cell_width
         y1 = adjusted_y * cell_height
@@ -157,39 +164,92 @@ def display_grid(parsed_data):
             fill="black"
         )
 
-    # Load UI
     if chosen_option == "load_unload":
-        tk.Label(root, text="Load", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
-        tk.Label(root, text="Enter Container Name:", font=("Arial", 12)).pack(pady=5)
-        name_input = tk.Entry(root, width=30)
-        name_input.pack(pady=5)
+        unload_menu(parsed_data, current_containers_on_ship)
 
-        tk.Label(root, text="Enter Container Weight:", font=("Arial", 12)).pack(pady=5)
-        weight_input = tk.Entry(root, width=30)
-        weight_input.pack(pady=5)
+#displays spot to enter in what containers to load, and calls unload()
+def load_menu(parsed_data):
+    print("current containers to unload: ")
+    print(containers_to_unload)
+    #call unload here:
+    start_state = State()
+    start_state.init_start_state(parsed_data)
+    unload(start_state, containers_to_unload)
+    tk.Label(root, text="Load Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    tk.Label(root, text="Enter Container Name:", font=("Arial", 12)).pack(pady=5)
+    name_input = tk.Entry(root, width=30)
+    name_input.pack(pady=5)
 
-        def load_container():
-            name = name_input.get().strip()
-            weight = weight_input.get().strip()
-            if name and weight.isdigit():
-                weight = int(weight)
-                new_container = Container(None, weight, name)
-                containers_to_load.append(new_container) #adds container to the list of containers to load
-                tk.Label(root, text=f"Loading container: {name} with weight {weight}",font=("Arial", 10), fg="red").pack(pady=5)
-                print(containers_to_load)
-                name_input.delete(0, tk.END)
-                weight_input.delete(0, tk.END)
-                #parsed_data.append(new_container)  # Add to the parsed data
-                #display_grid(parsed_data)  # Refresh grid
-                utils.updateLog(f"Loading container: {name} with weight {weight}")
-            else:
-                tk.Label(root, text="Invalid input. Please enter a valid name and numeric weight.",
-                         font=("Arial", 10), fg="red").pack(pady=5)
+    tk.Label(root, text="Enter Container Weight:", font=("Arial", 12)).pack(pady=5)
+    weight_input = tk.Entry(root, width=30)
+    weight_input.pack(pady=5)
 
-        tk.Button(root, text="Load", font=("Arial", 14), command=load_container).pack(pady=10)
+    def load_container():
+        name = name_input.get().strip()
+        weight = weight_input.get().strip()
+        if name and weight.isdigit():
+            weight = int(weight)
+            new_container = Container(None, weight, name)
+            containers_to_load.append(new_container)
+            tk.Label(root, text=f"Loaded container: {name} with weight {weight}",
+                     font=("Arial", 10), fg="red").pack(pady=5)
+            name_input.delete(0, tk.END)
+            weight_input.delete(0, tk.END)
+            utils.updateLog(f"Loaded container: {name} with weight {weight}")
+        else:
+            tk.Label(root, text="Invalid input. Please enter a valid name and numeric weight.",
+                     font=("Arial", 10), fg="red").pack(pady=5)
+
+    tk.Button(root, text="Load", font=("Arial", 14), command=load_container).pack(pady=10)
+    def go_to_get_instructions():
+        get_instructions(parsed_data)
+    tk.Button(root, text="Next", font=("Arial", 14), command=go_to_get_instructions).pack(pady=10)
+
+def unload_menu(parsed_data, unloadable_containers):
+    tk.Label(root, text="Unload Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    tk.Label(root, text="Select containers to unload:", font=("Arial", 12)).pack(pady=5)
+
+    # Listbox to select containers
+    listbox = tk.Listbox(root, width=50, height=10, selectmode=tk.MULTIPLE)
+    listbox.pack(pady=5)
+
+    # Populate the listbox with loaded containers
+    for idx, container in enumerate(unloadable_containers):
+        listbox.insert(idx, f"{container.description} (Weight: {container.weight})")
+
+    def unload_containers():
+        selected_indices = listbox.curselection()
+        for idx in selected_indices:
+            containers_to_unload.append(unloadable_containers[idx])
+        tk.Label(root, text="Selected containers for unloading.",
+                 font=("Arial", 10), fg="red").pack(pady=5)
+        utils.updateLog(f"Unloaded containers: {', '.join([unloadable_containers[idx].description for idx in selected_indices])}")
+
+    tk.Button(root, text="Unload", font=("Arial", 14), command=unload_containers).pack(pady=10)
+    def go_to_load_menu():
+        for widget in root.winfo_children():
+            if not isinstance(widget, tk.Canvas):  # Keep the grid
+                widget.destroy()
+        load_menu(parsed_data)
+
+    tk.Button(root, text="Next", font=("Arial", 14), command=go_to_load_menu).pack(pady=10)
+
+#calls load here after getting a list of containers to load
+def get_instructions(parsed_manifest_data):
+    for widget in root.winfo_children():
+        widget.destroy()
+    tk.Label(root,text="instructions coming here")
+    start_state = state.State()
+    #if parsed_manifest_data:
+    start_state.init_start_state(parsed_manifest_data)
+    #start_state.init_start_state()
+    load(start_state, containers_to_load)
+    # else:
+    #     print("there's no manifest!!!!!")
 
 # Function to go to the next screen
 def go_to_file_selector():
+    global parsed_manifest #declare that it's global so that we can access it again
     entered_name = name_entry.get()
     if entered_name.strip():
         sign_in_message = entered_name + " signed in"
@@ -203,8 +263,8 @@ def go_to_file_selector():
         file_path = filedialog.askopenfilename(title="Select a File")
         if file_path:
             label_selected_file.config(text=f"Selected: {file_path}")
-            parsed_data = utils.parseManifest(file_path)
-            tk.Button(root, text="Next", command=lambda: display_grid(parsed_data)).pack(pady=10)
+            parsed_manifest = parseManifest(file_path)
+            tk.Button(root, text="Next", command=lambda: display_grid(parsed_manifest)).pack(pady=10)
 
     tk.Label(root, text="Select a File:", font=("Arial", 14)).pack(pady=20)
     tk.Button(root, text="Browse", command=select_file).pack(pady=10)
