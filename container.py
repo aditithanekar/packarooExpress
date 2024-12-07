@@ -9,6 +9,15 @@ class Container:
         self.position = position
         self.weight = weight
         self.description = description
+        if description == "NAN":
+            self.IsNAN = True
+        else:
+            self.IsNAN = False
+            
+        if description == "UNUSED":
+            self.IsUNUSED = True
+        else:
+            self.IsUNUSED = False
 
     def get_weight(self):
         return self.weight
