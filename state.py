@@ -1,6 +1,6 @@
 from utils import parseManifest
 
-MANIFEST = parseManifest("sampleManifest.txt")
+#MANIFEST = parseManifest("sampleManifest.txt")
 
 
 class State:
@@ -27,13 +27,13 @@ class State:
         self.target_location = target_location
     
     def _initialize_empty_ship(self, num_rows: int, num_cols: int):
-        return [[None] * num_rows for _ in range(num_cols)]
+        return [[None] * num_cols for _ in range(num_rows)]
     
-    def init_start_state(self):
+    def init_start_state(self, manifest):
         # Doesn't run if changed to 8x12?
-        self.state_representation = self._initialize_empty_ship(num_rows=12, num_cols=12)
+        self.state_representation = self._initialize_empty_ship(num_rows=8, num_cols=12)
         
-        for container in MANIFEST:
+        for container in manifest:
             position = container.get_position()
             row, col = position[0] - 1, position[1] - 1
             self.state_representation[row][col] = container

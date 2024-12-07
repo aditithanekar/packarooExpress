@@ -215,4 +215,80 @@ December 5th 2024: 19:53 Manifest sampleManifest.txt is opened
 December 5th 2024: 19:53 Bob signed in
 December 5th 2024: 19:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
 December 5th 2024: 19:54 Loading container: Potatoes with weight 8904
-December 5th 2024: 19:54 Loading container: Taco Bell with weight 4238
+December 5th 2024: 19:54 Loading container: Taco Bell with weight 4238December 6th 2024: 22:38 Manifest sampleManifest.txt is opened
+December 6th 2024: 22:38 Bob signed in
+December 6th 2024: 22:38 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 6th 2024: 22:39 Manifest sampleManifest.txt is opened
+December 6th 2024: 22:39 Bob signed in
+December 6th 2024: 22:39 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 6th 2024: 22:40 Manifest sampleManifest.txt is opened
+December 6th 2024: 22:40 bob signed in
+December 6th 2024: 22:40 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 6th 2024: 22:41 Manifest sampleManifest.txt is opened
+December 6th 2024: 22:41 Steve signed in
+December 6th 2024: 22:41 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 6th 2024: 22:42 Loading container: potato with weight 123
+December 6th 2024: 22:44 Manifest sampleManifest.txt is opened
+December 6th 2024: 22:44 Bob signed in
+December 6th 2024: 22:44 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 6th 2024: 22:44 Loaded container: Potato with weight 898
+December 6th 2024: 22:44 Loaded container: Orange with weight 13256
+December 6th 2024: 23:55 Manifest sampleManifest.txt is opened
+December 6th 2024: 23:55 Bill signed in
+December 6th 2024: 23:55 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 6th 2024: 23:56 Loaded container: Potato with weight 123
+December 7th 2024: 00:24 Bill signed in
+December 7th 2024: 00:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 00:25 Loaded container: Bananas with weight 1234
+December 7th 2024: 00:25 Loaded container: Potatoes with weight 5234
+December 7th 2024: 00:26 steve signed in
+December 7th 2024: 00:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 00:26 Loaded container: Potatoes with weight 2342
+December 7th 2024: 00:26 Loaded container: Bananas with weight 1243
+December 7th 2024: 00:28 Bob signed in
+December 7th 2024: 00:28 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 7th 2024: 00:28 Loaded container: Bananas with weight 214
+December 7th 2024: 00:30 Manifest sampleManifest.txt is opened
+December 7th 2024: 00:30 Bill signed in
+December 7th 2024: 00:30 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 7th 2024: 00:30 Loaded container: Oranges with weight 243
+December 7th 2024: 00:37 Bob signed in
+December 7th 2024: 00:37 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 00:37 Loaded container: Bananas with weight 123
+December 7th 2024: 00:38 Bob signed in
+December 7th 2024: 00:38 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 00:38 Loaded container: Bananas with weight 124
+December 7th 2024: 02:01 Bob signed in
+December 7th 2024: 02:01 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:01 Loaded container: Bananas with weight 123
+December 7th 2024: 02:01 Joe signed in
+December 7th 2024: 02:01 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:01 Loaded container: Potatos with weight 134
+December 7th 2024: 02:07 Joe signed in
+December 7th 2024: 02:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:08 Joe signed in
+December 7th 2024: 02:08 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:10 joe signed in
+December 7th 2024: 02:10 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:12 Joe signed in
+December 7th 2024: 02:12 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:12 Loaded container: Banana with weight 1234
+December 7th 2024: 02:22 Joe signed in
+December 7th 2024: 02:22 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:26 Bob signed in
+December 7th 2024: 02:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:26 Unloaded containers: Dog
+December 7th 2024: 02:26 Loaded container: Potato with weight 413
+December 7th 2024: 02:26 Loaded container: Carrots with weight 5324
+December 7th 2024: 02:35 Joe signed in
+December 7th 2024: 02:35 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
+December 7th 2024: 02:35 Unloaded containers: Cat, Dog
+December 7th 2024: 02:37 Joe signed in
+December 7th 2024: 02:37 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 02:37 Unloaded containers: Cat, Dog
+December 7th 2024: 02:37 Loaded container: Bananas with weight 1234
+December 7th 2024: 02:37 Loaded container: Cookies with weight 425
+December 7th 2024: 03:04 Liz signed in
+December 7th 2024: 03:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 03:04 Unloaded containers: Dog
+December 7th 2024: 03:04 Loaded container: Bananas with weight 789
