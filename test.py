@@ -13,14 +13,15 @@ MANIFEST = parseManifest("sampleManifest.txt")
 
 #create a starting state
 state = State()
-updated_state = state.init_start_state(MANIFEST)
+state.init_start_state(MANIFEST)
 
 
 def adititest():
-    updated_state.print_state_representation()
+    state.print_state_representation()
     
-    result_state = a_star(updated_state)
-    result_state.print_state_representation()
+    result_state = a_star(state)
+    print(result_state)
+    #result_state.print_state_representation()
 
 adititest()
 

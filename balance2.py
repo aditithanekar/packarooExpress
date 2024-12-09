@@ -14,6 +14,8 @@ def manhattan_distance(x1, y1, x2, y2):
 
 def heuristic(state, total_weight):
     left_weight, right_weight = calculate_weights(state)
+    # print(left_weight)
+    # print(right_weight)
     imbalance = abs(left_weight - right_weight)
 
     # If already balanced, heuristic cost is 0
@@ -21,79 +23,88 @@ def heuristic(state, total_weight):
         return 0
 
     # Find the Manhattan distance for the smallest weight adjustment
+    state_rep = state.state_representation
     min_cost = float('inf')
     for row in range(ROWS):
         for col in range(COLS):
-            if state[row][col] > 0:  # Only consider non-empty cells
+            container = state_rep[row][col]
+            if container:  # Only consider non-empty cells
                 # Calculate the potential cost of moving this container
-                # Move to the opposite side of the grid
                 target_col = COLS // 2 - 1 if col >= COLS // 2 else COLS // 2
                 for target_row in range(ROWS):
-                    if state[target_row][target_col] == EMPTY_CELL:  # Check for empty target
+                    if state_rep[target_row][target_col].IsUNUSED:  # Check for empty target
                         move_cost = manhattan_distance(row, col, target_row, target_col)
                         min_cost = min(min_cost, move_cost)
 
-    # Return the smallest cost to move one container as the heuristic
     return min_cost
 
 # Calculate weights of left and right sides
 def calculate_weights(state):
-    state = state.state_representation
+    #print("calc weights type: ", currstate)
+    currstate = state.get_state_representation()
+    #currstate = currstate.state_representation
     left_weight = 0
     for row in range(ROWS):
         for col in range(COLS // 2):
-            left_weight += state[row][col]
+            if currstate[row][col].weight:
+                left_weight += currstate[row][col].weight
 
     right_weight = 0
     for row in range(ROWS):
         for col in range(COLS // 2, COLS):
-            right_weight += state[row][col]
+            if currstate[row][col].weight:
+                right_weight += currstate[row][col].weight
     return left_weight, right_weight
 
 # Check if the goal is achieved
 def is_goal(state, total_weight):
+    # print("hiiiiiii",type(state)) # state is State obj
     left_weight, right_weight = calculate_weights(state)
     return abs(left_weight - right_weight) <= (THRESHOLD_PERCENT / 100) * total_weight
 
 # Generate all possible moves (operators)
 def generate_moves(state):
+    state_rep = state.state_representation
     moves = []
     for row in range(ROWS):
         for col in range(COLS):
-            if state[row][col] > 0:  # Only consider containers
+            container = state_rep[row][col]
+            if container:  # Only consider containers
                 # Move Up
-                if row > 0 and state[row - 1][col] == EMPTY_CELL:
+                if row > 0 and state_rep[row - 1][col].IsUNUSED:
                     moves.append(((row, col), (row - 1, col), manhattan_distance(row, col, row - 1, col)))
                 # Move Down
-                if row < ROWS - 1 and state[row + 1][col] == EMPTY_CELL:
-                    # Ensure no container above blocks it
-                    if all(state[r][col] == EMPTY_CELL for r in range(row + 1, ROWS)):
-                        moves.append(((row, col), (row + 1, col), manhattan_distance(row, col, row + 1, col)))
+                if row < ROWS - 1 and state_rep[row + 1][col].IsUNUSED:
+                    moves.append(((row, col), (row + 1, col), manhattan_distance(row, col, row + 1, col)))
                 # Move Left
-                if col > 0 and state[row][col - 1] == EMPTY_CELL:
+                if col > 0 and state_rep[row][col - 1].IsUNUSED:
                     moves.append(((row, col), (row, col - 1), manhattan_distance(row, col, row, col - 1)))
                 # Move Right
-                if col < COLS - 1 and state[row][col + 1] == EMPTY_CELL:
+                if col < COLS - 1 and state_rep[row][col + 1].IsUNUSED:
                     moves.append(((row, col), (row, col + 1), manhattan_distance(row, col, row, col + 1)))
     return moves
 
 # Apply a move
 def apply_move(state, move):
     (x1, y1), (x2, y2), cost = move
-    new_state = [row[:] for row in state]  # Deep copy
-    new_state[x2][y2] = new_state[x1][y1]
-    new_state[x1][y1] = EMPTY_CELL
+    new_state_rep = state.get_state_representation()
+    new_state_rep[x2][y2] = new_state_rep[x1][y1]
+    empty_container = Container(None, None, "UNUSED")
+    new_state_rep[x1][y1] = empty_container
+    new_state = State(
+        state_representation=new_state_rep,
+        depth=state.depth + 1,
+        parent_state=state,
+        num_moves=state.num_moves + 1,
+    )
     return new_state, cost
 
 # A* Search
 def a_star(initial_state):
-    initial_state= initial_state.state_representation
-    #total_weight = sum(sum(container.weight) for container in initial_state)
-    total_weight = 0
-    for row in initial_state:
-        for contain in row:
-            total_weight +=contain.weight
-        
+    initial_state.time = 0 # use for priority cost 
+    total_weight = sum(
+        container.weight for row in initial_state.state_representation for container in row if container
+    )
     open_set = []
     heapq.heappush(open_set, (0, initial_state, []))  # (priority, state, path)
     visited = set()
@@ -103,27 +114,38 @@ def a_star(initial_state):
 
         # Check goal state
         if is_goal(current_state, total_weight):
-            return path, current_state
-
+            #return path, current_state
+            print("im goal")
+            return current_state
+        else:
+            print("im not goal!")
+       
         # Encode state for hashing
-        state_tuple = tuple(tuple(row) for row in current_state)
+        state_tuple = tuple(tuple(row) for row in current_state.get_state_representation())
         if state_tuple in visited:
             continue
         visited.add(state_tuple)
-
+        
+        print(generate_moves(current_state))
         # Generate and evaluate moves
         for move in generate_moves(current_state):
             new_state, move_cost = apply_move(current_state, move)
+            # newnew_state = State()
+            # newnew_state.state_representation = new_state
+            new_state.time=current_state.time + move_cost  # Update priority as time
+            new_state.parent_state = current_state,
+            new_state.num_moves=current_state.num_moves+1
             new_path = path + [move]
             new_priority = priority + move_cost + heuristic(new_state, total_weight)
             heapq.heappush(open_set, (new_priority, new_state, new_path))
-
-    return None, None
+        print(path)
+    #return None, None
+    return None
 
 # Function to visualize the grid
 def visualize_grid(grid):
     for row in grid:
-        print(" ".join(f"{cell:2}" for cell in row))
+        print(" | ".join(f"{cell.weight if cell else 'Empty':^5}" for cell in row))
     print()
 
 # Main Program

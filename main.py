@@ -272,7 +272,7 @@ def go_to_file_selector():
     label_selected_file.pack(pady=10)
     
 
-# Main screen
+# # Main screen
 # root = tk.Tk()
 # root.title("Packeroo Express")
 # root.geometry("1200x900")
@@ -286,8 +286,8 @@ def go_to_file_selector():
 
 # root.mainloop()
 
-# def getMoves():
-#     # insert code
+def getMoves():
+    # insert code
 
-if __name__=="__main__":
-    main()
+    if __name__=="__main__":
+        main()
