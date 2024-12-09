@@ -292,3 +292,17 @@ December 7th 2024: 03:04 Liz signed in
 December 7th 2024: 03:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
 December 7th 2024: 03:04 Unloaded containers: Dog
 December 7th 2024: 03:04 Loaded container: Bananas with weight 789
+December 8th 2024: 18:15 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:15 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:16 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:16 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:19 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:22 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:24 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:27 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:27 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:28 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:29 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:32 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:35 Manifest sampleManifest.txt is opened
+December 8th 2024: 18:35 Manifest sampleManifest.txt is opened

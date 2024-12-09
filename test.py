@@ -3,6 +3,7 @@ from state import State
 from container import Container
 from utils import parseManifest
 from main import load
+from balance2 import a_star
 
 
 
@@ -12,22 +13,29 @@ MANIFEST = parseManifest("sampleManifest.txt")
 
 #create a starting state
 state = State()
-updated_state = state.init_start_state()
+updated_state = state.init_start_state(MANIFEST)
 
 
-
-# SUHANI TESTING STUFF ===============================================================================================
-def suhani_test():
+def adititest():
     updated_state.print_state_representation()
     
-    containers = [Container(position=None, weight=10.0 + i, description=f"Container {i}") for i in range(1)]
-    for container in containers:
-        print(container.print_node_description())
-        
-    result_state = load(updated_state, containers)
+    result_state = a_star(updated_state)
     result_state.print_state_representation()
 
-suhani_test()
+adititest()
+
+# SUHANI TESTING STUFF ===============================================================================================
+# def suhani_test():
+#     updated_state.print_state_representation()
+    
+#     containers = [Container(position=None, weight=10.0 + i, description=f"Container {i}") for i in range(1)]
+#     for container in containers:
+#         print(container.print_node_description())
+        
+#     result_state = load(updated_state, containers)
+#     result_state.print_state_representation()
+
+# suhani_test()
 
 # load(updated_state, MANIFEST)
 
