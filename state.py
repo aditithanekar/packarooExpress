@@ -67,9 +67,3 @@ class State:
         return [row.copy() for row in self.state_representation]
 
 
-        
-            
-            
-            
-        
-        
