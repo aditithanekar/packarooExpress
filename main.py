@@ -1,7 +1,11 @@
-from datetime import datetime
-import pytz
-import requests
-from container import container
+from state import State
+from utils import parseManifest
+import state
+from container import Container
+import utils
+import tkinter as tk
+from tkinter import filedialog
+
 
 def main():
     updateLog("Insert Message to log.txt")
@@ -115,7 +119,169 @@ def load(start_state, load_list): # Clarify where the load_list is coming from
 
     # Return the updated state after all containers are loaded
     return start_state
-  
+
+def is_unload_goal_test(self, unload_targets):
+    """
+    Checks if all of the target containers have been unloaded
+
+    Args:
+        unload_targets (list): List of containers to be unloaded
+
+    Returns:
+        Bool: True if all of the targets are unloaded, False otherwise
+
+    """
+    for target in unload_targets:
+        if self.find_container(target):
+            return False
+        return True
+
+def find_container(self, container_description: str):
+    """
+    Finds the position of a container in the grid based on its description
+
+    Args:
+        container_description: The description of the target container
+
+    Returns: 
+        tuple: row,col position of the container, or None if not found
+
+    """
+    for row_index, row in enumerate(self.state_representation):
+        for col_index, col in enumerate(row): 
+            if container and container != "NAN" and container.get_description() == container_description:
+                return (row_index, col_index)
+    return None
+
+def can_pick_up(self, col):
+    """
+    Checks if a container can be picked up from a specific column
+
+    Args: 
+       col (int): The column index
+
+    Return: 
+       bool: True if a container can be picked up, false otherwise
+    """
+    for row in range(8):
+        if self.state_representation[row][col] is not None and self.state_representation[row][col] != "NAN":
+            return True
+    return False
+
+def pick_up(self, col, crane_position, target_container_description=None):
+    target_row = None
+    blocking_containers = []
+
+    for row in range(8):
+        container = self.state_representation[row][col]
+        if container is not None and container != "NAN":  
+            if container.get_description() == target_container_description:
+                target_row = row
+                break
+            else:
+                blocking_containers.append((row, container))
+
+    if target_row is None:  
+        return None
+
+    new_representation = self.get_state_representation()
+    current_time = self.time
+    new_crane_position = crane_position
+
+    for row, container in blocking_containers:
+        empty_pos = self.find_empty_position(new_representation, exclude_col=col)
+        if empty_pos is None or new_representation[empty_pos[0]][empty_pos[1]] == "NAN":  
+            continue
+
+        crane_move_cost = abs(new_crane_position[1] - col) + abs(new_crane_position[0] - row)
+        current_time += crane_move_cost
+
+        new_representation[row][col] = None
+        new_representation[empty_pos[0]][empty_pos[1]] = container
+        current_time += 1  
+        new_crane_position = empty_pos
+
+    crane_move_cost = abs(new_crane_position[1] - col) + abs(new_crane_position[0] - target_row)
+    current_time += crane_move_cost
+
+    new_representation[target_row][col] = None
+    new_crane_position = (target_row, col)
+
+    return State(
+        state_representation=new_representation,
+        depth=self.depth + 1,
+        last_moved_container=self.state_representation[target_row][col],
+        time=current_time,
+        parent_state=self,
+        crane_position=new_crane_position,
+    )
+
+
+def find_empty_position(self, grid, exclude_col=None):
+    """
+    Finds the nearest empty position in the grid for relocating a container.
+
+    Args:
+        grid (list): Current grid representation.
+        exclude_col (int): Column to exclude from consideration (e.g., the target column).
+
+    Returns:
+        tuple: (row, col) of the nearest empty position, or None if no empty position is found.
+    """
+    for col in range(12):
+        if col == exclude_col:
+            continue
+        for row in range(7, -1, -1):
+            if grid[row][col] is None:
+                return (row, col)
+    return None
+
+
+def put_down_load(self, col, unload_targets):
+    """
+    Places a container from the unload targets into a specific column.
+
+    Args:
+        col (int): The column index.
+        unload_targets (list): List of containers to unload.
+
+    Returns:
+        State: A new state after the container is placed, or None if invalid.
+    """
+    for row in range(7, -1, -1):  
+        if self.state_representation[row][col] is None:  
+            if unload_targets:  
+                container_to_place = unload_targets.pop(0)  
+                new_representation = self.get_state_representation()
+                new_representation[row][col] = container_to_place
+
+                return State(
+                    state_representation=new_representation,
+                    depth=self.depth + 1,
+                    last_moved_container=container_to_place,
+                    time=self.time + 1, 
+                    parent_state=self
+                )
+    return None
+
+def calculate_heuristic(state: State, unload_target: str, unload_position: tuple):
+    """
+    Calculates the heuristic for a state based on the Manhattan distance.
+
+    Args:
+        state (State): Current grid state.
+        unload_target (str): The description of the container to unload.
+        unload_position (tuple): Position [row, col] where containers are unloaded.
+
+    Returns:
+        int: Estimated cost to unload the target container.
+    """
+    container_pos = state.find_container(unload_target)
+
+    if container_pos:
+        return abs(container_pos[0] - unload_position[0]) + abs(container_pos[1] - unload_position[1])
+    return float('inf') 
+
 
 # def unload():
 #     # insert code
@@ -133,10 +299,40 @@ def unload(start_state, unload_target, load_list, unload_position):
         State: The updated state after unloading the container.
         list: Updated load_list with the container moved to the back.
     """
-    final_pos = unload_position
-    unload_position = [0,0]
+    state_queue = PriorityQueue()
+    visited_costs = {}
+    crane_position = (7, 0)
 
-    # path = a_star
+    heuristic = calculate_heuristic(start_state, unload_target, unload_position)
+    state_queue.put((start_state.time + heuristic, start_state, crane_position))
+    visited_costs[start_state.to_string()] = start_state.time
+
+    while not state_queue.empty():
+        _, current_state, crane_position = state_queue.get()
+
+        if current_state.is_unload_goal_test([unload_target]):
+            return current_state
+
+        next_states = []
+        for col in range(12):
+            next_state = current_state.pick_up(col, crane_position, target_container_description=unload_target)
+            if next_state:
+                next_states.append(next_state)
+
+        for next_state in next_states:
+            if next_state is None:
+                continue
+
+            next_time = next_state.time
+            heuristic = calculate_heuristic(next_state, unload_target, unload_position)
+            total_cost = next_time + heuristic
+
+            state_string = next_state.to_string()
+            if state_string not in visited_costs or next_time < visited_costs[state_string]:
+                state_queue.put((total_cost, next_state, next_state.crane_position))
+                visited_costs[state_string] = next_time
+
+    return None
 
 
 # def balance():
