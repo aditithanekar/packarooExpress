@@ -30,7 +30,6 @@ class State:
         return [[None] * num_cols for _ in range(num_rows)]
     
     def init_start_state(self, manifest):
-        # Doesn't run if changed to 8x12?
         self.state_representation = self._initialize_empty_ship(num_rows=8, num_cols=12)
         
         for container in manifest:
@@ -68,9 +67,3 @@ class State:
         return [row.copy() for row in self.state_representation]
 
 
-        
-            
-            
-            
-        
-        
