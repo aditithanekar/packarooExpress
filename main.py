@@ -170,41 +170,46 @@ def calculate_heuristic(state: State, unload_target: str, unload_position: tuple
         return abs(container_pos[0] - unload_position[0]) + abs(container_pos[1] - unload_position[1])
     return float('inf') 
 
+
+# def unload():
+#     # insert code
 def unload(start_state, unload_target, load_list, unload_position):
     state_queue = PriorityQueue()
     visited_costs = {}
     crane_position = (7, 0)
+    current_state = start_state
 
-    heuristic = calculate_heuristic(start_state, unload_target, unload_position)
-    state_queue.put((start_state.time + heuristic, start_state, crane_position))
-    visited_costs[start_state.to_string()] = start_state.time
+    for unload_target in unload_targets:
+        heuristic = calculate_heuristic(current_state, unload_target, unload_position)
+        state_queue.put((current_state.time + heuristic, current_state, crane_position))
+        visited_costs[current_state.to_string()] = current_state.time
 
-    while not state_queue.empty():
-        _, current_state, crane_position = state_queue.get()
+        while not state_queue.empty():
+            _, current_state, crane_position = state_queue.get()
 
-        if current_state.is_unload_goal_test([unload_target]):
-            return current_state
+            if current_state.is_unload_goal_test([unload_target]):
+                break
 
-        next_states = []
-        for col in range(12):
-            next_state = current_state.pick_up(col, crane_position, target_container_description=unload_target)
-            if next_state:
-                next_states.append(next_state)
+            next_states = []
+            for col in range(12):
+                next_state = current_state.pick_up(col, crane_position, target_container_description=unload_target)
+                if next_state:
+                    next_states.append(next_state)
 
-        for next_state in next_states:
-            if next_state is None:
-                continue
+            for next_state in next_states:
+                if next_state is None:
+                    continue
 
-            next_time = next_state.time
-            heuristic = calculate_heuristic(next_state, unload_target, unload_position)
-            total_cost = next_time + heuristic
+                next_time = next_state.time
+                heuristic = calculate_heuristic(next_state, unload_target, unload_position)
+                total_cost = next_time + heuristic
 
-            state_string = next_state.to_string()
-            if state_string not in visited_costs or next_time < visited_costs[state_string]:
-                state_queue.put((total_cost, next_state, next_state.crane_position))
-                visited_costs[state_string] = next_time
+                state_string = next_state.to_string()
+                if state_string not in visited_costs or next_time < visited_costs[state_string]:
+                    state_queue.put((total_cost, next_state, next_state.crane_position))
+                    visited_costs[state_string] = next_time
 
-    return None
+    return current_state
 
 #displays choice for choosing load/unload or balance
 def go_to_option_selection():
