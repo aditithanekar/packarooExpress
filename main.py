@@ -6,147 +6,75 @@ import utils
 import tkinter as tk
 from tkinter import filedialog
 
+    
+# Global variable to track the chosen option load unload or balance
+chosen_option = None
+containers_to_load = [] #load list global
+containers_to_unload = []
+parsed_manifest = [] # this doesn't really work as a global properly but it's passed as an arg
+
+MANIFEST = parseManifest("sampleManifest.txt")
 
 def main():
-    updateLog("Insert Message to log.txt")
-    
-    manifestData = parseManifest("sampleManifest.txt")
-    for container in manifestData:
-        container.printContainer()
-        
-# To store each container object from manifest.txt into a grid
-def parseManifest(filePath):
-    manifest = []
+    state = State()
+    updated_state = state.init_start_state(MANIFEST)
+    #updated_state.print_state_representation() 
 
-    # Open the manifest file and read each line
-    with open(filePath, 'r') as file:
-        # Read each line in the file
-        updateLog("Manifest {} is opened".format(filePath))
-        # Read each line in the file
-        for line in file:
-            line = line.strip() # Remove leading/trailing whitespace
-            locationPart, weightPart, descriptionPart = line.split(", ") # Split the line into parts
-            
-            location = tuple(map(int, locationPart.strip("[]").split(','))) # Convert the location to a tuple
-            weight = int(weightPart.strip("{}")) # Convert the weight to an integer
-            description = descriptionPart # Keep the description as a string
+def load(start_state, load_list):
+    source = [7,0]
+    track_moves = []
+    track_moves.append(source)
 
-            newContainer = container(location, weight, description) # Create a new container object
-            manifest.append(newContainer) # Add the container to the manifest list
-
-    return manifest
-
-# def updateMaifest():
-def updateMaifest():
-   try:
-    with open(filePath, 'w') as file:
-        for container in updatedManifest:
-            # Format the container data into a string
-            locationStr = f"[{container.location[0]:02}, {container.location[1]:02}]"
-            # Format the weight as a 5-digit string with leading zeros
-            weightStr = f"{{container.weight:05}}"
-            # Get the description string
-            descriptionStr = container.description
-
-            file.write(f"{locationStr}, {weightStr}, {descriptionStr}\n")
-    
-    updateLog(f"Manifest {filePath} updated successfully.")
-
-   except Exception as e:
-       update(f"Error updating manifest: {e}")
-
-# def load():
-#     # insert code 
-def load(start_state, load_list): # Clarify where the load_list is coming from 
-    """
-    Helper function for the load algorithm.
-
-    Args:
-        start_state (State): The current state of the ship.
-        load_list (list): List of containers to load onto the ship.
-
-    Returns:
-        State: The updated state after loading the containers.
-    """
-
-    print("we in load")
-
-    # Continue loading containers until the load list is empty
     while len(load_list) != 0:
-        # Remove the last container from the load list
         node = load_list.pop()
-
-        # Define the source (starting location) for loading (e.g., crane position)
-        source = [7, 0]  # Example: crane is at row 7, column 0
-
-        # Iterate through the grid (columns and rows) to find a target position
-        for col_index, col in enumerate(start_state.state_representation):
-            for row_index, container in enumerate(col):
-                # Check if the cell is empty and marked as 'UNUSED'
+        move_options = []
+    
+        for col_index, column in enumerate(zip(*start_state.state_representation)):
+            for row_index in range(len(column)):
+                container = column[row_index]
                 if container is not None and container.get_description() == 'UNUSED':
-                    # Define the target position for the current container
-                    target = [row_index, 0]
-
-                    # Calculate the time taken to move from source to target
-                    # Formula: Manhattan distance + extra 2 units for placement time
-                    # Will replace this with A*
-                    time = abs(source[0] - target[0]) + abs(source[1] - target[1]) + 2 
-
-                    # Get the current state representation (grid)
+                    target = [row_index, col_index]
+                    time = source[1] + (9 - source[0]) + 4 + target[1] + (9 - target[0])
+                    print(target, time)
+    
                     state_rep = start_state.get_state_representation()
+                    state_rep[row_index][col_index] = node
 
-                    # Place the container in the target cell
-                    state_rep[row_index][0] = node
-
-                    # Create a new state object with the updated grid
+                    #new state object with the new and updated representation
                     new_state = State(
-                        state_rep,                # Updated grid representation
-                        start_state.depth,        # Same depth as the current state
-                        [None, None],             # Placeholder (can store additional info)
-                        start_state.time + time,  # Increment total time by the cost of this move
-                        start_state,              # Link to the parent state for backtracking
-                        time,                     # Cost for this specific action
-                        0,                        # Placeholder for heuristic (if needed)
-                        [-1, -1],                 # Placeholder for additional info
-                        target                    # Final position of the loaded container
+                        state_rep,
+                        start_state.depth + 1,
+                        node,           
+                        start_state.time + time,  
+                        start_state,
+                        time,                     #time taken for THIS action
+                        start_state.num_moves + 1,                        
+                        source,            
+                        target
                     )
+                    move_options.append(new_state)
 
-                    # Update the current state to this new state
-                    start_state = new_state
-
-                    # Break the loop once the container is placed
                     break
+    
+        best = float('inf')
+        for o in move_options:
+            if o.time < best: 
+                best = o.time
+                start_state = o
+            
+        track_moves.append(start_state.target_location)
+        source = start_state.last_moved_location
+        
+    return start_state, track_moves
 
-    # Return the updated state after all containers are loaded
-    return start_state
 
 def is_unload_goal_test(self, unload_targets):
-    """
-    Checks if all of the target containers have been unloaded
-
-    Args:
-        unload_targets (list): List of containers to be unloaded
-
-    Returns:
-        Bool: True if all of the targets are unloaded, False otherwise
-
-    """
     for target in unload_targets:
         if self.find_container(target):
             return False
         return True
 
 def find_container(self, container_description: str):
-    """
-    Finds the position of a container in the grid based on its description
-
-    Args:
-        container_description: The description of the target container
-
-    Returns: 
-        tuple: row,col position of the container, or None if not found
-
-    """
     for row_index, row in enumerate(self.state_representation):
         for col_index, col in enumerate(row): 
             if container and container != "NAN" and container.get_description() == container_description:
@@ -154,15 +82,6 @@ def find_container(self, container_description: str):
     return None
 
 def can_pick_up(self, col):
-    """
-    Checks if a container can be picked up from a specific column
-
-    Args: 
-       col (int): The column index
-
-    Return: 
-       bool: True if a container can be picked up, false otherwise
-    """
     for row in range(8):
         if self.state_representation[row][col] is not None and self.state_representation[row][col] != "NAN":
             return True
@@ -218,16 +137,6 @@ def pick_up(self, col, crane_position, target_container_description=None):
 
 
 def find_empty_position(self, grid, exclude_col=None):
-    """
-    Finds the nearest empty position in the grid for relocating a container.
-
-    Args:
-        grid (list): Current grid representation.
-        exclude_col (int): Column to exclude from consideration (e.g., the target column).
-
-    Returns:
-        tuple: (row, col) of the nearest empty position, or None if no empty position is found.
-    """
     for col in range(12):
         if col == exclude_col:
             continue
@@ -238,16 +147,6 @@ def find_empty_position(self, grid, exclude_col=None):
 
 
 def put_down_load(self, col, unload_targets):
-    """
-    Places a container from the unload targets into a specific column.
-
-    Args:
-        col (int): The column index.
-        unload_targets (list): List of containers to unload.
-
-    Returns:
-        State: A new state after the container is placed, or None if invalid.
-    """
     for row in range(7, -1, -1):  
         if self.state_representation[row][col] is None:  
             if unload_targets:  
@@ -265,40 +164,13 @@ def put_down_load(self, col, unload_targets):
     return None
 
 def calculate_heuristic(state: State, unload_target: str, unload_position: tuple):
-    """
-    Calculates the heuristic for a state based on the Manhattan distance.
-
-    Args:
-        state (State): Current grid state.
-        unload_target (str): The description of the container to unload.
-        unload_position (tuple): Position [row, col] where containers are unloaded.
-
-    Returns:
-        int: Estimated cost to unload the target container.
-    """
     container_pos = state.find_container(unload_target)
 
     if container_pos:
         return abs(container_pos[0] - unload_position[0]) + abs(container_pos[1] - unload_position[1])
     return float('inf') 
 
-
-# def unload():
-#     # insert code
 def unload(start_state, unload_target, load_list, unload_position):
-    """
-    Unloads a specified container from the grid and moves it to the back of the load_list.
-
-    Args:
-        start_state (State): The current state of the ship (grid representation).
-        unload_target (str): The description of the container to unload.
-        load_list (list): The list of containers on the ship.
-        unload_position (list): Target position for unloading [row, col].
-
-    Returns:
-        State: The updated state after unloading the container.
-        list: Updated load_list with the container moved to the back.
-    """
     state_queue = PriorityQueue()
     visited_costs = {}
     crane_position = (7, 0)
@@ -334,41 +206,196 @@ def unload(start_state, unload_target, load_list, unload_position):
 
     return None
 
+#displays choice for choosing load/unload or balance
+def go_to_option_selection():
+    global chosen_option
+    chosen_option = None  # Reset chosen option
+    # Clear current widgets
+    # for widget in root.winfo_children():
+    #     widget.destroy()
 
-# def balance():
-#     # insert code
+    # Create and display options
+    tk.Label(root, text="Choose an Option:", font=("Arial", 18)).pack(pady=20)
 
-# To get current PST time from an external source, for updateLog()
-def getCurrentTime():
-    try:
-        response = requests.get("http://worldtimeapi.org/api/timezone/America/Los_Angeles")
-        response.raise_for_status()  # Raises an exception if there is an error in the request
-        data = response.json()
-        datetimeString = data["datetime"]
-        utcTime = datetime.strptime(datetimeString, "%Y-%m-%dT%H:%M:%S.%f%z")
-        pstTimezone = pytz.timezone('America/Los_Angeles')
-        pstTime = utcTime.astimezone(pstTimezone)
-        return pstTime
-    except requests.RequestException as e:
-        print("Error fetching time:", e)
-        return None
+    tk.Button(root, text="Load/Unload", font=("Arial", 14), width=20, 
+              command=lambda: set_option_and_go("load_unload", go_to_file_selector)).pack(pady=10)
+    tk.Button(root, text="Balance", font=("Arial", 14), width=20, 
+              command=lambda: set_option_and_go("balance", go_to_file_selector)).pack(pady=10)
 
-# To update log file with a message string
-# USAGE: updateLog("Insert Message to log.txt")
-def updateLog(message):
-    pstTime = getCurrentTime()
+def set_option_and_go(option, next_screen_func):
+    global chosen_option
+    chosen_option = option
+    next_screen_func()
+  
+#displays the 8X12 grid color coded  
+def display_grid(parsed_data):
+    for widget in root.winfo_children():
+        widget.destroy()
 
-    if 10<=pstTime.day % 100<=20: suffix = "th"
-    else: suffix = {1:"st", 2:"nd", 3:"rd"}.get(pstTime.day % 10, "th")
+    canvas = tk.Canvas(root, width=600, height=400, bg="white")
+    canvas.pack(pady=20)
+
+    cell_width = 50
+    cell_height = 50
+    rows = 8
+    cols = 12
+    current_containers_on_ship = [] # this is a list of green containers, possibly unloadable ones
     
-    month_day_year = pstTime.strftime(f"%B {pstTime.day}{suffix} %Y")
-    timePart = pstTime.strftime("%H:%M")
-    pstTimeFormatted = f"{month_day_year}: {timePart}"
-    logInput = f"{pstTimeFormatted} {message}"
-    print(logInput)
+    #makes it so that NAN spots are gray, UNUSED are blue, and filled containers are green
+    color_mapping = {
+        "NAN": "gray",
+        "UNUSED": "lightblue"
+    }
+
+    # Draw grid cells
+    for container in parsed_data:
+        position, weight, description = container.position, container.weight, container.description
+        x, y = position
+        x -= 1
+        y -= 1
+
+        adjusted_x = y
+        adjusted_y = rows - 1 - x
+
+        color = color_mapping.get(description, "lightgreen" if weight > 0 else "white")
+        if color == "lightgreen":
+            current_containers_on_ship.append(container)#add to unloadable list
+
+        x1 = adjusted_x * cell_width
+        y1 = adjusted_y * cell_height
+        x2 = x1 + cell_width
+        y2 = y1 + cell_height
+        canvas.create_rectangle(x1, y1, x2, y2, fill=color, outline="black")
+
+        canvas.create_text(
+            x1 + cell_width / 2,
+            y1 + cell_height / 2,
+            text=description,
+            font=("Arial", 8),
+            fill="black"
+        )
+
+    if chosen_option == "load_unload":
+        unload_menu(parsed_data, current_containers_on_ship)
+
+#displays spot to enter in what containers to load, and calls unload()
+def load_menu(parsed_data):
+    print("current containers to unload: ")
+    print(containers_to_unload)
+    #call unload here:
+    start_state = State()
+    start_state.init_start_state(parsed_data)
+    unload(start_state, containers_to_unload)
+    tk.Label(root, text="Load Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    tk.Label(root, text="Enter Container Name:", font=("Arial", 12)).pack(pady=5)
+    name_input = tk.Entry(root, width=30)
+    name_input.pack(pady=5)
+
+    tk.Label(root, text="Enter Container Weight:", font=("Arial", 12)).pack(pady=5)
+    weight_input = tk.Entry(root, width=30)
+    weight_input.pack(pady=5)
+
+    def load_container():
+        name = name_input.get().strip()
+        weight = weight_input.get().strip()
+        if name and weight.isdigit():
+            weight = int(weight)
+            new_container = Container(None, weight, name)
+            containers_to_load.append(new_container)
+            tk.Label(root, text=f"Loaded container: {name} with weight {weight}",
+                     font=("Arial", 10), fg="red").pack(pady=5)
+            name_input.delete(0, tk.END)
+            weight_input.delete(0, tk.END)
+            utils.updateLog(f"Loaded container: {name} with weight {weight}")
+        else:
+            tk.Label(root, text="Invalid input. Please enter a valid name and numeric weight.",
+                     font=("Arial", 10), fg="red").pack(pady=5)
+
+    tk.Button(root, text="Load", font=("Arial", 14), command=load_container).pack(pady=10)
+    def go_to_get_instructions():
+        get_instructions(parsed_data)
+    tk.Button(root, text="Next", font=("Arial", 14), command=go_to_get_instructions).pack(pady=10)
+
+def unload_menu(parsed_data, unloadable_containers):
+    tk.Label(root, text="Unload Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    tk.Label(root, text="Select containers to unload:", font=("Arial", 12)).pack(pady=5)
+
+    # Listbox to select containers
+    listbox = tk.Listbox(root, width=50, height=10, selectmode=tk.MULTIPLE)
+    listbox.pack(pady=5)
+
+    # Populate the listbox with loaded containers
+    for idx, container in enumerate(unloadable_containers):
+        listbox.insert(idx, f"{container.description} (Weight: {container.weight})")
+
+    def unload_containers():
+        selected_indices = listbox.curselection()
+        for idx in selected_indices:
+            containers_to_unload.append(unloadable_containers[idx])
+        tk.Label(root, text="Selected containers for unloading.",
+                 font=("Arial", 10), fg="red").pack(pady=5)
+        utils.updateLog(f"Unloaded containers: {', '.join([unloadable_containers[idx].description for idx in selected_indices])}")
+
+    tk.Button(root, text="Unload", font=("Arial", 14), command=unload_containers).pack(pady=10)
+    def go_to_load_menu():
+        for widget in root.winfo_children():
+            if not isinstance(widget, tk.Canvas):  # Keep the grid
+                widget.destroy()
+        load_menu(parsed_data)
+
+    tk.Button(root, text="Next", font=("Arial", 14), command=go_to_load_menu).pack(pady=10)
+
+#calls load here after getting a list of containers to load
+def get_instructions(parsed_manifest_data):
+    for widget in root.winfo_children():
+        widget.destroy()
+    tk.Label(root,text="instructions coming here")
+    start_state = state.State()
+    #if parsed_manifest_data:
+    start_state.init_start_state(parsed_manifest_data)
+    #start_state.init_start_state()
+    load(start_state, containers_to_load)
+    # else:
+    #     print("there's no manifest!!!!!")
+
+# Function to go to the next screen
+def go_to_file_selector():
+    global parsed_manifest #declare that it's global so that we can access it again
+    entered_name = name_entry.get()
+    if entered_name.strip():
+        sign_in_message = entered_name + " signed in"
+        print(sign_in_message)
+        utils.updateLog(sign_in_message)
+
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    def select_file():
+        file_path = filedialog.askopenfilename(title="Select a File")
+        if file_path:
+            label_selected_file.config(text=f"Selected: {file_path}")
+            parsed_manifest = parseManifest(file_path)
+            tk.Button(root, text="Next", command=lambda: display_grid(parsed_manifest)).pack(pady=10)
+
+    tk.Label(root, text="Select a File:", font=("Arial", 14)).pack(pady=20)
+    tk.Button(root, text="Browse", command=select_file).pack(pady=10)
+    label_selected_file = tk.Label(root, text="No file selected", fg="gray")
+    label_selected_file.pack(pady=10)
     
-    with open("log.txt", "a") as logFile:
-        logFile.write(logInput + "\n")
+
+# # Main screen
+# root = tk.Tk()
+# root.title("Packeroo Express")
+# root.geometry("1200x900")
+
+# # Initial widgets
+# tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
+# name_entry = tk.Entry(root, width=30)
+# name_entry.pack(pady=5)
+# tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
+
+
+# root.mainloop()
 
 # def getMoves():
 #     # insert code
