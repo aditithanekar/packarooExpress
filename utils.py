@@ -54,3 +54,22 @@ def parseManifest(filePath):
             manifest.append(newContainer)
 
     return manifest
+
+def updateMaifest(end_state, filePath):
+    with open(filePath, "w") as file:
+        for row_index, row in enumerate(end_state.state_representation, start=1):
+            for col_index, container in enumerate(row, start=1):
+                if isinstance(container, Container):
+                    # Retrieve container details
+                    weight = f"{int(container.get_weight()):05}" if container.get_weight() else "00000"
+                    description = container.get_description() if container.get_description() else "NAN"
+                else:
+                    # Empty slots default to NAN
+                    weight = "00000"
+                    description = "NAN"
+
+                # Format the line as [row,col], {weight}, description
+                line = f"[{row_index:02},{col_index:02}], {{{weight}}}, {description}\n"
+                file.write(line)
+
+    updateLog("Manifest successfully updated in {}".format(filePath))

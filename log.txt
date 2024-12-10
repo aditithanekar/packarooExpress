@@ -292,3 +292,155 @@ December 7th 2024: 03:04 Liz signed in
 December 7th 2024: 03:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
 December 7th 2024: 03:04 Unloaded containers: Dog
 December 7th 2024: 03:04 Loaded container: Bananas with weight 789
+December 7th 2024: 16:44 bob signed in
+December 7th 2024: 16:44 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 16:44 Unloaded containers: 
+December 7th 2024: 16:44 Unloaded containers: Cat
+December 7th 2024: 16:45 Unloaded containers: Cat
+December 7th 2024: 16:45 Loaded container: tacos with weight 900000
+December 7th 2024: 16:55 bob signed in
+December 7th 2024: 16:55 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/ShipCase1.txt is opened
+December 7th 2024: 16:55 Loaded container: tacos with weight 900000
+December 7th 2024: 16:56 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:02 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:04 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:04 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:16 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:16 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:21 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:21 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:22 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:22 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:42 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:42 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:44 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:44 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:46 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:46 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:47 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:47 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:52 Manifest sampleManifest.txt is opened
+December 7th 2024: 17:52 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:14 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:14 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:15 d signed in
+December 8th 2024: 12:15 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/ShipCase1.txt is opened
+December 8th 2024: 12:15 Loaded container: r with weight 3
+December 8th 2024: 12:16 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:16 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:19 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:19 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:20 bob signed in
+December 8th 2024: 12:20 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/ShipCase1.txt is opened
+December 8th 2024: 12:20 Loaded container: a with weight 1
+December 8th 2024: 12:20 Loaded container: b with weight 1
+December 8th 2024: 12:20 Loaded container: c with weight 1
+December 8th 2024: 12:21 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:21 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:21 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:21 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:27 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:27 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:27 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:27 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:28 Manifest sampleManifest.txt is opened
+December 8th 2024: 12:28 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:17 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:17 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:22 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:22 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:29 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:29 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:31 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:31 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:35 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:35 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:36 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:36 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:39 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:39 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:40 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:40 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:40 Manifest sampleManifest.txt is opened
+December 8th 2024: 17:40 Manifest sampleManifest.txt is opened
+December 9th 2024: 16:54 Manifest sampleManifest.txt is opened
+December 9th 2024: 16:54 Manifest sampleManifest.txt is opened
+December 9th 2024: 16:59 Manifest sampleManifest.txt is opened
+December 9th 2024: 16:59 Manifest sampleManifest.txt is opened
+December 9th 2024: 16:59 Manifest sampleManifest.txt is opened
+December 9th 2024: 16:59 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:02 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:02 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:03 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:03 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:03 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:03 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:04 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:04 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:04 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:04 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:08 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:08 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:09 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:09 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:10 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:10 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:11 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:11 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:11 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:11 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:12 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:12 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:14 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:14 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:15 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:15 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:16 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:16 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:18 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:18 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:18 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:18 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:22 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:22 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:28 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:28 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:28 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:28 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:29 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:29 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:29 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:29 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:32 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:32 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:39 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:39 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:42 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:42 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:42 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:42 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:44 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:44 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:46 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:46 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:47 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:47 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:48 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:48 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:50 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:50 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:51 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:51 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:52 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:52 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:54 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:54 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:54 Manifest sampleManifest.txt is opened
+December 9th 2024: 17:54 Manifest sampleManifest.txt is opened
+December 9th 2024: 18:09 Manifest sampleManifest.txt is opened
+December 9th 2024: 18:09 Manifest sampleManifest.txt is opened
+December 9th 2024: 18:09 Manifest successfully updated in updatedManifest.txt
+December 9th 2024: 18:10 Manifest sampleManifest.txt is opened
+December 9th 2024: 18:10 Manifest sampleManifest.txt is opened
+December 9th 2024: 18:10 Manifest successfully updated in updatedManifest.txt
+December 9th 2024: 18:10 Manifest updatedManifest.txt is opened

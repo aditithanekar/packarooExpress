@@ -1,33 +1,36 @@
 import main
 from state import State
 from container import Container
-from utils import parseManifest
+import utils
 from main import load
 
 
 
 #TESTING THE LOAD FUNCTION------------------------------------------------------------------------------------------------------------
 #define the manifest
-MANIFEST = parseManifest("sampleManifest.txt")
+MANIFEST = utils.parseManifest("sampleManifest.txt")
 
 #create a starting state
 state = State()
-updated_state = state.init_start_state()
+updated_state = state.init_start_state(MANIFEST)
 
 
 
 # SUHANI TESTING STUFF ===============================================================================================
-def suhani_test():
-    updated_state.print_state_representation()
-    
-    containers = [Container(position=None, weight=10.0 + i, description=f"Container {i}") for i in range(1)]
-    for container in containers:
-        print(container.print_node_description())
-        
-    result_state = load(updated_state, containers)
-    result_state.print_state_representation()
+updated_state.print_state_representation()
 
-suhani_test()
+containers = [Container(position=None, weight=10.0 + i, description=f"Container {i}") for i in range(11)]
+for container in containers:
+    print(container.print_node_description())
+    
+end_state, operations = load(updated_state, containers)
+        # operations is where the crane ends after loading each container
+
+utils.updateMaifest(end_state, "updatedManifest.txt")
+NEW_MANIFEST = utils.parseManifest("updatedManifest.txt")
+state = State()
+updated_state = state.init_start_state(NEW_MANIFEST)
+updated_state.print_state_representation()
 
 # load(updated_state, MANIFEST)
 
