@@ -173,7 +173,7 @@ def calculate_heuristic(state: State, unload_target: str, unload_position: tuple
 
 # def unload():
 #     # insert code
-def unload(start_state, unload_target, load_list, unload_position):
+def unload(start_state, unload_targets, load_list, unload_position):
     state_queue = PriorityQueue()
     visited_costs = {}
     crane_position = (7, 0)
