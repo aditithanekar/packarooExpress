@@ -13,12 +13,24 @@ containers_to_load = [] #load list global
 containers_to_unload = []
 parsed_manifest = [] # this doesn't really work as a global properly but it's passed as an arg
 
-MANIFEST = parseManifest("sampleManifest.txt")
+MANIFEST = parseManifest("ShipCase1.txt")
 
 def main():
     state = State()
     updated_state = state.init_start_state(MANIFEST)
-    #updated_state.print_state_representation() 
+    
+    # Main screen
+    root = tk.Tk()
+    root.title("Packeroo Express")
+    root.geometry("1200x900")
+
+    # Initial widgets
+    tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
+    name_entry = tk.Entry(root, width=30)
+    name_entry.pack(pady=5)
+    tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
+
+    root.mainloop()
 
 def load(start_state, load_list):
     source = [7,0]
@@ -35,7 +47,6 @@ def load(start_state, load_list):
                 if container is not None and container.get_description() == 'UNUSED':
                     target = [row_index, col_index]
                     time = source[1] + (9 - source[0]) + 4 + target[1] + (9 - target[0])
-                    print(target, time)
     
                     state_rep = start_state.get_state_representation()
                     state_rep[row_index][col_index] = node
@@ -251,21 +262,6 @@ def go_to_file_selector():
     tk.Button(root, text="Browse", command=select_file).pack(pady=10)
     label_selected_file = tk.Label(root, text="No file selected", fg="gray")
     label_selected_file.pack(pady=10)
-    
-
-# # Main screen
-# root = tk.Tk()
-# root.title("Packeroo Express")
-# root.geometry("1200x900")
-
-# # Initial widgets
-# tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
-# name_entry = tk.Entry(root, width=30)
-# name_entry.pack(pady=5)
-# tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
-
-
-# root.mainloop()
 
 # def getMoves():
 #     # insert code
