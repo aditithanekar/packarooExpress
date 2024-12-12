@@ -105,7 +105,6 @@ December 3rd 2024: 12:03 Manifest sampleManifest.txt is opened
 December 3rd 2024: 12:03 Manifest sampleManifest.txt is opened
 December 3rd 2024: 12:06 Manifest sampleManifest.txt is opened
 December 3rd 2024: 12:06 Manifest sampleManifest.txt is opened
-=======
 November 25th 2024: 18:07 hihi signed in
 November 26th 2024: 13:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
 November 26th 2024: 13:09 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/sampleManifest.txt is opened
@@ -380,3 +379,23 @@ December 11th 2024: 19:12 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
 December 11th 2024: 19:12 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
 December 11th 2024: 19:12 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
 December 11th 2024: 19:12 Ship successfully balanced
+December 11th 2024: 22:03 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:03 Mr. Keough signed in
+December 11th 2024: 22:03 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/ShipCase1.txt is opened
+December 11th 2024: 22:05 Loaded container: Aditi with weight 900
+December 11th 2024: 22:11 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:17 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:17 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:17 Manifest successfully updated in updatedManifest.txt
+December 11th 2024: 22:17 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:17 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:17 Manifest successfully updated in updatedManifest.txt
+December 11th 2024: 22:19 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:19 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:19 Manifest successfully updated in updatedManifest.txt
+December 11th 2024: 22:19 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:19 Manifest sampleManifest.txt is opened
+December 11th 2024: 22:19 Manifest successfully updated in updatedManifest.txt
+December 11th 2024: 22:37 Manifest ShipCase1.txt is opened
+December 11th 2024: 22:37 Manifest ShipCase1.txt is opened
+December 11th 2024: 22:37 Manifest successfully updated in updatedManifest.txt

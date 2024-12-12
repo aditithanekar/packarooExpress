@@ -4,26 +4,25 @@ from container import Container
 from utils import parseManifest
 from main import load
 from balance2 import a_star
+import utils
+from load_unload import load
+import load_unload
 
+MANIFEST = utils.parseManifest("ShipCase1.txt")
 
-
-#TESTING THE LOAD FUNCTION------------------------------------------------------------------------------------------------------------
-#define the manifest
-MANIFEST = parseManifest("sampleManifest.txt")
-
-#create a starting state
 state = State()
 state.init_start_state(MANIFEST)
 
 
-def adititest():
-    state.print_state_representation()
+# ADITI TESTING STUFF ===============================================================================================
+# def adititest():
+#     state.print_state_representation()
     
-    result_state = a_star(state)
-    print(result_state)
-    #result_state.print_state_representation()
+#     result_state = a_star(state)
+#     print(result_state)
+#     #result_state.print_state_representation()
 
-adititest()
+# adititest()
 
 # SUHANI TESTING STUFF ===============================================================================================
 # def suhani_test():
@@ -39,6 +38,16 @@ adititest()
 # suhani_test()
 
 # load(updated_state, MANIFEST)
+
+state = state.init_start_state(MANIFEST)
+state.print_state_representation()
+
+containers = [Container(position=None, weight=10.0 + i, description=f"Box{i}") for i in range(11)]
+
+loaded_state, operations = load(state, containers) # operations is for if printing steps is needed later
+loaded_state.print_state_representation()
+
+utils.updateMaifest(loaded_state, "updatedManifest.txt")
 
 # #USING MOCK MANIFEST------------------------------------------------------------------------------------------------------------
 # def test_load():
@@ -79,36 +88,4 @@ adititest()
 
 # test_load()
 
-# #USING ACTUAL MANIFEST------------------------------------------------------------------------------------------------------------
 
-# def manifest_test_load():
-    
-#     start_state = State()
-#     start_state.init_start_state()
-    
-    
-#     load_list = [c for c in MANIFEST if c.get_description() == 'UNUSED']
-    
-    
-#     print("Initial Load List:")
-#     for c in load_list:
-#         print(c.print_node_description())
-    
-#     print("\nInitial State:")
-#     start_state.print_state_representation()
-    
-    
-#     result_state = load(start_state, load_list)
-    
-    
-#     assert result_state is not None, "Load function should return a state"
-#     assert len(load_list) == 0, "All containers should be loaded"
-    
-    
-#     print("\nFinal State:")
-#     result_state.print_state_representation()
-    
-#     print("Load test 2 completed successfully!")
-
-
-# manifest_test_load()
