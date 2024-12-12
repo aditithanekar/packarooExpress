@@ -2,8 +2,8 @@ import main
 from state import State
 from container import Container
 import utils
-from main import load
-
+from load_unload import load
+import load_unload
 
 MANIFEST = utils.parseManifest("ShipCase1.txt")
 
