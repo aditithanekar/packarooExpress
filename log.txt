@@ -15,3 +15,6 @@ December 11th 2024: 22:19 Manifest successfully updated in updatedManifest.txt
 December 11th 2024: 22:19 Manifest sampleManifest.txt is opened
 December 11th 2024: 22:19 Manifest sampleManifest.txt is opened
 December 11th 2024: 22:19 Manifest successfully updated in updatedManifest.txt
+December 11th 2024: 22:37 Manifest ShipCase1.txt is opened
+December 11th 2024: 22:37 Manifest ShipCase1.txt is opened
+December 11th 2024: 22:37 Manifest successfully updated in updatedManifest.txt
