@@ -370,3 +370,13 @@ December 8th 2024: 23:08 Manifest sampleManifest.txt is opened
 December 8th 2024: 23:08 Manifest sampleManifest.txt is opened
 December 8th 2024: 23:23 Manifest sampleManifest.txt is opened
 December 8th 2024: 23:28 Manifest sampleManifest.txt is opened
+December 11th 2024: 19:12 Error during ship balancing: [Errno 2] No such file or directory: 'manifest.txt'
+December 11th 2024: 19:12 Manifest sampleManifest.txt is opened
+December 11th 2024: 19:12 Ship balancer initialized with manifest
+December 11th 2024: 19:12 Starting A* search for optimal balance solution
+December 11th 2024: 19:12 Found solution for balancing
+December 11th 2024: 19:12 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 11th 2024: 19:12 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 11th 2024: 19:12 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 11th 2024: 19:12 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 11th 2024: 19:12 Ship successfully balanced
