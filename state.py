@@ -1,10 +1,6 @@
 from utils import parseManifest
 
-#MANIFEST = parseManifest("sampleManifest.txt")
-
-
 class State:
-    
     def __init__(self, 
                  state_representation=None, 
                  depth=0, 
@@ -14,7 +10,8 @@ class State:
                  move_time=0, 
                  num_moves=0, 
                  last_moved_location=None, 
-                 target_location=None) -> None:
+                 target_location=None,
+                 priority=0) -> None:
         
         self.state_representation = state_representation
         self.depth = depth
@@ -25,6 +22,17 @@ class State:
         self.num_moves = num_moves
         self.last_moved_location = last_moved_location if last_moved_location is not None else [-1, -1]
         self.target_location = target_location
+        self.priority = priority
+
+    def __lt__(self, other):
+        return self.priority < other.priority
+
+    def __eq__(self, other):
+        if not isinstance(other, State):
+            return False
+        return self.priority == other.priority
+
+#MANIFEST = parseManifest("sampleManifest.txt")
     
     def _initialize_empty_ship(self, num_rows: int, num_cols: int):
         return [[None] * num_cols for _ in range(num_rows)]
@@ -65,5 +73,4 @@ class State:
             return None
     
         return [row.copy() for row in self.state_representation]
-
 

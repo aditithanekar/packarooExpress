@@ -208,5 +208,24 @@ def go_to_file_selector():
     label_selected_file = tk.Label(root, text="No file selected", fg="gray")
     label_selected_file.pack(pady=10)
 
+# # Main screen
+# root = tk.Tk()
+# root.title("Packeroo Express")
+# root.geometry("1200x900")
+
+# # Initial widgets
+# tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
+# name_entry = tk.Entry(root, width=30)
+# name_entry.pack(pady=5)
+# tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
+
+
+# root.mainloop()
+
+def getMoves():
+    # insert code
+
+
 if __name__=="__main__":
     main()
+
