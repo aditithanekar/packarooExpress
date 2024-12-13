@@ -399,3 +399,232 @@ December 11th 2024: 22:19 Manifest successfully updated in updatedManifest.txt
 December 11th 2024: 22:37 Manifest ShipCase1.txt is opened
 December 11th 2024: 22:37 Manifest ShipCase1.txt is opened
 December 11th 2024: 22:37 Manifest successfully updated in updatedManifest.txt
+December 12th 2024: 16:33 Manifest ShipCase1.txt is opened
+December 12th 2024: 16:33 Manifest ShipCase1.txt is opened
+December 12th 2024: 16:33 Bob signed in
+December 12th 2024: 16:34 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase1.txt is opened
+December 12th 2024: 16:34 Unloaded containers: Cat, Dog
+December 12th 2024: 16:50 Error during ship balancing: [Errno 2] No such file or directory: 'sampleManifest.txt'
+December 12th 2024: 16:51 Error during ship balancing: [Errno 2] No such file or directory: 'packarooExpress/ShipCase2.txt'
+December 12th 2024: 16:51 Manifest ShipCase2.txt is opened
+December 12th 2024: 16:51 Ship balancer initialized with manifest
+December 12th 2024: 16:51 Starting A* search for optimal balance solution
+December 12th 2024: 16:51 Found solution for balancing
+December 12th 2024: 16:51 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 12th 2024: 16:51 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 12th 2024: 16:51 Move container from (0, 5) to (1, 5) (Cost: 1 mins)
+December 12th 2024: 16:51 Move container from (0, 8) to (0, 7) (Cost: 1 mins)
+December 12th 2024: 16:51 Move container from (0, 7) to (0, 6) (Cost: 1 mins)
+December 12th 2024: 16:51 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 12th 2024: 16:51 Move container from (0, 6) to (0, 5) (Cost: 1 mins)
+December 12th 2024: 16:51 Ship successfully balanced
+December 12th 2024: 16:54 Manifest ShipCase3.txt is opened
+December 12th 2024: 16:54 Ship balancer initialized with manifest
+December 12th 2024: 16:54 Starting A* search for optimal balance solution
+December 12th 2024: 16:54 Found solution for balancing
+December 12th 2024: 16:54 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 1) to (2, 1) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 0) to (1, 1) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 1) to (1, 2) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 2) to (1, 3) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 3) to (1, 4) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 12th 2024: 16:54 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 12th 2024: 16:54 Ship successfully balanced
+December 12th 2024: 16:55 Manifest ShipCase4.txt is opened
+December 12th 2024: 16:55 Ship balancer initialized with manifest
+December 12th 2024: 16:55 Starting A* search for optimal balance solution
+December 12th 2024: 16:55 Found solution for balancing
+December 12th 2024: 16:55 Move container from (4, 4) to (4, 5) (Cost: 1 mins)
+December 12th 2024: 16:55 Move container from (4, 5) to (4, 6) (Cost: 1 mins)
+December 12th 2024: 16:55 Ship successfully balanced
+December 12th 2024: 16:56 Manifest SilverQueen.txt is opened
+December 12th 2024: 16:56 Ship balancer initialized with manifest
+December 12th 2024: 16:56 Starting A* search for optimal balance solution
+December 12th 2024: 16:56 Found solution for balancing
+December 12th 2024: 16:56 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (1, 1) to (1, 0) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (0, 1) to (1, 1) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (1, 1) to (1, 2) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (1, 2) to (1, 3) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (1, 3) to (1, 4) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 12th 2024: 16:56 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 12th 2024: 16:56 Ship successfully balanced
+December 12th 2024: 17:03 Manifest SilverQueen.txt is opened
+December 12th 2024: 17:03 Ship balancer initialized with manifest
+December 12th 2024: 17:03 Starting A* search for optimal balance solution
+December 12th 2024: 17:03 Found solution for balancing
+December 12th 2024: 17:03 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (1, 1) to (1, 0) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (0, 1) to (1, 1) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (1, 1) to (1, 2) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (1, 2) to (1, 3) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (1, 3) to (1, 4) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 12th 2024: 17:03 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 12th 2024: 17:03 Ship successfully balanced
+December 12th 2024: 18:35 Manifest ShipCase1.txt is opened
+December 12th 2024: 18:35 Bob signed in
+December 12th 2024: 18:36 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 18:36 Loaded container: potatoes with weight 1240
+December 12th 2024: 18:36 Loaded container: Bananas with weight 14390
+December 12th 2024: 18:41 Manifest ShipCase1.txt is opened
+December 12th 2024: 18:41 Joe signed in
+December 12th 2024: 18:42 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 18:42 Unloaded containers: 
+December 12th 2024: 18:42 Loaded container: Bananas with weight 1239
+December 12th 2024: 18:45 Manifest ShipCase1.txt is opened
+December 12th 2024: 18:45 Joe signed in
+December 12th 2024: 18:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 18:45 Loaded container: Bananas with weight 1242
+December 12th 2024: 18:45 Loaded container: Potatoes with weight 9342
+December 12th 2024: 19:45 Manifest ShipCase1.txt is opened
+December 12th 2024: 19:45 Billy signed in
+December 12th 2024: 19:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 19:46 Loaded container: Bananas with weight 4290
+December 12th 2024: 19:46 Loaded container: Potatoes with weight 4239
+December 12th 2024: 19:47 Manifest ShipCase1.txt is opened
+December 12th 2024: 19:47 Bob signed in
+December 12th 2024: 19:47 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 19:47 Loaded container: Potatoes with weight 1342
+December 12th 2024: 19:47 Loaded container: Bananas with weight 1324
+December 12th 2024: 19:47 Loaded container: Oranges with weight 24990
+December 12th 2024: 20:01 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:01 Joe signed in
+December 12th 2024: 20:01 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:02 Loaded container: potato with weight 2357
+December 12th 2024: 20:04 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:04 Joe signed in
+December 12th 2024: 20:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:04 Loaded container: Potatoes with weight 124
+December 12th 2024: 20:06 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:06 Adi signed in
+December 12th 2024: 20:06 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:06 Loaded container: Potatoes with weight 1243
+December 12th 2024: 20:06 Loaded container: Bananas with weight 9343
+December 12th 2024: 20:08 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:08 Hi signed in
+December 12th 2024: 20:08 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase3.txt is opened
+December 12th 2024: 20:08 Loaded container: Potatoes with weight 2345
+December 12th 2024: 20:09 Loaded container: Bananas with weight 1243
+December 12th 2024: 20:10 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:10 hu signed in
+December 12th 2024: 20:10 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:11 Loaded container: Potato with weight 798
+December 12th 2024: 20:13 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:13 hi signed in
+December 12th 2024: 20:13 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:13 Loaded container: 1213 with weight 1243
+December 12th 2024: 20:13 Loaded container: bananas with weight 1233
+December 12th 2024: 20:13 Loaded container: beets with weight 2543
+December 12th 2024: 20:18 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:18 Jim signed in
+December 12th 2024: 20:18 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:18 Loaded container: Potato with weight 134
+December 12th 2024: 20:21 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:21 Jim signed in
+December 12th 2024: 20:21 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 20:21 Loaded container: Potato with weight 3524
+December 12th 2024: 20:21 Loaded container: Bananas with weight 35498
+December 12th 2024: 20:21 Loaded container: Juice with weight 245
+December 12th 2024: 20:24 Manifest ShipCase1.txt is opened
+December 12th 2024: 20:24 Jim signed in
+December 12th 2024: 20:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase3.txt is opened
+December 12th 2024: 20:24 Loaded container: afsdjhk with weight 1345
+December 12th 2024: 20:24 Loaded container: potatoes with weight 5245
+December 12th 2024: 21:49 Manifest ShipCase1.txt is opened
+December 12th 2024: 21:49 hi signed in
+December 12th 2024: 21:50 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 12th 2024: 21:50 Loaded container: potato with weight 123
+December 12th 2024: 21:50 Loaded container: bananas with weight 8906
+December 12th 2024: 21:51 Manifest ShipCase1.txt is opened
+December 12th 2024: 21:51 hi signed in
+December 12th 2024: 21:51 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase3.txt is opened
+December 12th 2024: 21:51 Loaded container: potatoes with weight 2435
+December 12th 2024: 21:51 Loaded container: banans with weight 1435
+December 12th 2024: 22:52 Manifest ShipCase1.txt is opened
+December 12th 2024: 22:52 Joe signed in
+December 12th 2024: 22:52 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase3.txt is opened
+December 12th 2024: 22:52 Loaded container: bear with weight 143
+December 12th 2024: 22:52 Loaded container: Rice with weight 43652
+December 12th 2024: 22:53 Loaded container: Hen with weight 254
+December 12th 2024: 22:53 Loaded container: Eggs with weight 5243
+December 12th 2024: 22:53 Loaded container: Banans with weight 245
+December 12th 2024: 22:53 Loaded container: Fun with weight 904
+December 12th 2024: 22:53 Loaded container: Love with weight 4252
+December 12th 2024: 22:53 Loaded container: Apple with weight 543
+December 12th 2024: 22:55 Manifest ShipCase1.txt is opened
+December 12th 2024: 22:55 Joe signed in
+December 12th 2024: 22:55 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase5.txt is opened
+December 12th 2024: 22:55 Loaded container: Potatos with weight 243
+December 12th 2024: 22:55 Loaded container: Bananas with weight 234
+December 12th 2024: 22:55 Loaded container: Food with weight 1432
+December 12th 2024: 22:55 Loaded container: Hen with weight 243
+December 12th 2024: 22:58 Manifest ShipCase1.txt is opened
+December 12th 2024: 22:58 Joe signed in
+December 12th 2024: 22:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/SilverQueen.txt is opened
+December 12th 2024: 22:58 Loaded container: Potatoes with weight 235
+December 12th 2024: 22:58 Loaded container: Hen with weight 253
+December 12th 2024: 22:59 Loaded container: Bear with weight 524
+December 12th 2024: 22:59 Loaded container: Duck with weight 425
+December 12th 2024: 22:59 Loaded container: Eggs with weight 5234
+December 12th 2024: 22:59 Loaded container: Milk with weight 234
+December 12th 2024: 22:59 Loaded container: Bread with weight 2351
+December 12th 2024: 22:59 Loaded container: Fruit with weight 2341
+December 12th 2024: 23:06 Manifest ShipCase1.txt is opened
+December 12th 2024: 23:06 Joe signed in
+December 12th 2024: 23:06 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase5.txt is opened
+December 12th 2024: 23:06 Loaded container: Bananas with weight 134
+December 12th 2024: 23:06 Loaded container: Pie with weight 314
+December 12th 2024: 23:07 Loaded container: Fox with weight 123
+December 12th 2024: 23:07 Loaded container: Hen with weight 423
+December 12th 2024: 23:07 Loaded container: Choco with weight 432
+December 12th 2024: 23:07 Loaded container: Milk with weight 2435
+December 12th 2024: 23:07 Loaded container: Eggs with weight 645
+December 12th 2024: 23:07 Loaded container: Bread with weight 687
+December 12th 2024: 23:07 Loaded container: Cars with weight 2343
+December 12th 2024: 23:36 Manifest ShipCase1.txt is opened
+December 12th 2024: 23:36 Joe signed in
+December 12th 2024: 23:36 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase3.txt is opened
+December 12th 2024: 23:36 Loaded container: Banans with weight 1234
+December 12th 2024: 23:36 Loaded container: Hen with weight 134
+December 12th 2024: 23:36 Loaded container: Chick with weight 235
+December 12th 2024: 23:36 Loaded container: Bear with weight 524
+December 12th 2024: 23:36 Loaded container: Duck with weight 234
+December 12th 2024: 23:36 Loaded container: Zebra with weight 2345
+December 12th 2024: 23:37 Loaded container: Ice with weight 534
+December 12th 2024: 23:37 Loaded container: Water with weight 254
+December 12th 2024: 23:37 Loaded container: Eel with weight 534
+December 12th 2024: 23:37 Manifest successfully updated in OUTBOUND
+December 12th 2024: 23:39 Manifest ShipCase1.txt is opened
+December 12th 2024: 23:39 JOe signed in
+December 12th 2024: 23:39 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase3.txt is opened
+December 12th 2024: 23:39 Loaded container: Potato with weight 234
+December 12th 2024: 23:39 Manifest successfully updated in OUTBOUND
+December 12th 2024: 23:58 Manifest ShipCase1.txt is opened
+December 12th 2024: 23:58 Joe signed in
+December 12th 2024: 23:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase5.txt is opened
+December 12th 2024: 23:58 Loaded container: Bananas with weight 1234
+December 12th 2024: 23:59 Loaded container: Milk with weight 1234
+December 12th 2024: 23:59 Loaded container: Eggs with weight 1426
+December 12th 2024: 23:59 Loaded container: Bread with weight 9034
+December 12th 2024: 23:59 Loaded container: Fruit with weight 893
+December 12th 2024: 23:59 Manifest successfully updated in OUTBOUND.txt
+December 13th 2024: 00:03 Manifest ShipCase1.txt is opened
+December 13th 2024: 00:03 Jim signed in
+December 13th 2024: 00:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 13th 2024: 00:04 Loaded container: Milk with weight 789
+December 13th 2024: 00:05 Manifest ShipCase1.txt is opened
+December 13th 2024: 00:05 jim signed in
+December 13th 2024: 00:05 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 13th 2024: 00:05 Loaded container: eggs with weight 325
+December 13th 2024: 00:09 Manifest ShipCase1.txt is opened
+December 13th 2024: 00:09 jim signed in
+December 13th 2024: 00:09 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
+December 13th 2024: 00:10 Loaded container: Bananas with weight 234
+December 13th 2024: 00:10 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2OUTBOUND.txt

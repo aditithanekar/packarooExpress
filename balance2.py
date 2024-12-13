@@ -213,7 +213,7 @@ class ShipBalancer:
             return None, None
 
 def main():
-    manifest_path = "sampleManifest.txt"
+    manifest_path = "SilverQueen.txt"
     
     try:
         balancer = ShipBalancer(manifest_path)

@@ -15,14 +15,14 @@ state.init_start_state(MANIFEST)
 
 
 # ADITI TESTING STUFF ===============================================================================================
-# def adititest():
-#     state.print_state_representation()
+def adititest():
+    state.print_state_representation()
     
-#     result_state = a_star(state)
-#     print(result_state)
-#     #result_state.print_state_representation()
+    result_state = a_star(state)
+    print(result_state)
+    #result_state.print_state_representation()
 
-# adititest()
+adititest()
 
 # SUHANI TESTING STUFF ===============================================================================================
 # def suhani_test():
