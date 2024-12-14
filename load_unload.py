@@ -126,4 +126,7 @@ def unload(start_state, unload_targets, unload_position):
     print(f"--- UNLOAD PROCESS COMPLETED ---")
     print(f"Final crane position: {current_state.last_moved_location}.")
     current_state.print_state_representation()
+    current_state.fix_floating_containers()
+    print("print after fix floating stuff")
+    current_state.print_state_representation()
     return current_state, []

@@ -9,6 +9,8 @@ class Container:
         self.position = position
         self.weight = weight
         self.description = description
+        self.IsNAN = False
+        self.IsUNUSED = False
         if description == "NAN":
             self.IsNAN = True
         else:

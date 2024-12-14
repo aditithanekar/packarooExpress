@@ -126,6 +126,10 @@ def balance_menu(parsed_data):
      # Draw the initial state
     start_position = convert_to_grid_indices(*optimal_moves[0][0])
     end_position = convert_to_grid_indices(*optimal_moves[0][1])
+
+    # Next button
+    next_button = tk.Button(root, text="Next", command=lambda: next_instruction_balance_and_unload(optimal_moves, parsed_manifest), font=("Arial", 14))
+    next_button.pack(pady=10)
     # Draw the initial state
     draw_grid_balance_and_unload(parsed_data, start_position=start_position, end_position=end_position, cost=optimal_moves[0][2], moves=optimal_moves)
     update_instruction_label_balance_and_unload(optimal_moves)
@@ -376,8 +380,11 @@ def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_posit
     """
     # Clear the previous grid
     for widget in root.winfo_children():
-        if isinstance(widget, tk.Canvas):
+        if isinstance(widget, tk.Canvas) :
             widget.destroy()
+             # or isinstance(widget, tk.Label) and "Cost" in widget.cget("text")
+        # if isinstance(widget, tk.Button):
+        #     widget.destroy()
 
     canvas = tk.Canvas(root, width=600, height=400, bg="white")
     canvas.pack(pady=20)
@@ -423,9 +430,6 @@ def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_posit
     if cost:
         tk.Label(root, text=f"Cost: {cost} min", font=("Arial", 14)).pack(pady=10)
 
-    # Next button
-    next_button = tk.Button(root, text="Next", command=lambda: next_instruction_balance_and_unload(moves, parsed_manifest), font=("Arial", 14))
-    next_button.pack(pady=10)
 
 def next_instruction_balance_and_unload(moves, parsed_manifest_data):
     global current_instruction

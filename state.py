@@ -235,5 +235,28 @@ class State:
             spot.description == "NAN" or  # Spot is explicitly a NAN.
             (spot is not None and isinstance(spot, Container) and spot.description not in ["NAN", "UNUSED"])
         )
+    def fix_floating_containers(self):
+        # Iterate over each column
+        for col in range(len(self.state_representation[0])):
+            # Start from the bottom of the column
+            for row in range(len(self.state_representation) - 1, -1, -1):
+                cell = self.state_representation[row][col]
 
+                # Skip over NAN cells, they act as a boundary
+                if cell is not None and cell.IsNAN:
+                    continue
 
+                # If the cell is a container, move it as far down as possible
+                if cell is not None and not cell.IsUNUSED:
+                    target_row = row
+                    while target_row > 0:
+                        below_cell = self.state_representation[target_row - 1][col]
+
+                        # If the below cell is empty, keep moving down
+                        if below_cell is None:
+                            self.state_representation[target_row][col] = None
+                            self.state_representation[target_row - 1][col] = cell
+                            target_row -= 1
+                        # Stop moving if the below cell is NAN or another container
+                        else:
+                            break
