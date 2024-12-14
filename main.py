@@ -107,7 +107,29 @@ def display_grid(parsed_data):
 
     if chosen_option == "load_unload":
         unload_menu(parsed_data, current_containers_on_ship)
+    if chosen_option == "balance":
+        balance_menu(parsed_data)
 
+def balance_menu(parsed_data):
+    tk.Label(root, text="Balance Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    balancer = ShipBalancer(manifest_filename)
+    optimal_moves, final_state = balancer.balance_ship()
+    print(optimal_moves)
+    
+    global current_instruction, instruction_label
+    current_instruction = 0
+
+    # Create a label for instructions
+    instruction_label = tk.Label(root, text="", font=("Arial", 14))
+    instruction_label.pack(pady=10)
+    
+     # Draw the initial state
+    start_position = convert_to_grid_indices(*optimal_moves[0][0])
+    end_position = convert_to_grid_indices(*optimal_moves[0][1])
+    # Draw the initial state
+    draw_grid_balance_and_unload(parsed_data, start_position=start_position, end_position=end_position, cost=optimal_moves[0][2], moves=optimal_moves)
+    update_instruction_label_balance_and_unload(optimal_moves)
+    
 #displays spot to enter in what containers to load, and calls unload()
 def load_menu(parsed_data):
     print("current containers to unload: ")
@@ -240,7 +262,7 @@ def get_instructions(parsed_manifest_data):
     # Draw the first grid state
     draw_grid(parsed_manifest_data, load_moved_positions[current_instruction+1], load_list[current_instruction].description, load_list[current_instruction].weight)
     update_instruction_label(load_list, load_moved_positions)
-
+#for load only
 def draw_grid(parsed_manifest, highlight_position=None, new_description=None, new_weight=None):
     """
     Updates and redraws the grid using the latest `parsed_manifest`.
@@ -250,6 +272,9 @@ def draw_grid(parsed_manifest, highlight_position=None, new_description=None, ne
     for widget in root.winfo_children():
         if isinstance(widget, tk.Canvas):
             widget.destroy()
+        if isinstance(widget, tk.Button):
+            widget.destroy()
+
 
     canvas = tk.Canvas(root, width=600, height=400, bg="white")
     canvas.pack(pady=20)
@@ -289,9 +314,6 @@ def draw_grid(parsed_manifest, highlight_position=None, new_description=None, ne
             color = "yellow"  # Highlighted color
         else:
             color = color_mapping.get(description, "lightgreen" if weight > 0 else "white")
-
-        if color == "lightgreen":
-            current_containers_on_ship.append(container)  # Add to unloadable list
 
         x1 = adjusted_x * cell_width
         y1 = adjusted_y * cell_height
@@ -346,6 +368,87 @@ def go_to_file_selector():
     label_selected_file = tk.Label(root, text="No file selected", fg="gray")
     label_selected_file.pack(pady=10)
     
+    
+def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_position=None, cost=None, moves=None):
+    """
+    Updates and redraws the grid using the latest `parsed_manifest`.
+    Highlights the `start_position` in red and the `end_position` in yellow.
+    """
+    # Clear the previous grid
+    for widget in root.winfo_children():
+        if isinstance(widget, tk.Canvas):
+            widget.destroy()
+
+    canvas = tk.Canvas(root, width=600, height=400, bg="white")
+    canvas.pack(pady=20)
+
+    cell_width = 50
+    cell_height = 50
+    rows = 8
+    cols = 12
+
+    # Draw grid cells
+    for container in parsed_manifest:
+        position, weight, description = container.position, container.weight, container.description
+        x, y = position
+        x -= 1
+        y -= 1
+
+        adjusted_x = y
+        adjusted_y = rows - 1 - x
+
+        # Determine the color for the container
+        color = "white"
+        if position == start_position:
+            color = "red"
+        elif position == end_position:
+            color = "yellow"
+
+        x1 = adjusted_x * cell_width
+        y1 = adjusted_y * cell_height
+        x2 = x1 + cell_width
+        y2 = y1 + cell_height
+        canvas.create_rectangle(x1, y1, x2, y2, fill=color, outline="black", width=3 if color != "white" else 1)
+
+        # Add text to the cell
+        canvas.create_text(
+            x1 + cell_width / 2,
+            y1 + cell_height / 2,
+            text=description,
+            font=("Arial", 8),
+            fill="black"
+        )
+
+    # Display cost
+    if cost:
+        tk.Label(root, text=f"Cost: {cost} min", font=("Arial", 14)).pack(pady=10)
+
+    # Next button
+    next_button = tk.Button(root, text="Next", command=lambda: next_instruction_balance_and_unload(moves, parsed_manifest), font=("Arial", 14))
+    next_button.pack(pady=10)
+
+def next_instruction_balance_and_unload(moves, parsed_manifest_data):
+    global current_instruction
+    if current_instruction < len(moves):
+        start, end, cost = moves[current_instruction]
+        start_position = convert_to_grid_indices(*start)
+        end_position = convert_to_grid_indices(*end)
+        print(f"Move container at {start_position} to {end_position} for a cost of {cost} min")
+        current_instruction += 1
+        draw_grid_balance_and_unload(parsed_manifest_data, start_position=start_position, end_position=end_position, cost=cost)
+        update_instruction_label_balance_and_unload(moves)
+    else:
+        instruction_label.config(text="All moves completed!")
+def update_instruction_label_balance_and_unload(moves):
+    global current_instruction
+    if current_instruction < len(moves):
+        start, end, cost = moves[current_instruction]
+        start_position = convert_to_grid_indices(*start)
+        end_position = convert_to_grid_indices(*end)
+        instruction_label.config(text=f"Move container at {start_position} to {end_position} (Cost: {cost} min)")
+    else:
+        instruction_label.config(text="All moves completed!")
+
 #gets the filename for the output manifest(OUTBOUND)
 def get_output_filename(input_file_path):
 
