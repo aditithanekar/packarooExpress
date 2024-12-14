@@ -766,3 +766,25 @@ December 13th 2024: 16:32 Ship balancer initialized with manifest
 December 13th 2024: 16:34 jim signed in
 December 13th 2024: 16:35 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
 December 13th 2024: 16:35 Unloaded containers: Cat
+December 13th 2024: 20:48 kirtana signed in
+December 13th 2024: 20:49 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 20:49 Unloaded containers: Dog, Cat
+December 13th 2024: 21:00 jim signed in
+December 13th 2024: 21:00 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 21:00 Unloaded containers: Cat
+December 13th 2024: 21:09 jim signed in
+December 13th 2024: 21:09 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 21:09 Unloaded containers: Dog
+December 13th 2024: 21:10 jim signed in
+December 13th 2024: 21:11 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 21:11 Unloaded containers: Dog
+December 13th 2024: 21:11 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2OUTBOUND.txt
+December 13th 2024: 21:12 kirtana signed in
+December 13th 2024: 21:12 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 21:12 Unloaded containers: Rat
+December 13th 2024: 21:13 kir signed in
+December 13th 2024: 21:14 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 21:14 Unloaded containers: Cow
+December 13th 2024: 21:14 cow signed in
+December 13th 2024: 21:14 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 13th 2024: 21:15 Unloaded containers: Cow
