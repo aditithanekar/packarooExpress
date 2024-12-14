@@ -628,3 +628,141 @@ December 13th 2024: 00:09 jim signed in
 December 13th 2024: 00:09 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2.txt is opened
 December 13th 2024: 00:10 Loaded container: Bananas with weight 234
 December 13th 2024: 00:10 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/ShipCase2OUTBOUND.txt
+December 13th 2024: 01:56 Bob signed in
+December 13th 2024: 01:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 01:56 Unloaded containers: Dog, Cat
+December 13th 2024: 02:14 Jim signed in
+December 13th 2024: 02:14 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 02:14 Unloaded containers: Cow, Rat, Cat
+December 13th 2024: 02:14 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 02:14 Ship balancer initialized with manifest
+December 13th 2024: 02:15 jim signed in
+December 13th 2024: 02:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 13th 2024: 02:15 Unloaded containers: Pig
+December 13th 2024: 02:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 13th 2024: 02:15 Ship balancer initialized with manifest
+December 13th 2024: 12:05 jim signed in
+December 13th 2024: 12:05 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 12:05 Unloaded containers: Cat
+December 13th 2024: 13:00 jim signed in
+December 13th 2024: 13:00 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 13:00 Unloaded containers: Cat
+December 13th 2024: 13:04 jim signed in
+December 13th 2024: 13:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 13:04 Unloaded containers: Cat
+December 13th 2024: 14:21 Jim signed in
+December 13th 2024: 14:21 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 14:21 Unloaded containers: Cat
+December 13th 2024: 14:24 Bob signed in
+December 13th 2024: 14:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 14:25 Unloaded containers: Cat
+December 13th 2024: 14:30 Jim signed in
+December 13th 2024: 14:30 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:31 Unloaded containers: Cat
+December 13th 2024: 14:51 Jim signed in
+December 13th 2024: 14:51 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:52 Unloaded containers: Cat
+December 13th 2024: 14:52 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:52 Ship balancer initialized with manifest
+December 13th 2024: 14:53 Jim signed in
+December 13th 2024: 14:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:53 Unloaded containers: Cat
+December 13th 2024: 14:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:53 Ship balancer initialized with manifest
+December 13th 2024: 14:54 jim signed in
+December 13th 2024: 14:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:54 Unloaded containers: Cat, Doe
+December 13th 2024: 14:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:54 Ship balancer initialized with manifest
+December 13th 2024: 14:55 Bunny signed in
+December 13th 2024: 14:55 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:55 Unloaded containers: Ewe
+December 13th 2024: 14:55 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 14:55 Ship balancer initialized with manifest
+December 13th 2024: 14:56 jim signed in
+December 13th 2024: 14:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 14:56 Unloaded containers: Dog
+December 13th 2024: 14:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 14:56 Ship balancer initialized with manifest
+December 13th 2024: 15:03 jim signed in
+December 13th 2024: 15:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:03 Unloaded containers: Doe
+December 13th 2024: 15:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:03 Ship balancer initialized with manifest
+December 13th 2024: 15:04 Error during ship balancing: [Errno 2] No such file or directory: 'SilverQueen.txt'
+December 13th 2024: 15:04 Jimmy signed in
+December 13th 2024: 15:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:05 Unloaded containers: Ewe
+December 13th 2024: 15:05 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:05 Ship balancer initialized with manifest
+December 13th 2024: 15:16 Jim signed in
+December 13th 2024: 15:16 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 15:17 Unloaded containers: Owl, Cat
+December 13th 2024: 15:17 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 15:17 Ship balancer initialized with manifest
+December 13th 2024: 15:38 jim signed in
+December 13th 2024: 15:38 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 15:38 Unloaded containers: Ram, Dog, Cat
+December 13th 2024: 15:38 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 15:38 Ship balancer initialized with manifest
+December 13th 2024: 15:39 jim signed in
+December 13th 2024: 15:39 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:39 Unloaded containers: Cow
+December 13th 2024: 15:39 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:39 Ship balancer initialized with manifest
+December 13th 2024: 15:56 jim signed in
+December 13th 2024: 15:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:57 Unloaded containers: Cow
+December 13th 2024: 15:57 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 15:57 Ship balancer initialized with manifest
+December 13th 2024: 16:12 jim signed in
+December 13th 2024: 16:12 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:13 Unloaded containers: Dog, Cat, Doe
+December 13th 2024: 16:13 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:13 Ship balancer initialized with manifest
+December 13th 2024: 16:15 Error during ship balancing: [Errno 2] No such file or directory: 'SilverQueen.txt'
+December 13th 2024: 16:15 jim signed in
+December 13th 2024: 16:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 16:15 Unloaded containers: Cat
+December 13th 2024: 16:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 13th 2024: 16:15 Ship balancer initialized with manifest
+December 13th 2024: 16:15 jim signed in
+December 13th 2024: 16:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:16 Unloaded containers: Ewe
+December 13th 2024: 16:16 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:16 Ship balancer initialized with manifest
+December 13th 2024: 16:22 jim signed in
+December 13th 2024: 16:22 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:23 Unloaded containers: Cat
+December 13th 2024: 16:23 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:23 Ship balancer initialized with manifest
+December 13th 2024: 16:24 jim signed in
+December 13th 2024: 16:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:24 Ship balancer initialized with manifest
+December 13th 2024: 16:24 Loaded container: bananas with weight 123
+December 13th 2024: 16:24 Loaded container: Potatoes with weight 2543
+December 13th 2024: 16:24 Loaded container: hen with weight 425
+December 13th 2024: 16:24 Loaded container: eggs with weight 354
+December 13th 2024: 16:24 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3OUTBOUND.txt
+December 13th 2024: 16:26 Error during ship balancing: [Errno 2] No such file or directory: 'SilverQueen.txt'
+December 13th 2024: 16:26 jim signed in
+December 13th 2024: 16:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:26 Unloaded containers: Cat
+December 13th 2024: 16:27 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:27 Ship balancer initialized with manifest
+December 13th 2024: 16:29 Error during ship balancing: [Errno 2] No such file or directory: 'SilverQueen.txt'
+December 13th 2024: 16:29 jim signed in
+December 13th 2024: 16:30 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:30 Unloaded containers: Cat
+December 13th 2024: 16:30 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:30 Ship balancer initialized with manifest
+December 13th 2024: 16:31 Error during ship balancing: [Errno 2] No such file or directory: 'SilverQueen.txt'
+December 13th 2024: 16:32 jim signed in
+December 13th 2024: 16:32 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:32 Unloaded containers: Dog, Cat, Doe
+December 13th 2024: 16:32 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:32 Ship balancer initialized with manifest
+December 13th 2024: 16:34 jim signed in
+December 13th 2024: 16:35 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 13th 2024: 16:35 Unloaded containers: Cat

@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import filedialog
 import load_unload
 import os
+from balance2 import ShipBalancer
     
 # Global variable to track the chosen option load unload or balance
 chosen_option = None
@@ -16,11 +17,11 @@ parsed_manifest = [] # this doesn't really work as a global properly but it's pa
 # global manifest_filename = ""
 output_manifest_filename= ""
 
-MANIFEST = parseManifest("ShipCase1.txt")
+#MANIFEST = parseManifest("ShipCase1.txt")
 
 def main():
-    state = State()
-    updated_state = state.init_start_state(MANIFEST)
+    # state = State()
+    # updated_state = state.init_start_state(MANIFEST)
     
     # Main screen
     root = tk.Tk()
@@ -114,7 +115,12 @@ def load_menu(parsed_data):
     #call unload here:
     start_state = State()
     start_state.init_start_state(parsed_data)
-    #unload(start_state, containers_to_unload)
+    start_state.print_state_representation()
+    # balancer = ShipBalancer(manifest_filename)
+    # final_state, unload_moves = balancer.unload(start_state, containers_to_unload)
+    final_state, unload_moves = load_unload.unload(start_state, containers_to_unload, (7,0))
+    final_state.print_state_representation()
+    print("unload moves, ", unload_moves)
     tk.Label(root, text="Load Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
     tk.Label(root, text="Enter Container Name:", font=("Arial", 12)).pack(pady=5)
     name_input = tk.Entry(root, width=30)

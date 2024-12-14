@@ -1,4 +1,5 @@
 from utils import parseManifest
+from container import Container
 
 class State:
     def __init__(self, 
@@ -73,4 +74,106 @@ class State:
             return None
     
         return [row.copy() for row in self.state_representation]
+     
+    def find_container(self, container_description: str):
+        for row_index, row in enumerate(self.state_representation):
+            for col_index, container in enumerate(row):
+                if isinstance(container, Container) and container.get_description() == container_description:
+                    return (row_index, col_index)
+        return None
+    
+    def state_to_tuple(self):
+        return tuple(
+            tuple(
+                (cell.weight if cell and not cell.IsUNUSED and not cell.IsNAN else 0)
+                for cell in row
+            )
+            for row in self.state_representation
+        )
+        
+    def is_unload_goal_test(self, unload_targets):
+        for target in unload_targets:
+            if self.find_container(target):
+                return False
+        return True
+    
+    def put_down_load(self, col, unload_targets):
+        for row in range(7, -1, -1):
+            if self.state_representation[row][col] is None:
+                if unload_targets:
+                    container_to_place = unload_targets.pop(0)
+                    new_representation = self.get_state_representation()
+                    new_representation[row][col] = container_to_place
+
+                    return State(
+                        state_representation=new_representation,
+                        depth=self.depth + 1,
+                        last_moved_container=container_to_place,
+                        time=self.time + 1,
+                        parent_state=self,
+                        last_moved_location=(row, col),
+                        target_location=None
+                    )
+        return None
+    
+    def pick_up(self, col, crane_position, target_container_description=None):
+        target_row = None
+        blocking_containers = []
+
+        for row in range(8):
+            container = self.state_representation[row][col]
+            if container is not None and isinstance(container, Container) and not container.IsNAN:
+                if container.get_description() == target_container_description:
+                    target_row = row
+                    break
+                else:
+                    blocking_containers.append((row, container))
+
+        if target_row is None:
+            return None
+
+        new_representation = self.get_state_representation()
+        current_time = self.time
+        crane_position = self.last_moved_location or (7, 0)  # Use last moved location as crane's current position
+
+        for row, container in blocking_containers:
+            empty_pos = self.find_empty_position(new_representation, exclude_col=col)
+            if empty_pos is None or (isinstance(new_representation[empty_pos[0]][empty_pos[1]], Container) and
+                                    new_representation[empty_pos[0]][empty_pos[1]].IsNAN):
+                continue
+
+            crane_move_cost = abs(crane_position[1] - col) + abs(crane_position[0] - row)
+            current_time += crane_move_cost
+
+            new_representation[row][col] = None
+            new_representation[empty_pos[0]][empty_pos[1]] = container
+            current_time += 1
+            crane_position = empty_pos
+
+        crane_move_cost = abs(crane_position[1] - col) + abs(crane_position[0] - target_row)
+        current_time += crane_move_cost
+
+        new_representation[target_row][col] = None
+        crane_position = (target_row, col)
+
+        return State(
+            state_representation=new_representation,
+            depth=self.depth + 1,
+            last_moved_container=self.state_representation[target_row][col],
+            time=current_time,
+            parent_state=self,
+            last_moved_location=crane_position,
+            target_location=None
+        )
+    
+    def find_empty_position(self, grid, exclude_col=None):
+        for col in range(12):
+            if col == exclude_col:
+                continue
+            for row in range(7, -1, -1):
+                if grid[row][col] is None:
+                    return (row, col)
+        return None
+
+
 
