@@ -1183,3 +1183,39 @@ December 14th 2024: 02:36 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
 December 14th 2024: 02:39 hi signed in
 December 14th 2024: 02:39 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
 December 14th 2024: 02:39 Unloaded containers: Ewe
+December 14th 2024: 12:43 a signed in
+December 14th 2024: 12:43 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 14th 2024: 12:43 Unloaded containers: Owl
+December 14th 2024: 12:47 a signed in
+December 14th 2024: 12:47 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 12:47 Unloaded containers: Owl
+December 14th 2024: 12:53 j signed in
+December 14th 2024: 12:53 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 12:53 Unloaded containers: Owl
+December 14th 2024: 12:57 k signed in
+December 14th 2024: 12:57 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 12:58 Unloaded containers: Owl
+December 14th 2024: 13:05 j signed in
+December 14th 2024: 13:05 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 13:07 a signed in
+December 14th 2024: 13:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 13:07 Unloaded containers: Owl
+December 14th 2024: 13:20 a signed in
+December 14th 2024: 13:20 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 13:20 Unloaded containers: Owl
+December 14th 2024: 13:24 a signed in
+December 14th 2024: 13:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5.txt is opened
+December 14th 2024: 13:24 Unloaded containers: Cat, Dog, Pig, Hen, Rat
+December 14th 2024: 13:25 Loaded container: potato with weight 143
+December 14th 2024: 13:25 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5OUTBOUND.txt
+December 14th 2024: 13:26 a signed in
+December 14th 2024: 13:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 14th 2024: 13:26 Unloaded containers: Cow
+December 14th 2024: 13:33 a signed in
+December 14th 2024: 13:33 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 14th 2024: 13:33 Unloaded containers: Ewe
+December 14th 2024: 13:36 a signed in
+December 14th 2024: 13:36 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 14th 2024: 13:37 a signed in
+December 14th 2024: 13:37 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 14th 2024: 13:37 Unloaded containers: Doe

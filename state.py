@@ -190,13 +190,17 @@ class State:
                 raise ValueError(f"No empty positions available to unblock column {col}.")
 
             print(f"    Found empty position at {empty_pos}.")
-            self.state_representation[row][col] = None
+            #set the blocking location to be UNUSED again
+            self.state_representation[row][col] = Container((row+1, col+1), 0, "UNUSED")
             self.state_representation[empty_pos[0]][empty_pos[1]] = container
-
+                        
         # Attempt to pick up the target container.
         print(f"Picking up target container '{target_container_description}' from Row {target_row}, Column {col}...")
         self.state_representation[target_row][col] = None  # Remove the container from the grid.
         print(f"SUCCESS: Picked up container '{target_container_description}'.")
+        
+        #resets the unloaded container location as UNUSED location
+        self.state_representation[target_row][col] = Container((target_row+1, col+1), 0, "UNUSED")
 
         return State(
             state_representation=self.state_representation,
@@ -236,27 +240,45 @@ class State:
             (spot is not None and isinstance(spot, Container) and spot.description not in ["NAN", "UNUSED"])
         )
     def fix_floating_containers(self):
-        # Iterate over each column
-        for col in range(len(self.state_representation[0])):
-            # Start from the bottom of the column
-            for row in range(len(self.state_representation) - 1, -1, -1):
-                cell = self.state_representation[row][col]
+        #ship dimensions never change
+        rows = 8
+        cols = 12
 
-                # Skip over NAN cells, they act as a boundary
-                if cell is not None and cell.IsNAN:
+        for col in range(cols):
+            for row in range(rows - 1, -1, -1):  # start from the top of the ship and move downward
+                container = self.state_representation[row][col]
+                
+                # don't check UNUSED or NAN containers
+                if container is None or (isinstance(container, Container) and (container.IsNAN or container.IsUNUSED)):
                     continue
 
-                # If the cell is a container, move it as far down as possible
-                if cell is not None and not cell.IsUNUSED:
-                    target_row = row
-                    while target_row > 0:
-                        below_cell = self.state_representation[target_row - 1][col]
+                current_row = row
+                # move the container down until it sits on a valid base
+                while current_row - 1 >= 0:  # Adjusted for the bottommost row being row 0
+                    below_container = self.state_representation[current_row - 1][col]
 
-                        # If the below cell is empty, keep moving down
-                        if below_cell is None:
-                            self.state_representation[target_row][col] = None
-                            self.state_representation[target_row - 1][col] = cell
-                            target_row -= 1
-                        # Stop moving if the below cell is NAN or another container
-                        else:
-                            break
+                    # stop moving container down if it's the bottom
+                    if current_row - 1 == 0:
+                        break  # Row 0 is always valid to rest on
+                    
+                    # if the spot below is empty or UNUSED, continue checking below
+                    if below_container is None or (isinstance(below_container, Container) and below_container.IsUNUSED):
+                        # move container down by 1 row
+                        self.state_representation[current_row - 1][col] = container
+                        #reset the location that is moved from to be UNUSED
+                        self.state_representation[current_row][col] = Container((current_row+1, col+1), 0, "UNUSED")
+                        current_row -= 1
+                    else:
+                        # stop moving container down if its the bottom (sit on top of NAN)
+                        break
+
+                if current_row == 0:
+                    continue  # check if container is at bottom row
+
+                # make sure it sits on a NAN, bottom or not UNUSED container 
+                below_container = self.state_representation[current_row - 1][col]
+                if below_container is None or (isinstance(below_container, Container) and below_container.IsUNUSED):
+                    # invalid base below to sit on, move it back to the original position
+                    self.state_representation[current_row][col] = container
+                    self.state_representation[row][col] = Container((current_row+1, col+1), 0, "UNUSED")
+
