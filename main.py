@@ -174,7 +174,7 @@ def load_menu(parsed_data):
     tk.Button(root, text="Next", font=("Arial", 14), command=go_to_get_instructions).pack(pady=10)
 
 def unload_menu(parsed_data, unloadable_containers):
-    tk.Label(root, text="Unload Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    # tk.Label(root, text="Unload Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
     tk.Label(root, text="Select containers to unload:", font=("Arial", 12)).pack(pady=5)
 
     # Listbox to select containers
@@ -503,4 +503,3 @@ def getMoves():
 
     if __name__=="__main__":
         main()
-
