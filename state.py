@@ -163,15 +163,18 @@ class State:
                     print(f"    TARGET CONTAINER FOUND: '{target_container_description}' at Row {row}.")
                     target_row = row  # Store the row of the target container.
                     break  # Stop scanning once the target is found.
-                else:
-                    print(f"    Blocking container found: {container.get_description()} (Weight: {container.get_weight()}).")
-                    blocking_containers.append((row, container))  # Add blocking container to the list.
 
         # Check if the target container was found.
         if target_row is None:
             print(f"ERROR: Target container '{target_container_description}' not found in column {col}.")
             raise ValueError(f"Target container '{target_container_description}' not found in column {col}.")
-
+        else:
+            #find containers that are blocking above the target row
+            for row in range(target_row + 1, 8):
+                container = self.state_representation[row][col]
+                if container is not None and isinstance(container, Container):
+                    print(f"    Blocking container found: {container.get_description()} (Weight: {container.get_weight()}).")
+                    blocking_containers.append((row, container))  # Add blocking container to the list.
         # Check if the crane is aligned with the target column.
         if col != crane_position[1]:
             print(f"ERROR: Crane is not aligned with column {col}. Current crane column: {crane_position[1]}.")
@@ -181,7 +184,7 @@ class State:
         print(f"Blocking containers to move: {len(blocking_containers)}.")
         for row, container in blocking_containers:
             print(f"  Moving blocking container '{container.get_description()}' from Row={row}, Col={col}.")
-            empty_pos = self.find_empty_position(self.state_representation, exclude_col=col)
+            empty_pos = self.find_empty_position(row, col, exclude_col=col)
             if empty_pos is None:
                 print(f"ERROR: No empty positions available to unblock column {col}.")
                 raise ValueError(f"No empty positions available to unblock column {col}.")
@@ -205,13 +208,32 @@ class State:
             target_location=None,
         )
 
-    def find_empty_position(self, grid, exclude_col=None):
+    def find_empty_position(self, target_row, target_col, exclude_col=None):
+        grid = self.state_representation
+        closest_position = None
+        closest_distance = float('inf')  # Start with a very large distance.
+
         for col in range(12):
             if col == exclude_col:
                 continue
-            for row in range(7, -1, -1):
+            for row in range(7, -1, -1):  # Start from the topmost row and move downward.
+                # Check if the spot is empty or UNUSED.
                 if grid[row][col] is None or (isinstance(grid[row][col], Container) and grid[row][col].IsUNUSED):
-                    return (row, col)
-        return None
+                    # check the spot has a valid base (a NAN or a valid container directly below it) - no floating!
+                    if row == 7 or self.is_valid_base(grid[row + 1][col]):
+                        # Calculate Manhattan distance to the target container.
+                        distance = abs(target_row - row) + abs(target_col - col)
+                        # Update the closest position if this one is better.
+                        if distance < closest_distance:
+                            closest_position = (row, col)
+                            closest_distance = distance
+
+        return closest_position
+
+    def is_valid_base(self, spot):
+        return (
+            spot.description == "NAN" or  # Spot is explicitly a NAN.
+            (spot is not None and isinstance(spot, Container) and spot.description not in ["NAN", "UNUSED"])
+        )
 
 
