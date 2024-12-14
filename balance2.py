@@ -211,6 +211,85 @@ class ShipBalancer:
         else:
             print("No solution found!")
             return None, None
+    #helper used with unload to get the path    
+    def find_path_to_target(self, start_row, start_col, target_row, target_col, state_repr):
+        # A basic pathfinding function that could be used to find the shortest path to (0, 0)
+        # For simplicity, assume this function uses Manhattan distance and generates a valid path.
+        path = []
+        
+        # While we're not at the target position, move towards it
+        current_row, current_col = start_row, start_col
+        while (current_row, current_col) != (target_row, target_col):
+            if current_row > target_row:
+                # Move up
+                if self.is_valid_position(state_repr, current_row - 1, current_col):
+                    path.append(((current_row, current_col), (current_row - 1, current_col), 1))  # cost = 1 for simplicity
+                    current_row -= 1
+            elif current_row < target_row:
+                # Move down
+                if self.is_valid_position(state_repr, current_row + 1, current_col):
+                    path.append(((current_row, current_col), (current_row + 1, current_col), 1))
+                    current_row += 1
+            elif current_col > target_col:
+                # Move left
+                if self.is_valid_position(state_repr, current_row, current_col - 1):
+                    path.append(((current_row, current_col), (current_row, current_col - 1), 1))
+                    current_col -= 1
+            elif current_col < target_col:
+                # Move right
+                if self.is_valid_position(state_repr, current_row, current_col + 1):
+                    path.append(((current_row, current_col), (current_row, current_col + 1), 1))
+                    current_col += 1
+        
+        return path
+
+
+    def unload(self, state, containers_to_unload):
+        # Start from the grid and attempt to unload containers one by one.
+        # state = self.initial_state
+        moves = []  # Store the sequence of moves
+        state_repr = state.get_state_representation()
+
+        # Assuming we want to unload containers to the top-left corner (0, 0)
+        target_row, target_col = 7, 0  # Top-left corner as target
+
+        # Iterate over the containers to unload (given as an argument)
+        for container in containers_to_unload:
+            # Find the position of the container in the state grid
+            container_position = None
+            for row in range(self.ROWS):
+                for col in range(self.COLS):
+                    if state_repr[row][col] == container:
+                        container_position = (row, col)
+                        break
+                if container_position:
+                    break
+            
+            if container_position:
+                start_row, start_col = container_position
+
+                # Find the path to the target position (0, 0)
+                path_to_target = self.find_path_to_target(start_row, start_col, target_row, target_col, state_repr)
+
+                # If there's a valid path to the target
+                if path_to_target:
+                    # Add the moves from the path to the moves list
+                    moves.extend(path_to_target)
+
+                    # Apply the moves to the state one by one
+                    for move in path_to_target:
+                        state, cost = self.apply_move(state, move)
+                        state_repr = state.get_state_representation()
+                    
+                    # Once the container is at (7, 0)(the corner), replace it with an UNUSED container so it can get out of the grid
+                    state_repr[target_row][target_col] = Container((7,0), None, "UNUSED")
+                    state.state_representation = state_repr
+
+
+        # Return the final state after all unloading is complete, along with the path taken
+        return state, moves
+
+
 
 def main():
     manifest_path = "SilverQueen.txt"
