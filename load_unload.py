@@ -68,7 +68,7 @@ def can_pick_up(self, col):
     return False
 
 
-def calculate_heuristic(state: State, unload_target: str, unload_position: tuple):
+def calculate_heuristic(state: State, unload_target, unload_position: tuple):
     container_pos = state.find_container(unload_target)
 
     if container_pos:
@@ -76,58 +76,54 @@ def calculate_heuristic(state: State, unload_target: str, unload_position: tuple
     return float('inf')
 
 def unload(start_state, unload_targets, unload_position):
-    state_queue = []
-    visited_costs = {}
-    path = []
-    start_state.last_moved_location = unload_position
-
-    # Initialize current state
     current_state = start_state
+    print("--- UNLOAD PROCESS STARTED ---")
+    print("Initial crane position: {current_state.last_moved_location}.")
+    print("Initial state representation:")
+    current_state.print_state_representation()
 
     for unload_target in unload_targets:
-        # Reset the priority queue and visited costs for each unload target
-        state_queue = []
-        visited_costs = {}
+        print(f"\n--- Processing target container: '{unload_target}' ---")
+        
+        # Locate the target container
+        print(f"Finding container '{unload_target}' in the grid...")
+        container_pos = current_state.find_container(unload_target)
+        if not container_pos:
+            print(f"ERROR: Container '{unload_target}' not found in the grid.")
+            raise ValueError(f"Container '{unload_target}' not found in the grid.")
 
-        # Calculate heuristic for the starting state
-        heuristic = calculate_heuristic(current_state, unload_target, unload_position)
-        heapq.heappush(state_queue, (current_state.time + heuristic, current_state))
-        visited_costs[current_state.state_to_tuple()] = current_state.time
+        target_row, target_col = container_pos
+        print(f"SUCCESS: Container '{unload_target}' found at Row={target_row}, Col={target_col}.")
 
-        while state_queue:
-            _, current_state = heapq.heappop(state_queue)
-
-            # Check if the goal is reached for the current target
-            if current_state.is_unload_goal_test([unload_target]):
-                break
-
-            # Generate possible next states by picking up containers
-            next_states = []
-            for col in range(12):
-                next_state = current_state.pick_up(col, current_state.last_moved_location, target_container_description=unload_target)
-                if next_state:
-                    next_states.append(next_state)
-
-            # Process each generated state
-            for next_state in next_states:
-                if next_state is None:
-                    continue
-
-                next_time = next_state.time
-                heuristic = calculate_heuristic(next_state, unload_target, unload_position)
-                total_cost = next_time + heuristic
-
-                state_tuple = next_state.state_to_tuple()
-                if state_tuple not in visited_costs or next_time < visited_costs[state_tuple]:
-                    heapq.heappush(state_queue, (total_cost, next_state))
-                    visited_costs[state_tuple] = next_time
-
-        # Perform the put-down operation for the current target
-        next_state = current_state.put_down_load(unload_position[1], [Container(None, None, unload_target)])
-        if next_state:
-            path.append((current_state.last_moved_location, unload_position))
-            current_state = next_state
+        # Move crane to the correct column
+        print(f"Crane current position: {current_state.last_moved_location}. Moving to Column {target_col} if needed.")
+        if current_state.last_moved_location[1] != target_col:
+            crane_move_cost = abs(current_state.last_moved_location[1] - target_col)
+            current_state.time += crane_move_cost
+            current_state.last_moved_location = (current_state.last_moved_location[0], target_col)
+            print(f"Crane moved to Column {target_col}. Time cost: {crane_move_cost}.")
         else:
-            raise ValueError(f"Unable to unload container {unload_target}.")
+            print(f"Crane is already at Column {target_col}.")
 
-    return current_state, path
+        # Debug before calling pick_up
+        print(f"DEBUG BEFORE PICK_UP: target_col={target_col} (expected for '{unload_target}').")
+        print(f"DEBUG BEFORE PICK_UP: current crane position = {current_state.last_moved_location}.")
+        print(f"DEBUG BEFORE PICK_UP: target description = {unload_target}.")
+
+        # Call pick_up to pick up the container
+        try:
+            print(f"Attempting to pick up container '{unload_target}'...")
+            next_state = current_state.pick_up(
+                target_col,  
+                current_state.last_moved_location,unload_target
+            )
+            print(f"SUCCESS: Picked up container '{unload_target}'.")
+            current_state = next_state
+        except ValueError as e:
+            print(f"ERROR during pick_up: {e}")
+            raise e
+
+    print(f"--- UNLOAD PROCESS COMPLETED ---")
+    print(f"Final crane position: {current_state.last_moved_location}.")
+    current_state.print_state_representation()
+    return current_state, []
