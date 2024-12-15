@@ -144,6 +144,7 @@ def balance_menu(parsed_data):
     balancer = ShipBalancer(manifest_filename)
     optimal_moves, final_state = balancer.balance_ship()
     print(optimal_moves)
+    total_time = 0
     
     global current_instruction, instruction_label
     current_instruction = 0
@@ -157,11 +158,11 @@ def balance_menu(parsed_data):
     end_position = convert_to_grid_indices(*optimal_moves[0][1])
 
     # Next button
-    next_button = tk.Button(root, text="Next", command=lambda: next_instruction_balance_and_unload(optimal_moves, parsed_data), font=("Arial", 14))
+    next_button = tk.Button(root, text="Next", command=lambda: next_instruction_balance_and_unload(optimal_moves, parsed_data, total_time), font=("Arial", 14))
     next_button.pack(pady=10)
     # Draw the initial state
     draw_grid_balance_and_unload(parsed_data, start_position=start_position, end_position=end_position, cost=optimal_moves[0][2], moves=optimal_moves)
-    update_instruction_label_balance_and_unload(optimal_moves)
+    update_instruction_label_balance_and_unload(optimal_moves, total_time)
     
     add_comment_section()
     
@@ -235,21 +236,21 @@ def convert_to_grid_indices(row, col):
     return row + 1, col + 1
 
 #gets the next load instruction in animation
-def next_instruction(load_list, load_moved_positions, parsed_manifest_data):
+def next_instruction(load_list, load_moved_positions, parsed_manifest_data, total_time_load):
     global current_instruction
     if current_instruction < len(load_list):
-        print(f"Move container {load_list[current_instruction].description} to position {load_moved_positions[current_instruction + 1]}")
+        print(f"Move container {load_list[current_instruction].description} to position {load_moved_positions[current_instruction + 1]}, total time for all load operations: {total_time_load} minutes.")
         current_instruction += 1
         draw_grid(parsed_manifest_data, load_moved_positions[current_instruction + 1], load_list[current_instruction].description, load_list[current_instruction].weight)
-        update_instruction_label(load_list, load_moved_positions)
+        update_instruction_label(load_list, load_moved_positions, total_time_load)
     else:
         done_with_operations()
 
 #updates the instruction for what container to move for load 
-def update_instruction_label(load_list, load_moved_positions):
+def update_instruction_label(load_list, load_moved_positions, total_time_load):
     global current_instruction
     if current_instruction < len(load_list):
-        instruction_label.config(text=f"Move container {load_list[current_instruction].description} to position {load_moved_positions[current_instruction+1]}")
+        instruction_label.config(text=f"Move container {load_list[current_instruction].description} to position {load_moved_positions[current_instruction+1]}, total time for all load operations: {total_time_load} minutes.")
     else:
         instruction_label.config(text="All containers moved!")
         done_with_operations()
@@ -370,8 +371,9 @@ def get_instructions_unload(parsed_manifest_data):
     
     # Perform unload operations
     final_unload_state, unload_moves, blocking_containers = load_unload.unload(start_state, containers_to_unload, (8,0))
-    trace, time = load_unload.unload_time_trace(final_unload_state, unload_moves, blocking_containers)
+    trace, time_for_unload = load_unload.unload_time_trace(final_unload_state, unload_moves, blocking_containers)
     
+    trace = [[(0, 3), (8, 0)], [(1, 1), (1, 0)], [(0, 1), (8, 0)]]
     utils.updateMaifest(final_unload_state, output_manifest_filename)
     
     # Initialize visualization
@@ -401,12 +403,12 @@ def get_instructions_unload(parsed_manifest_data):
         next_button = tk.Button(
             root, 
             text="Next", 
-            command=lambda: next_instruction_balance_and_unload(trace, parsed_manifest_data),
+            command=lambda: next_instruction_balance_and_unload(trace, parsed_manifest_data, time_for_unload),
             font=("Arial", 14)
         )
         next_button.pack(pady=10)
         
-        update_instruction_label_balance_and_unload(trace)
+        update_instruction_label_balance_and_unload(trace, time_for_unload)
     else:
         # If no unload moves, proceed to loading with original manifest
         get_instructions_load(parsed_manifest_data)
@@ -430,6 +432,7 @@ def get_instructions_load(parsed_manifest_data):
     # Perform load operations
     load_list = containers_to_load.copy()
     final_state, load_moved_positions = load_unload.load(start_state, containers_to_load)
+    total_time_load = final_state.time
     
     # Update final manifest
     utils.updateMaifest(final_state, output_manifest_filename)
@@ -446,12 +449,12 @@ def get_instructions_load(parsed_manifest_data):
     instruction_label.pack(pady=10)
 
     # Next button to move through instructions
-    next_button = tk.Button(root, text="Next", command=lambda: next_instruction(load_list, load_moved_positions, parsed_manifest_data), font=("Arial", 14))
+    next_button = tk.Button(root, text="Next", command=lambda: next_instruction(load_list, load_moved_positions, parsed_manifest_data, total_time_load), font=("Arial", 14))
     next_button.pack(pady=10)
 
     # Draw the first grid state
     draw_grid(parsed_manifest_data, load_moved_positions[current_instruction+1], load_list[current_instruction].description, load_list[current_instruction].weight)
-    update_instruction_label(load_list, load_moved_positions)
+    update_instruction_label(load_list, load_moved_positions, total_time_load)
 
 #same as draw_grid, but highlights 2 locations... start and end positions
 def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_position=None, cost=None, moves=None):
@@ -524,7 +527,7 @@ def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_posit
         )
         
 #goes to the next instruction for balance and unload
-def next_instruction_balance_and_unload(moves, parsed_manifest_data):
+def next_instruction_balance_and_unload(moves, parsed_manifest_data, total_time):
     global current_instruction, final_manifest_after_unload
 
     if current_instruction < len(moves):
@@ -540,16 +543,26 @@ def next_instruction_balance_and_unload(moves, parsed_manifest_data):
 
         # Update container positions in the manifest data
         start_container = None
+        end_container = None
+        # Update the parsed_manifest data with the new positions
         for container in parsed_manifest_data:
+            #find start and end containers so that you can set the properties right
             if container.position == start_position:
                 start_container = container
-                container.description = "UNUSED"
+            if container.position == end_position:
+                end_container = container
+                
+        #make end container have start container and make start container unused
+        start_weight = start_container.weight
+        start_descrip = start_container.description
+        for container in parsed_manifest_data:
+            #find start and end containers so that you can set the properties right
+            if container.position == start_position:
                 container.weight = 0
-            elif container.position == end_position:
-                if start_container:
-                    container.description = start_container.description
-                    container.weight = start_container.weight
-
+                container.description= "UNUSED"
+            if container.position == end_position:
+                container.weight = start_weight
+                container.description = start_descrip
         current_instruction += 1
         
         if current_instruction < len(moves):
@@ -570,7 +583,7 @@ def next_instruction_balance_and_unload(moves, parsed_manifest_data):
                 cost=cost1,
                 moves=moves
             )
-            update_instruction_label_balance_and_unload(moves)
+            update_instruction_label_balance_and_unload(moves, total_time)
         else:
             # If this was the last unload move
             if len(containers_to_load) > 0:
@@ -587,7 +600,7 @@ def next_instruction_balance_and_unload(moves, parsed_manifest_data):
             done_with_operations()
 
 #gets the move instruction for balance and unload
-def update_instruction_label_balance_and_unload(moves):
+def update_instruction_label_balance_and_unload(moves, total_time):
     global current_instruction
     if current_instruction < len(moves):
         # start,end,cost = None
@@ -600,7 +613,11 @@ def update_instruction_label_balance_and_unload(moves):
         # start, end, cost = moves[current_instruction]
         start_position = convert_to_grid_indices(*start)
         end_position = convert_to_grid_indices(*end)
-        instruction_label.config(text=f"Move container at {start_position} to {end_position} (Cost: {cost} min)")
+        if chosen_option =="balance":
+            instruction_label.config(text=f"Move container at {start_position} to {end_position} (Total Time for Balance Operations: {total_time} min)")
+        else:
+            instruction_label.config(text=f"Move container at {start_position} to {end_position} (Total Time for Unload Operations: {total_time} min)")
+
     else:
         instruction_label.config(text="All moves completed!")
 
