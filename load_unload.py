@@ -78,62 +78,45 @@ def calculate_heuristic(state: State, unload_target, unload_position: tuple):
 
 def unload(start_state, unload_targets, unload_position):
     trace = []
+    blocking_containers = [] 
+    
+    
+    if not unload_targets:
+        return start_state, trace, blocking_containers
     
     current_state = start_state
-    # print("--- UNLOAD PROCESS STARTED ---")
-    # print("Initial crane position: {current_state.last_moved_location}.")
-    # print("Initial state representation:")
-    # current_state.print_state_representation()
 
     for unload_target in unload_targets:
-        # print(f"\n--- Processing target container: '{unload_target}' ---")
-        
-        # Locate the target container
-        # print(f"Finding container '{unload_target}' in the grid...")
         container_pos = current_state.find_container(unload_target)
         trace.append(container_pos)
         if not container_pos:
-            # print(f"ERROR: Container '{unload_target}' not found in the grid.")
             raise ValueError(f"Container '{unload_target}' not found in the grid.")
 
         target_row, target_col = container_pos
-        # print(f"SUCCESS: Container '{unload_target}' found at Row={target_row}, Col={target_col}.")
 
-        # Move crane to the correct column
-        # print(f"Crane current position: {current_state.last_moved_location}. Moving to Column {target_col} if needed.")
         if current_state.last_moved_location[1] != target_col:
             crane_move_cost = 2*(target_col) + 2*(8-target_row) + 4
             current_state.time += crane_move_cost
             current_state.last_moved_location = (0,8)
-            # print(f"Crane moved to Column {target_col}. Time cost: {crane_move_cost}.")
-        # else:
-            # print(f"Crane is already at Column {target_col}.")
 
-        # Debug before calling pick_up
-        # print(f"DEBUG BEFORE PICK_UP: target_col={target_col} (expected for '{unload_target}').")
-        # print(f"DEBUG BEFORE PICK_UP: current crane position = {current_state.last_moved_location}.")
-        # print(f"DEBUG BEFORE PICK_UP: target description = {unload_target}.")
-
-        # Call pick_up to pick up the container
         try:
             print(f"Attempting to pick up container '{unload_target}'...")
-            blocking_containers, next_state = current_state.pick_up(
+            new_blocking_containers, next_state = current_state.pick_up(
                 target_col,  
-                current_state.last_moved_location,unload_target
+                current_state.last_moved_location,
+                unload_target
             )
-            # print(f"SUCCESS: Picked up container '{unload_target}'.")
+            
+            if new_blocking_containers:
+                blocking_containers = new_blocking_containers
             current_state = next_state
         except ValueError as e:
-            # print(f"ERROR during pick_up: {e}")
             raise e
 
-    # print(f"--- UNLOAD PROCESS COMPLETED ---")
     current_state.target_location = (8,0)
-    # print(f"Final crane position: {current_state.last_moved_location}.")
     current_state.print_state_representation()
     current_state.fix_floating_containers()
-    # print("print after fix floating stuff")
-    # current_state.print_state_representation()
+    
     return current_state, trace, blocking_containers
 
 def unload_time_trace(unloaded_state, trace, blocking_containers):

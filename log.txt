@@ -1872,3 +1872,284 @@ December 15th 2024: 02:32 Loaded container: hi with weight 234
 December 15th 2024: 02:32 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5OUTBOUND.txt
 December 15th 2024: 02:32 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5OUTBOUND.txt is opened
 December 15th 2024: 02:32 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5OUTBOUND.txt
+December 14th 2024: 22:37 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:37 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:39 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:39 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:40 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:40 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:40 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:40 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:40 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:40 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:40 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:42 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:42 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:42 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:43 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:43 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:43 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:43 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:43 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:43 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:48 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:48 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:48 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:48 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:48 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:48 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:49 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:49 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:49 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:49 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:49 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:49 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:50 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:50 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:50 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:50 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:50 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:50 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:51 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:51 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:53 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:53 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:58 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Ship balancer initialized with manifest
+December 14th 2024: 22:58 Starting A* search for optimal balance solution
+December 14th 2024: 22:58 Found solution for balancing
+December 14th 2024: 22:58 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Ship balancer initialized with manifest
+December 14th 2024: 22:58 Starting A* search for optimal balance solution
+December 14th 2024: 22:58 Found solution for balancing
+December 14th 2024: 22:58 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Ship balancer initialized with manifest
+December 14th 2024: 22:58 Starting A* search for optimal balance solution
+December 14th 2024: 22:58 Found solution for balancing
+December 14th 2024: 22:58 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Ship balancer initialized with manifest
+December 14th 2024: 22:58 Starting A* search for optimal balance solution
+December 14th 2024: 22:58 Found solution for balancing
+December 14th 2024: 22:58 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:58 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:58 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:59 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Ship balancer initialized with manifest
+December 14th 2024: 22:59 Starting A* search for optimal balance solution
+December 14th 2024: 22:59 Found solution for balancing
+December 14th 2024: 22:59 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Ship balancer initialized with manifest
+December 14th 2024: 22:59 Starting A* search for optimal balance solution
+December 14th 2024: 22:59 Found solution for balancing
+December 14th 2024: 22:59 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Ship balancer initialized with manifest
+December 14th 2024: 22:59 Starting A* search for optimal balance solution
+December 14th 2024: 22:59 Found solution for balancing
+December 14th 2024: 22:59 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 22:59 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 22:59 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:01 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:02 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:02 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:02 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Starting A* search for optimal balance solution
+December 14th 2024: 23:02 Found solution for balancing
+December 14th 2024: 23:02 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Starting A* search for optimal balance solution
+December 14th 2024: 23:02 Found solution for balancing
+December 14th 2024: 23:02 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Ship balancer initialized with manifest
+December 14th 2024: 23:02 Starting A* search for optimal balance solution
+December 14th 2024: 23:02 Found solution for balancing
+December 14th 2024: 23:02 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:02 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:02 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:06 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Ship balancer initialized with manifest
+December 14th 2024: 23:06 Starting A* search for optimal balance solution
+December 14th 2024: 23:06 Found solution for balancing
+December 14th 2024: 23:06 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 23:06 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:06 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:06 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Ship balancer initialized with manifest
+December 14th 2024: 23:06 Starting A* search for optimal balance solution
+December 14th 2024: 23:06 Found solution for balancing
+December 14th 2024: 23:06 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 23:06 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:06 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:06 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase1.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase2.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase4.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase5.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase2.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase4.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase5.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase2.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase4.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase5.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase2.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase4.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase5.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase2.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase4.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/ShipCase5.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:06 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:06 Ship balancer initialized with manifest
+December 14th 2024: 23:06 Starting A* search for optimal balance solution
+December 14th 2024: 23:07 Found solution for balancing
+December 14th 2024: 23:07 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 5) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:07 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
