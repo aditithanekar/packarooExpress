@@ -35,14 +35,37 @@ def main():
     tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
 
     root.mainloop()
+    
+#the feature to add a comment
+def add_comment_section():
+    # frame for the comment section
+    comment_frame = tk.Frame(root)
+    comment_frame.pack(side=tk.BOTTOM, pady=20)
+    
+    tk.Label(comment_frame, text="Add Comment:", font=("Arial", 12)).pack(side=tk.LEFT, padx=5)
+    
+    # enter comment in field
+    comment_entry = tk.Entry(comment_frame, width=50)
+    comment_entry.pack(side=tk.LEFT, padx=5)
+    
+    def submit_comment():
+        comment = comment_entry.get().strip()
+        if comment:
+            utils.updateLog(comment)
+            comment_entry.delete(0, tk.END)  # clear entry field
+            # show confirmation
+            confirm_label = tk.Label(comment_frame, text="Comment added to log file!", fg="green", font=("Arial", 10))
+            confirm_label.pack(side=tk.RIGHT, padx=5)
+            # remove confirmation after 2 seconds
+            root.after(2000, confirm_label.destroy)
+    
+    # Add submit button
+    tk.Button(comment_frame, text="Submit Comment", command=submit_comment, font=("Arial", 10)).pack(side=tk.LEFT, padx=5)
 
 #displays choice for choosing load/unload or balance
 def go_to_option_selection():
     global chosen_option
     chosen_option = None  # Reset chosen option
-    # Clear current widgets
-    # for widget in root.winfo_children():
-    #     widget.destroy()
 
     # Create and display options
     tk.Label(root, text="Choose an Option:", font=("Arial", 18)).pack(pady=20)
@@ -110,6 +133,9 @@ def display_grid(parsed_data):
     if chosen_option == "balance":
         balance_menu(parsed_data)
 
+    add_comment_section()
+
+#calls the ShipBalancer, and gets the trace, leads to the animation right away
 def balance_menu(parsed_data):
     for widget in root.winfo_children():
     #    if isinstance(widget, tk.Canvas):  # Keep the grid
@@ -137,19 +163,41 @@ def balance_menu(parsed_data):
     draw_grid_balance_and_unload(parsed_data, start_position=start_position, end_position=end_position, cost=optimal_moves[0][2], moves=optimal_moves)
     update_instruction_label_balance_and_unload(optimal_moves)
     
-#displays spot to enter in what containers to load, and calls unload()
+    add_comment_section()
+    
+#gets the containers to unload, and leads to load_menu
+def unload_menu(parsed_data, unloadable_containers):
+    # tk.Label(root, text="Unload Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    tk.Label(root, text="Select containers to unload:", font=("Arial", 12)).pack(pady=5)
+
+    # Listbox to select containers
+    listbox = tk.Listbox(root, width=50, height=10, selectmode=tk.MULTIPLE)
+    listbox.pack(pady=5)
+
+    # Populate the listbox with loaded containers
+    for idx, container in enumerate(unloadable_containers):
+        listbox.insert(idx, f"{container.description} (Weight: {container.weight})")
+
+    def unload_containers():
+        selected_indices = listbox.curselection()
+        for idx in selected_indices:
+            containers_to_unload.append(unloadable_containers[idx])
+        tk.Label(root, text="Selected containers for unloading.",
+                 font=("Arial", 10), fg="red").pack(pady=5)
+        utils.updateLog(f"Unloaded containers: {', '.join([unloadable_containers[idx].description for idx in selected_indices])}")
+
+    tk.Button(root, text="Unload", font=("Arial", 14), command=unload_containers).pack(pady=10)
+    def go_to_load_menu():
+        for widget in root.winfo_children():
+            if not isinstance(widget, tk.Canvas):  # Keep the grid
+                widget.destroy()
+        load_menu(parsed_data)
+
+    tk.Button(root, text="Next", font=("Arial", 14), command=go_to_load_menu).pack(pady=10)
+    add_comment_section()
+    
+# gets what containers to load and leads to instructions
 def load_menu(parsed_data):
-    print("current containers to unload: ")
-    print(containers_to_unload)
-    #call unload here:
-    start_state = State()
-    start_state.init_start_state(parsed_data)
-    start_state.print_state_representation()
-    # balancer = ShipBalancer(manifest_filename)
-    # final_state, unload_moves = balancer.unload(start_state, containers_to_unload)
-    final_state, unload_moves = load_unload.unload(start_state, containers_to_unload, (7,0))
-    final_state.print_state_representation()
-    print("unload moves, ", unload_moves)
     tk.Label(root, text="Load Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
     tk.Label(root, text="Enter Container Name:", font=("Arial", 12)).pack(pady=5)
     name_input = tk.Entry(root, width=30)
@@ -179,38 +227,14 @@ def load_menu(parsed_data):
     def go_to_get_instructions():
         get_instructions(parsed_data)
     tk.Button(root, text="Next", font=("Arial", 14), command=go_to_get_instructions).pack(pady=10)
+    
+    add_comment_section()
 
-def unload_menu(parsed_data, unloadable_containers):
-    # tk.Label(root, text="Unload Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
-    tk.Label(root, text="Select containers to unload:", font=("Arial", 12)).pack(pady=5)
-
-    # Listbox to select containers
-    listbox = tk.Listbox(root, width=50, height=10, selectmode=tk.MULTIPLE)
-    listbox.pack(pady=5)
-
-    # Populate the listbox with loaded containers
-    for idx, container in enumerate(unloadable_containers):
-        listbox.insert(idx, f"{container.description} (Weight: {container.weight})")
-
-    def unload_containers():
-        selected_indices = listbox.curselection()
-        for idx in selected_indices:
-            containers_to_unload.append(unloadable_containers[idx])
-        tk.Label(root, text="Selected containers for unloading.",
-                 font=("Arial", 10), fg="red").pack(pady=5)
-        utils.updateLog(f"Unloaded containers: {', '.join([unloadable_containers[idx].description for idx in selected_indices])}")
-
-    tk.Button(root, text="Unload", font=("Arial", 14), command=unload_containers).pack(pady=10)
-    def go_to_load_menu():
-        for widget in root.winfo_children():
-            if not isinstance(widget, tk.Canvas):  # Keep the grid
-                widget.destroy()
-        load_menu(parsed_data)
-
-    tk.Button(root, text="Next", font=("Arial", 14), command=go_to_load_menu).pack(pady=10)
-#changes the (0,0) to be scaled to start at (1,1)
+# helper to change the (0,0) to be scaled to start at (1,1) for the manifest's format
 def convert_to_grid_indices(row, col):
     return row + 1, col + 1
+
+#gets the next load instruction in animation
 def next_instruction(load_list, load_moved_positions, parsed_manifest_data):
     global current_instruction
     if current_instruction < len(load_list):
@@ -221,6 +245,7 @@ def next_instruction(load_list, load_moved_positions, parsed_manifest_data):
     else:
         done_with_operations()
 
+#updates the instruction for what container to move for load 
 def update_instruction_label(load_list, load_moved_positions):
     global current_instruction
     if current_instruction < len(load_list):
@@ -229,47 +254,7 @@ def update_instruction_label(load_list, load_moved_positions):
         instruction_label.config(text="All containers moved!")
         done_with_operations()
 
-#calls load here after getting a list of containers to load
-def get_instructions(parsed_manifest_data):
-    global current_instruction
-    for widget in root.winfo_children():
-        widget.destroy()
-    
-    # Initialize the UI and state
-    tk.Label(root, text="Load instructions", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
-    start_state = state.State()
-    start_state.init_start_state(parsed_manifest_data)
-    print("Initial state:")
-    start_state.print_state_representation()
-    print(containers_to_load)
-
-    load_list = containers_to_load.copy() 
-    final_state, load_moved_positions = load_unload.load(start_state, containers_to_load)
-    final_state.print_state_representation()
-    
-    #update/write to the manifest here: 
-    #it's spelt wrong but we're going with it..
-    
-    utils.updateMaifest(final_state, output_manifest_filename)
-    
-    load_moved_positions = [convert_to_grid_indices(row, col) for row, col in load_moved_positions]
-    
-    # Start with the first instruction
-    current_instruction = 0
-    
-    # Instruction label
-    global instruction_label
-    instruction_label = tk.Label(root, text="Move container ___ to position ___", font=("Arial", 14))
-    instruction_label.pack(pady=10)
-
-    # Next button to move through instructions
-    next_button = tk.Button(root, text="Next", command=lambda: next_instruction(load_list, load_moved_positions, parsed_manifest_data), font=("Arial", 14))
-    next_button.pack(pady=10)
-
-    # Draw the first grid state
-    draw_grid(parsed_manifest_data, load_moved_positions[current_instruction+1], load_list[current_instruction].description, load_list[current_instruction].weight)
-    update_instruction_label(load_list, load_moved_positions)
-#for load only
+#draws grid for load only, single container to be highlighted (spot to move it to)
 def draw_grid(parsed_manifest, highlight_position=None, new_description=None, new_weight=None):
     """
     Updates and redraws the grid using the latest `parsed_manifest`.
@@ -279,9 +264,6 @@ def draw_grid(parsed_manifest, highlight_position=None, new_description=None, ne
     for widget in root.winfo_children():
         if isinstance(widget, tk.Canvas):
             widget.destroy()
-        if isinstance(widget, tk.Button):
-            widget.destroy()
-
 
     canvas = tk.Canvas(root, width=600, height=400, bg="white")
     canvas.pack(pady=20)
@@ -337,15 +319,6 @@ def draw_grid(parsed_manifest, highlight_position=None, new_description=None, ne
             fill="black"
         )
 
-# Function to reset the highlighted cell to green
-def reset_highlight(parsed_data, highlight_position):
-    for container in parsed_data:
-        if container.position == highlight_position:
-            container.description = "FULL"  # Reset description
-            container.weight = 50  # Reset weight
-    draw_grid()
-
-
 # Function to go to the next screen
 def go_to_file_selector():
     global parsed_manifest #declare that it's global so that we can access it again
@@ -374,8 +347,113 @@ def go_to_file_selector():
     tk.Button(root, text="Browse", command=select_file).pack(pady=10)
     label_selected_file = tk.Label(root, text="No file selected", fg="gray")
     label_selected_file.pack(pady=10)
+
+#calls the unload instructions first before load if there are containers to unload
+def get_instructions(parsed_manifest_data):
+    """Main function to handle both unload and load operations in sequence"""
+    if len(containers_to_unload) > 0:
+        get_instructions_unload(parsed_manifest_data)
+    else:
+        get_instructions_load(parsed_manifest_data)
+
+#unload animation calls the unload, updates manifest with final state and calls draw_grid_balance_and_unload 
+def get_instructions_unload(parsed_manifest_data):
+    """Handle unloading operations and visualization"""
+    global current_instruction, containers_to_unload
+    for widget in root.winfo_children():
+        widget.destroy()
     
+    # Initialize unload state
+    tk.Label(root, text="Unload instructions", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    start_state = State()
+    start_state.init_start_state(parsed_manifest_data)
     
+    # Perform unload operations
+    final_unload_state, unload_moves, blocking_containers = load_unload.unload(start_state, containers_to_unload, (8,0))
+    trace, time = load_unload.unload_time_trace(final_unload_state, unload_moves, blocking_containers)
+    
+    utils.updateMaifest(final_unload_state, output_manifest_filename)
+    
+    # Initialize visualization
+    global instruction_label
+    instruction_label = tk.Label(root, text="Move container ___ to position ___", font=("Arial", 14))
+    instruction_label.pack(pady=10)
+    
+    current_instruction = 0
+    
+    if trace:  # Only proceed if there are moves to make
+        start_position = convert_to_grid_indices(*trace[0][0])
+        end_position = convert_to_grid_indices(*trace[0][1])
+        
+        # Draw initial grid state
+        draw_grid_balance_and_unload(
+            parsed_manifest_data,
+            start_position=start_position,
+            end_position=end_position,
+            moves=trace
+        )
+        
+        # Store final unload state for next operations
+        global final_manifest_after_unload
+        final_manifest_after_unload = parseManifest(output_manifest_filename)
+        
+        # Set up next button for unload operations
+        next_button = tk.Button(
+            root, 
+            text="Next", 
+            command=lambda: next_instruction_balance_and_unload(trace, parsed_manifest_data),
+            font=("Arial", 14)
+        )
+        next_button.pack(pady=10)
+        
+        update_instruction_label_balance_and_unload(trace)
+    else:
+        # If no unload moves, proceed to loading with original manifest
+        get_instructions_load(parsed_manifest_data)
+
+#calls load and begins animation using draw_grid(), and updates manifest with final state 
+def get_instructions_load(parsed_manifest_data):
+    """Handle loading operations with updated manifest data"""
+    global current_instruction
+    for widget in root.winfo_children():
+        widget.destroy()
+    
+    if len(containers_to_load) == 0:
+        done_with_operations()
+        return
+        
+    # Initialize load state with updated manifest data
+    tk.Label(root, text="Load instructions", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
+    start_state = State()
+    start_state.init_start_state(parsed_manifest_data)  # Using updated manifest
+    
+    # Perform load operations
+    load_list = containers_to_load.copy()
+    final_state, load_moved_positions = load_unload.load(start_state, containers_to_load)
+    
+    # Update final manifest
+    utils.updateMaifest(final_state, output_manifest_filename)
+    
+    # Convert positions to (1,1) corner instead of (0,0)
+    load_moved_positions = [convert_to_grid_indices(row, col) for row, col in load_moved_positions]
+    
+    # Initialize visualization
+    current_instruction = 0
+    
+    # Instruction label
+    global instruction_label
+    instruction_label = tk.Label(root, text="Move container ___ to position ___", font=("Arial", 14))
+    instruction_label.pack(pady=10)
+
+    # Next button to move through instructions
+    next_button = tk.Button(root, text="Next", command=lambda: next_instruction(load_list, load_moved_positions, parsed_manifest_data), font=("Arial", 14))
+    next_button.pack(pady=10)
+
+    # Draw the first grid state
+    draw_grid(parsed_manifest_data, load_moved_positions[current_instruction+1], load_list[current_instruction].description, load_list[current_instruction].weight)
+    update_instruction_label(load_list, load_moved_positions)
+
+#same as draw_grid, but highlights 2 locations... start and end positions
 def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_position=None, cost=None, moves=None):
     # Clear the previous grid
     for widget in root.winfo_children():
@@ -444,133 +522,82 @@ def draw_grid_balance_and_unload(parsed_manifest, start_position=None, end_posit
             font=("Arial", 8),
             fill="black"
         )
-    # # Clear the previous canvas if it exists
-    # for widget in root.winfo_children():
-    #     if isinstance(widget, tk.Canvas):
-    #         widget.destroy()
-
-    # canvas = tk.Canvas(root, width=600, height=400, bg="white")
-    # canvas.pack(pady=20)
-
-    # cell_width = 50
-    # cell_height = 50
-    # rows = 8
-    # cols = 12
-
-    # # Draw grid cells
-    # for container in parsed_manifest:
-    #     position, weight, description = container.position, container.weight, container.description
-    #     if position is None:  # Skip unused cells without position
-    #         continue
-    #     x, y = position
-    #     x -= 1
-    #     y -= 1
-
-    #     adjusted_x = y
-    #     adjusted_y = rows - 1 - x
-
-    #     # Determine the color for the container
-    #     color = "white"  # Default color
-
-    #     # Handle specific cases for positions:
-    #     if description == "UNUSED":
-    #         color = "lightblue"  # UNUSED is light blue
-    #     elif description == "NAN":
-    #         color = "gray"  # NAN is gray
-    #     elif position == start_position:
-    #         color = "red"  # Start position is marked in red
-    #     elif position == end_position:
-    #         color = "yellow"  # End position is marked in yellow
-    #     else:
-    #         color = "green"  # Containers are marked in green by default
-
-    #     # Draw the rectangle for the current grid cell
-    #     x1 = adjusted_x * cell_width
-    #     y1 = adjusted_y * cell_height
-    #     x2 = x1 + cell_width
-    #     y2 = y1 + cell_height
-    #     canvas.create_rectangle(x1, y1, x2, y2, fill=color, outline="black", width=3 if color != "white" else 1)
-
-    #     # Add text to the cell to describe the container
-    #     canvas.create_text(
-    #         x1 + cell_width / 2,
-    #         y1 + cell_height / 2,
-    #         text=description,
-    #         font=("Arial", 8),
-    #         fill="black"
-    #     )
-
-    # # Display the cost if available
-    # if cost is not None:
-    #     tk.Label(root, text=f"Cost: {cost} min", font=("Arial", 14)).pack(pady=10)
-
-
+        
+#goes to the next instruction for balance and unload
 def next_instruction_balance_and_unload(moves, parsed_manifest_data):
-    global current_instruction
+    global current_instruction, final_manifest_after_unload
 
     if current_instruction < len(moves):
-        # Get the current move (start, end, and cost)
-        start, end, cost = moves[current_instruction]
+        # Process current move
+        move = moves[current_instruction]
+        if len(move) == 3:
+            start, end, cost = move
+        else:
+            start, end = move
+            cost = 0
         start_position = convert_to_grid_indices(*start)
         end_position = convert_to_grid_indices(*end)
 
-        print(f"Move container at {start_position} to {end_position} for a cost of {cost} min")
-
+        # Update container positions in the manifest data
         start_container = None
-        end_container = None
-        # Update the parsed_manifest data with the new positions
         for container in parsed_manifest_data:
-            #find start and end containers so that you can set the properties right
             if container.position == start_position:
                 start_container = container
-                # .description = "UNUSED"  # Mark start position as UNUSED
-                # container.position = None  # Clear its position
-            if container.position == end_position:
-                end_container = container
-                # container.description =   # Mark end position as container (green)
-                # container.position = end_position
-        #make end container have start container and make start container unused
-        #end_container = Container(end_container.position, start_container.weight, start_container.description)
-        #make start container unused
-        #start_container = Container(start_container.position, 0, "UNUSED")
-        start_weight = start_container.weight
-        start_descrip = start_container.description
-        for container in parsed_manifest_data:
-            #find start and end containers so that you can set the properties right
-            if container.position == start_position:
+                container.description = "UNUSED"
                 container.weight = 0
-                container.description= "UNUSED"
-                # .description = "UNUSED"  # Mark start position as UNUSED
-                # container.position = None  # Clear its position
-            if container.position == end_position:
-                container.weight = start_weight
-                container.description = start_descrip
-                # end_container = container
-        # x1,y1 = start_position
-        # x2,y2 = end_position
-        
-        # parsed_manifest_data[x1-1][y1-1] = Container(start_container.position, 0, "UNUSED")
-        # parsed_manifest_data[x2-1][y2-1] = Container(end_container.position, start_container.weight, start_container.description)
+            elif container.position == end_position:
+                if start_container:
+                    container.description = start_container.description
+                    container.weight = start_container.weight
 
         current_instruction += 1
-        start1, end1, cost1 = moves[current_instruction]
-        start_position1 = convert_to_grid_indices(*start1)
-        end_position1 = convert_to_grid_indices(*end1)
-        # Redraw the grid with the updated parsed manifest
-        draw_grid_balance_and_unload(parsed_manifest_data, start_position=start_position1, end_position=end_position1, cost=cost1, moves=moves)
         
-        # Update the instruction label
-        update_instruction_label_balance_and_unload(moves)
-        # Increment the instruction index
+        if current_instruction < len(moves):
+            # Setup next move visualization
+            move1 = moves[current_instruction]
+            if len(move1) == 3:
+                start1, end1, cost1 = move1
+            else:
+                start1, end1 = move1
+                cost1 = 0
+            start_position1 = convert_to_grid_indices(*start1)
+            end_position1 = convert_to_grid_indices(*end1)
+            
+            draw_grid_balance_and_unload(
+                parsed_manifest_data,
+                start_position=start_position1,
+                end_position=end_position1,
+                cost=cost1,
+                moves=moves
+            )
+            update_instruction_label_balance_and_unload(moves)
+        else:
+            # If this was the last unload move
+            if len(containers_to_load) > 0:
+                # Use the final unload state for loading
+                # final_manifest_after_unload = parsed_manifest_data
+                get_instructions_load(final_manifest_after_unload)
+            else:
+                done_with_operations()
     else:
-        instruction_label.config(text="All moves completed!")
-        done_with_operations()
+        if len(containers_to_load) > 0:
+            # Use the final unload state for loading
+            get_instructions_load(final_manifest_after_unload)
+        else:
+            done_with_operations()
 
-        
+#gets the move instruction for balance and unload
 def update_instruction_label_balance_and_unload(moves):
     global current_instruction
     if current_instruction < len(moves):
-        start, end, cost = moves[current_instruction]
+        # start,end,cost = None
+        move = moves[current_instruction]
+        if len(move) == 3:
+            start, end, cost = move
+        else:
+            start, end = move
+            cost = 0 
+        # start, end, cost = moves[current_instruction]
         start_position = convert_to_grid_indices(*start)
         end_position = convert_to_grid_indices(*end)
         instruction_label.config(text=f"Move container at {start_position} to {end_position} (Cost: {cost} min)")
@@ -580,51 +607,49 @@ def update_instruction_label_balance_and_unload(moves):
 #gets the filename for the output manifest(OUTBOUND)
 def get_output_filename(input_file_path):
 
-    # Generates an output file path by replacing the input file's name with 'ShipCaseOUTBOUND.txt'.
-    
-   # Extract the directory and input filename
-    directory, input_filename = os.path.split(input_file_path)
+    # gets an output file name by adding 'OUTBOUND.txt' to the input file's name.
     print("manifest name is ", input_file_path)
     # split at the '.txt' extension
     base_filename = ""
     if input_file_path.endswith(".txt"):
-        base_filename = input_file_path[:-4]  # Remove the '.txt' extension
+        base_filename = input_file_path[:-4]  # get rid of the '.txt' 
     else:
-        raise ValueError("The input file does not have a .txt extension.")
+        raise ValueError("The input file is not a .txt file.")
     
     # Append 'OUTBOUND' to the base filename
     output_filename = f"{base_filename}OUTBOUND.txt"
     
     print("manifest output name is ", output_filename)
-    # Combine the directory and the new output filename
-    #output_file_path = os.path.join(directory, output_filename)
-    
+
     return output_filename
 
+#the ending screen! tells the crane operator where the manifest is and reminds him to email the captain
 def done_with_operations():
     for widget in root.winfo_children():
         widget.destroy()    
-    tk.Label(root, text="done with all operations", font=("Arial", 14)).pack(pady=10)
-    print("done with all operations")
-    #print with tk that manifest is saved to (file location)
-    print(manifest_filename)
     #save the manifest here 
     #update manifest should already be called 
+    tk.Label(root, text=f"Success! Manifest: {output_manifest_filename}, has been saved.", font=("Arial", 15)).pack(pady=50)
+    tk.Label(root, text=f"Don't forget to send an email to the captain of the ship!", font=("Arial", 15)).pack(pady=30)
+
+    print("done with all operations")
+    print(manifest_filename)
+    add_comment_section()
 
 
-# # Main screen
-# root = tk.Tk()
-# root.title("Packeroo Express")
-# root.geometry("1200x900")
+# Main screen
+root = tk.Tk()
+root.title("Packeroo Express")
+root.geometry("1200x900")
 
-# # Initial widgets
-# tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
-# name_entry = tk.Entry(root, width=30)
-# name_entry.pack(pady=5)
-# tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
+# Initial widgets
+tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
+name_entry = tk.Entry(root, width=30)
+name_entry.pack(pady=5)
+tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
 
 
-# root.mainloop()
+root.mainloop()
 
 
 def getMoves():
