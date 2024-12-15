@@ -1257,3 +1257,5 @@ December 14th 2024: 20:56 Manifest test_cases/ShipCase3.txt is opened
 December 14th 2024: 21:15 Manifest test_cases/ShipCase3.txt is opened
 December 14th 2024: 21:20 Manifest test_cases/ShipCase3.txt is opened
 December 14th 2024: 21:32 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:10 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:10 Manifest successfully updated in updatedManifest.txt
