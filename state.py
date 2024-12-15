@@ -77,23 +77,23 @@ class State:
      
     def find_container(self, container):
         container_description = container.description
-        print(f"--- FIND CONTAINER STARTED ---")
-        print("Looking for container with description ", container_description)
+        # print(f"--- FIND CONTAINER STARTED ---")
+        # print("Looking for container with description ", container_description)
 
         for row_index, row in enumerate(self.state_representation):  # Iterate over each row in the grid.
-            print(f"Scanning Row {row_index}...")  # Log current row being scanned.
+            # print(f"Scanning Row {row_index}...")  # Log current row being scanned.
 
             for col_index, container in enumerate(row):  # Iterate over each column in the row.
-                print(f"  Checking cell at Row {row_index}, Col {col_index}...")  # Log current cell being checked.
+                # print(f"  Checking cell at Row {row_index}, Col {col_index}...")  # Log current cell being checked.
 
                 if isinstance(container, Container):  # Check if the cell contains a Container object.
-                    print(f"    Found a container: {container.get_description()} (Weight: {container.get_weight()}).")  # Log container details.
+                    # print(f"    Found a container: {container.get_description()} (Weight: {container.get_weight()}).")  # Log container details.
 
                     if container.get_description() == container_description:  # Compare descriptions.
-                        print(f"    MATCH FOUND: Container '{container_description}' is at Row={row_index}, Col={col_index}.")
+                        # print(f"    MATCH FOUND: Container '{container_description}' is at Row={row_index}, Col={col_index}.")
                         return (row_index, col_index)  # Return the position if found.
 
-        print(f"ERROR: Container '{container_description}' not found in the grid.")  # Log if the container is not found.
+        # print(f"ERROR: Container '{container_description}' not found in the grid.")  # Log if the container is not found.
         return None  # Return None if no match is found.
 
     
@@ -133,76 +133,77 @@ class State:
     
     def pick_up(self, col, crane_position, target_container):
         target_container_description = target_container.description
-        print(f"\n--- PICK UP PROCESS STARTED ---")
-        print(f"Attempting to pick up container '{target_container_description}' from column {col}.")
-        print(f"Crane position before pick_up: {crane_position}.")
-        print(f"Debug: Current column = {col}.")
+        # print(f"\n--- PICK UP PROCESS STARTED ---")
+        # print(f"Attempting to pick up container '{target_container_description}' from column {col}.")
+        # print(f"Crane position before pick_up: {crane_position}.")
+        # print(f"Debug: Current column = {col}.")
 
         # Debug: Print the state of the column
-        print(f"Debug: State of Column {col}:")
+        # print(f"Debug: State of Column {col}:")
         for row in range(8):  # Print all rows in the specified column.
             container = self.state_representation[row][col]
-            if container:
-                print(f"  Row {row}: {container.get_description()} (Weight: {container.get_weight()})")
-            else:
-                print(f"  Row {row}: EMPTY")
+            # if container:
+            #     print(f"  Row {row}: {container.get_description()} (Weight: {container.get_weight()})")
+            # else:
+            #     print(f"  Row {row}: EMPTY")
 
         target_row = None  # Initialize the variable to store the row of the target container.
         blocking_containers = []  # Initialize a list to store blocking containers.
 
         # Scan the column to find the target container and identify blocking containers.
-        print(f"Scanning column {col} to find target container '{target_container_description}'...")
+        # print(f"Scanning column {col} to find target container '{target_container_description}'...")
         for row in range(8):
             container = self.state_representation[row][col]
-            print(f"  Checking Row {row} in Column {col}...")
+            # print(f"  Checking Row {row} in Column {col}...")
 
             if container is not None and isinstance(container, Container):  # Check if there's a container in this cell.
-                print(f"    Found container '{container.get_description()}' at Row {row}.")
+                # print(f"    Found container '{container.get_description()}' at Row {row}.")
 
                 if container.get_description() == target_container_description:  # Check if it's the target container.
-                    print(f"    TARGET CONTAINER FOUND: '{target_container_description}' at Row {row}.")
+                    # print(f"    TARGET CONTAINER FOUND: '{target_container_description}' at Row {row}.")
                     target_row = row  # Store the row of the target container.
                     break  # Stop scanning once the target is found.
 
         # Check if the target container was found.
         if target_row is None:
-            print(f"ERROR: Target container '{target_container_description}' not found in column {col}.")
+            # print(f"ERROR: Target container '{target_container_description}' not found in column {col}.")
             raise ValueError(f"Target container '{target_container_description}' not found in column {col}.")
         else:
             #find containers that are blocking above the target row
             for row in range(target_row + 1, 8):
                 container = self.state_representation[row][col]
-                if container is not None and isinstance(container, Container):
-                    print(f"    Blocking container found: {container.get_description()} (Weight: {container.get_weight()}).")
+                if container is not None and isinstance(container, Container) and not container.IsUNUSED:
+                    # print(f"    Blocking container found: {container.get_description()} (Weight: {container.get_weight()}).")
                     blocking_containers.append((row, container))  # Add blocking container to the list.
-        # Check if the crane is aligned with the target column.
-        if col != crane_position[1]:
-            print(f"ERROR: Crane is not aligned with column {col}. Current crane column: {crane_position[1]}.")
-            raise ValueError(f"Crane is not aligned with column {col}.")
+        # # Check if the crane is aligned with the target column.
+        # if col != crane_position[1]:
+        #     print(f"ERROR: Crane is not aligned with column {col}. Current crane column: {crane_position[1]}.")
+        #     raise ValueError(f"Crane is not aligned with column {col}.")
 
         # Move blocking containers if necessary.
-        print(f"Blocking containers to move: {len(blocking_containers)}.")
+        # print(f"Blocking containers to move: {len(blocking_containers)}.")
         for row, container in blocking_containers:
-            print(f"  Moving blocking container '{container.get_description()}' from Row={row}, Col={col}.")
-            empty_pos = self.find_empty_position(row, col, exclude_col=col)
-            if empty_pos is None:
-                print(f"ERROR: No empty positions available to unblock column {col}.")
-                raise ValueError(f"No empty positions available to unblock column {col}.")
+            if not container.IsUNUSED:            
+                # print(f"  Moving blocking container '{container.get_description()}' from Row={row}, Col={col}.")
+                empty_pos = self.find_empty_position(row, col, exclude_col=col)
+                if empty_pos is None:
+                    print(f"ERROR: No empty positions available to unblock column {col}.")
+                    raise ValueError(f"No empty positions available to unblock column {col}.")
 
-            print(f"    Found empty position at {empty_pos}.")
-            #set the blocking location to be UNUSED again
-            self.state_representation[row][col] = Container((row+1, col+1), 0, "UNUSED")
-            self.state_representation[empty_pos[0]][empty_pos[1]] = container
+                # print(f"    Found empty position at {empty_pos}.")
+                #set the blocking location to be UNUSED again
+                self.state_representation[row][col] = Container((row+1, col+1), 0, "UNUSED")
+                self.state_representation[empty_pos[0]][empty_pos[1]] = container
                         
         # Attempt to pick up the target container.
-        print(f"Picking up target container '{target_container_description}' from Row {target_row}, Column {col}...")
+        # print(f"Picking up target container '{target_container_description}' from Row {target_row}, Column {col}...")
         self.state_representation[target_row][col] = None  # Remove the container from the grid.
-        print(f"SUCCESS: Picked up container '{target_container_description}'.")
+        # print(f"SUCCESS: Picked up container '{target_container_description}'.")
         
         #resets the unloaded container location as UNUSED location
         self.state_representation[target_row][col] = Container((target_row+1, col+1), 0, "UNUSED")
 
-        return State(
+        return blocking_containers, State(
             state_representation=self.state_representation,
             depth=self.depth + 1,
             last_moved_container=self.state_representation[target_row][col],
