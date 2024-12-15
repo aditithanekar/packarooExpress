@@ -103,7 +103,8 @@ class ShipBalancer:
         # Swap containers
         new_state.state_representation[x2][y2] = new_state.state_representation[x1][y1]
         new_state.state_representation[x1][y1] = Container((x1+1,y1+1), 0, "UNUSED") #set it to be UNUSED after we move it out
-        
+        new_state.fix_floating_containers()
+
         return new_state, cost
 
     def heuristic(self, state):
@@ -292,7 +293,7 @@ class ShipBalancer:
 
 
 def main():
-    manifest_path = "SilverQueen.txt"
+    manifest_path = "test_cases/SilverQueen.txt"
     
     try:
         balancer = ShipBalancer(manifest_path)

@@ -50,6 +50,9 @@ def load(start_state, load_list):
         track_moves.append(start_state.target_location)
         source = start_state.target_location
         
+        node_description = node.description
+        utils.updateLog("Container {} is loaded".format(node_description))
+        
     return start_state, track_moves
 
 def find_initial_crane_position(grid, unload_targets):
@@ -113,6 +116,8 @@ def unload(start_state, unload_targets, unload_position):
         # print(f"DEBUG BEFORE PICK_UP: target_col={target_col} (expected for '{unload_target}').")
         # print(f"DEBUG BEFORE PICK_UP: current crane position = {current_state.last_moved_location}.")
         # print(f"DEBUG BEFORE PICK_UP: target description = {unload_target}.")
+
+        utils.updateLog("Container {} is unloaded".format(unload_target.description))
 
         # Call pick_up to pick up the container
         try:

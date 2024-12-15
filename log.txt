@@ -1660,3 +1660,116 @@ December 14th 2024: 21:26 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
 December 14th 2024: 21:26 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
 December 14th 2024: 21:26 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
 December 14th 2024: 21:26 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 22:56 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:56 Container Box1 is loaded
+December 14th 2024: 22:56 Container Box0 is loaded
+December 14th 2024: 22:56 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 22:59 Manifest test_cases/ShipCase3.txt is opened
+December 14th 2024: 22:59 Container Cow is unloaded
+December 14th 2024: 22:59 Container Box1 is loaded
+December 14th 2024: 22:59 Container Box0 is loaded
+December 14th 2024: 22:59 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 23:08 Error during ship balancing: [Errno 2] No such file or directory: 'SilverQueen.txt'
+December 14th 2024: 23:08 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:08 Ship balancer initialized with manifest
+December 14th 2024: 23:08 Starting A* search for optimal balance solution
+December 14th 2024: 23:08 Found solution for balancing
+December 14th 2024: 23:08 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:08 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:08 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:08 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:08 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:08 Ship successfully balanced
+December 14th 2024: 23:09 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:09 Ship balancer initialized with manifest
+December 14th 2024: 23:09 Starting A* search for optimal balance solution
+December 14th 2024: 23:09 Found solution for balancing
+December 14th 2024: 23:09 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:09 Ship successfully balanced
+December 14th 2024: 23:09 Billy signed in
+December 14th 2024: 23:09 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:09 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:09 Ship balancer initialized with manifest
+December 14th 2024: 23:09 Starting A* search for optimal balance solution
+December 14th 2024: 23:09 Found solution for balancing
+December 14th 2024: 23:09 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:09 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:11 Billy signed in
+December 14th 2024: 23:11 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:11 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:11 Ship balancer initialized with manifest
+December 14th 2024: 23:11 Starting A* search for optimal balance solution
+December 14th 2024: 23:11 Found solution for balancing
+December 14th 2024: 23:11 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:11 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:11 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:11 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:11 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:14 Bob signed in
+December 14th 2024: 23:14 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:14 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:14 Ship balancer initialized with manifest
+December 14th 2024: 23:14 Starting A* search for optimal balance solution
+December 14th 2024: 23:22 m signed in
+December 14th 2024: 23:22 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:22 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:22 Ship balancer initialized with manifest
+December 14th 2024: 23:22 Starting A* search for optimal balance solution
+December 14th 2024: 23:22 Found solution for balancing
+December 14th 2024: 23:22 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:22 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:22 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:22 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:22 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:24 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:24 Ship balancer initialized with manifest
+December 14th 2024: 23:24 Starting A* search for optimal balance solution
+December 14th 2024: 23:24 Found solution for balancing
+December 14th 2024: 23:24 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:24 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:24 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:24 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:24 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:24 Ship successfully balanced
+December 14th 2024: 23:26 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:26 Ship balancer initialized with manifest
+December 14th 2024: 23:26 Starting A* search for optimal balance solution
+December 14th 2024: 23:26 Found solution for balancing
+December 14th 2024: 23:26 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:26 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:26 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:26 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:26 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 14th 2024: 23:26 Ship successfully balanced
+December 14th 2024: 23:30 Manifest test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:30 Ship balancer initialized with manifest
+December 14th 2024: 23:30 Starting A* search for optimal balance solution
+December 14th 2024: 23:30 Error during ship balancing: 'NoneType' object has no attribute 'get_state_representation'
+December 14th 2024: 23:37 d signed in
+December 14th 2024: 23:37 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:37 Manifest /Users/suhanibhanvadia/Desktop/CS179M/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 23:37 Ship balancer initialized with manifest
+December 14th 2024: 23:37 Starting A* search for optimal balance solution
+December 14th 2024: 23:37 Found solution for balancing
+December 14th 2024: 23:37 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 23:37 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 23:37 Move container from (0, 1) to (0, 0) (Cost: 1 mins)
+December 14th 2024: 23:37 Move container from (0, 0) to (1, 0) (Cost: 1 mins)
+December 14th 2024: 23:37 Move container from (0, 5) to (0, 6) (Cost: 1 mins)
+December 15th 2024: 00:04 Manifest test_cases/SilverQueen.txt is opened
+December 15th 2024: 00:04 Manifest test_cases/SilverQueen.txt is opened
+December 15th 2024: 00:05 Manifest test_cases/SilverQueen.txt is opened
+December 15th 2024: 00:05 Container Catfish is unloaded
+December 15th 2024: 00:05 Container Batons is unloaded
+December 15th 2024: 00:05 Manifest successfully updated in updatedManifest.txt
+December 15th 2024: 00:09 Manifest test_cases/SilverQueen.txt is opened
+December 15th 2024: 00:09 Container Catfish is unloaded
+December 15th 2024: 00:09 Container Batons is unloaded
+December 15th 2024: 00:09 Manifest successfully updated in updatedManifest.txt
