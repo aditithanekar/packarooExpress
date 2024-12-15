@@ -31,10 +31,25 @@ print(operations) # operations is a list of coordinates where each container was
 loaded_state.print_state_representation()
 print(loaded_state.time)
 
-# utils.updateMaifest(loaded_state, "updatedManifest.txt")
+utils.updateMaifest(loaded_state, "updatedManifest.txt")
 
 # BALANCE (TIME)
 balance_input = [((0, 3), (0, 4), 1), ((0, 4), (0, 5), 1), ((0, 2), (1, 2), 1), ((0, 1), (0, 2), 1), ((0, 2), (0, 3), 1), ((0, 3), (0, 4), 1), ((0, 4), (1, 4), 1), ((1, 4), (1, 5), 1), ((1, 5), (1, 6), 1)]
 def get_balance_time(balance_input):
-    time += balance_input[0]
+    first_start = balance_input[0][0]
+    total_cost = (8 - first_start[0]) + first_start[1]
+    
+    for i in range(len(balance_input)):
+        total_cost += balance_input[i][2]
+        if i < len(balance_input) - 1:
+            current_end = balance_input[i][1]
+            next_start = balance_input[i + 1][0]
+            total_cost += abs(current_end[0] - next_start[0]) + abs(current_end[1] - next_start[1])
+
+    last_end = balance_input[-1][1]
+    total_cost += (8 - last_end[0]) + last_end[1]
+
+    return total_cost
+
+print(get_balance_time(balance_input))
 #################################################################################################################################
