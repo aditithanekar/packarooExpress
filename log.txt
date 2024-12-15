@@ -1219,43 +1219,444 @@ December 14th 2024: 13:36 Manifest /Users/aditithanekar/Documents/packerooExpres
 December 14th 2024: 13:37 a signed in
 December 14th 2024: 13:37 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
 December 14th 2024: 13:37 Unloaded containers: Doe
-December 14th 2024: 17:35 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 17:36 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 17:38 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 17:40 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 17:42 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 17:48 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 17:58 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 18:00 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 18:09 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 18:55 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 18:57 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:02 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:06 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:09 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:09 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:11 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:17 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:43 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 19:44 Manifest test_cases/ShipCase1.txt is opened
-December 14th 2024: 20:18 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:21 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:23 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:28 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:28 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:29 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:30 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:31 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:32 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:33 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:36 Manifest test_cases/ShipCase4.txt is opened
-December 14th 2024: 20:37 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:41 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:49 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:55 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 20:56 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 21:15 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 21:20 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 21:32 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 22:10 Manifest test_cases/ShipCase3.txt is opened
-December 14th 2024: 22:10 Manifest successfully updated in updatedManifest.txt
+December 14th 2024: 16:22 a signed in
+December 14th 2024: 16:22 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 16:22 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 16:22 Ship balancer initialized with manifest
+December 14th 2024: 16:22 Starting A* search for optimal balance solution
+December 14th 2024: 16:22 Found solution for balancing
+December 14th 2024: 16:22 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 16:22 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 16:46 h signed in
+December 14th 2024: 16:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 16:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 16:46 Ship balancer initialized with manifest
+December 14th 2024: 16:46 Starting A* search for optimal balance solution
+December 14th 2024: 16:46 Found solution for balancing
+December 14th 2024: 16:46 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 16:46 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:12 j signed in
+December 14th 2024: 17:12 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:12 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:12 Ship balancer initialized with manifest
+December 14th 2024: 17:12 Starting A* search for optimal balance solution
+December 14th 2024: 17:12 Found solution for balancing
+December 14th 2024: 17:12 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:12 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:15 a signed in
+December 14th 2024: 17:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:15 Ship balancer initialized with manifest
+December 14th 2024: 17:15 Starting A* search for optimal balance solution
+December 14th 2024: 17:15 Found solution for balancing
+December 14th 2024: 17:15 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:15 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:17 a signed in
+December 14th 2024: 17:17 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:17 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:17 Ship balancer initialized with manifest
+December 14th 2024: 17:17 Starting A* search for optimal balance solution
+December 14th 2024: 17:17 Found solution for balancing
+December 14th 2024: 17:17 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:17 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:40 a signed in
+December 14th 2024: 17:40 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:40 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:40 Ship balancer initialized with manifest
+December 14th 2024: 17:40 Starting A* search for optimal balance solution
+December 14th 2024: 17:40 Found solution for balancing
+December 14th 2024: 17:40 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:40 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:41 j signed in
+December 14th 2024: 17:41 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:41 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:41 Ship balancer initialized with manifest
+December 14th 2024: 17:41 Starting A* search for optimal balance solution
+December 14th 2024: 17:41 Found solution for balancing
+December 14th 2024: 17:41 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:41 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:45 h signed in
+December 14th 2024: 17:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:45 Ship balancer initialized with manifest
+December 14th 2024: 17:45 Starting A* search for optimal balance solution
+December 14th 2024: 17:45 Found solution for balancing
+December 14th 2024: 17:45 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:45 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:54 h signed in
+December 14th 2024: 17:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:54 Ship balancer initialized with manifest
+December 14th 2024: 17:54 Starting A* search for optimal balance solution
+December 14th 2024: 17:54 Found solution for balancing
+December 14th 2024: 17:54 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:54 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:57 a signed in
+December 14th 2024: 17:57 j signed in
+December 14th 2024: 17:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:58 Ship balancer initialized with manifest
+December 14th 2024: 17:58 Starting A* search for optimal balance solution
+December 14th 2024: 17:58 Found solution for balancing
+December 14th 2024: 17:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 17:58 a signed in
+December 14th 2024: 17:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 17:58 Ship balancer initialized with manifest
+December 14th 2024: 17:58 Starting A* search for optimal balance solution
+December 14th 2024: 17:58 Found solution for balancing
+December 14th 2024: 17:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 17:58 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 18:03 j signed in
+December 14th 2024: 18:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5.txt is opened
+December 14th 2024: 18:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5.txt is opened
+December 14th 2024: 18:03 Ship balancer initialized with manifest
+December 14th 2024: 18:03 Starting A* search for optimal balance solution
+December 14th 2024: 18:04 j signed in
+December 14th 2024: 18:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 18:04 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 18:04 Ship balancer initialized with manifest
+December 14th 2024: 18:04 Starting A* search for optimal balance solution
+December 14th 2024: 18:04 Found solution for balancing
+December 14th 2024: 18:04 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 18:04 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 19:15 h signed in
+December 14th 2024: 19:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 19:15 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 19:15 Ship balancer initialized with manifest
+December 14th 2024: 19:15 Starting A* search for optimal balance solution
+December 14th 2024: 19:15 Found solution for balancing
+December 14th 2024: 19:15 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 19:15 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 19:23 h signed in
+December 14th 2024: 19:23 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 19:23 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 19:23 Ship balancer initialized with manifest
+December 14th 2024: 19:23 Starting A* search for optimal balance solution
+December 14th 2024: 19:23 Found solution for balancing
+December 14th 2024: 19:23 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 19:23 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 19:28 qa signed in
+December 14th 2024: 19:28 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 19:28 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 19:28 Ship balancer initialized with manifest
+December 14th 2024: 19:28 Starting A* search for optimal balance solution
+December 14th 2024: 19:28 Found solution for balancing
+December 14th 2024: 19:28 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 19:28 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:06 a signed in
+December 14th 2024: 20:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:07 Ship balancer initialized with manifest
+December 14th 2024: 20:07 Starting A* search for optimal balance solution
+December 14th 2024: 20:07 Found solution for balancing
+December 14th 2024: 20:07 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:07 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:10 h signed in
+December 14th 2024: 20:10 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:10 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:10 Ship balancer initialized with manifest
+December 14th 2024: 20:10 Starting A* search for optimal balance solution
+December 14th 2024: 20:10 Found solution for balancing
+December 14th 2024: 20:10 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:10 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:18 a signed in
+December 14th 2024: 20:18 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:18 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:18 Ship balancer initialized with manifest
+December 14th 2024: 20:18 Starting A* search for optimal balance solution
+December 14th 2024: 20:18 Found solution for balancing
+December 14th 2024: 20:18 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:18 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:19 j signed in
+December 14th 2024: 20:20 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:20 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:20 Ship balancer initialized with manifest
+December 14th 2024: 20:20 Starting A* search for optimal balance solution
+December 14th 2024: 20:20 Found solution for balancing
+December 14th 2024: 20:20 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:20 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:28 ad signed in
+December 14th 2024: 20:28 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:28 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:28 Ship balancer initialized with manifest
+December 14th 2024: 20:28 Starting A* search for optimal balance solution
+December 14th 2024: 20:28 Found solution for balancing
+December 14th 2024: 20:28 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:28 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:31 j signed in
+December 14th 2024: 20:31 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:31 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:31 Ship balancer initialized with manifest
+December 14th 2024: 20:31 Starting A* search for optimal balance solution
+December 14th 2024: 20:31 Found solution for balancing
+December 14th 2024: 20:31 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:31 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:32 h signed in
+December 14th 2024: 20:32 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:32 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:32 Ship balancer initialized with manifest
+December 14th 2024: 20:32 Starting A* search for optimal balance solution
+December 14th 2024: 20:32 Found solution for balancing
+December 14th 2024: 20:32 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:32 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:34 j signed in
+December 14th 2024: 20:34 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:34 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:34 Ship balancer initialized with manifest
+December 14th 2024: 20:34 Starting A* search for optimal balance solution
+December 14th 2024: 20:34 Found solution for balancing
+December 14th 2024: 20:34 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:34 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:41 j signed in
+December 14th 2024: 20:41 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:42 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:42 Ship balancer initialized with manifest
+December 14th 2024: 20:42 Starting A* search for optimal balance solution
+December 14th 2024: 20:42 Found solution for balancing
+December 14th 2024: 20:42 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:42 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:43 j signed in
+December 14th 2024: 20:43 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:43 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:43 Ship balancer initialized with manifest
+December 14th 2024: 20:43 Starting A* search for optimal balance solution
+December 14th 2024: 20:43 Found solution for balancing
+December 14th 2024: 20:43 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:43 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:45 h signed in
+December 14th 2024: 20:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:45 Ship balancer initialized with manifest
+December 14th 2024: 20:45 Starting A* search for optimal balance solution
+December 14th 2024: 20:45 Found solution for balancing
+December 14th 2024: 20:45 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:45 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 20:46 h signed in
+December 14th 2024: 20:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 20:46 Ship balancer initialized with manifest
+December 14th 2024: 20:46 Starting A* search for optimal balance solution
+December 14th 2024: 20:46 Found solution for balancing
+December 14th 2024: 20:46 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 20:46 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 21:23 h signed in
+December 14th 2024: 21:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 21:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 21:24 Ship balancer initialized with manifest
+December 14th 2024: 21:24 Starting A* search for optimal balance solution
+December 14th 2024: 21:24 Found solution for balancing
+December 14th 2024: 21:24 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 21:24 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 14th 2024: 21:25 hi signed in
+December 14th 2024: 21:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 21:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 14th 2024: 21:26 Ship balancer initialized with manifest
+December 14th 2024: 21:26 Starting A* search for optimal balance solution
+December 14th 2024: 21:26 Found solution for balancing
+December 14th 2024: 21:26 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 14th 2024: 21:26 Move container from (1, 5) to (1, 6) (Cost: 1 mins)

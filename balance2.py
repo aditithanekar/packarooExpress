@@ -102,7 +102,7 @@ class ShipBalancer:
         
         # Swap containers
         new_state.state_representation[x2][y2] = new_state.state_representation[x1][y1]
-        new_state.state_representation[x1][y1] = None
+        new_state.state_representation[x1][y1] = Container((x1+1,y1+1), 0, "UNUSED") #set it to be UNUSED after we move it out
         
         return new_state, cost
 
