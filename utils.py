@@ -33,7 +33,7 @@ def updateLog(message):
     logInput = f"{pstTimeFormatted} {message}"
     print(logInput)
     
-    with open("log.txt", "a") as logFile:
+    with open("KeoghsPort2024.txt", "a") as logFile:
         logFile.write(logInput + "\n")
 
 # To store each container object from manifest.txt into a list

@@ -16,6 +16,7 @@ containers_to_unload = []
 parsed_manifest = [] # this doesn't really work as a global properly but it's passed as an arg
 # global manifest_filename = ""
 output_manifest_filename= ""
+current_crane_operator_name = ""
 
 #MANIFEST = parseManifest("ShipCase1.txt")
 
@@ -143,8 +144,10 @@ def balance_menu(parsed_data):
     tk.Label(root, text="Balance Containers", font=("Arial", 24, "bold"), fg="blue").pack(pady=10)
     balancer = ShipBalancer(manifest_filename)
     optimal_moves, final_state = balancer.balance_ship()
-    print(optimal_moves)
+    
     total_time = 0
+    
+    print(optimal_moves)
     
     global current_instruction, instruction_label
     current_instruction = 0
@@ -163,8 +166,7 @@ def balance_menu(parsed_data):
     # Draw the initial state
     draw_grid_balance_and_unload(parsed_data, start_position=start_position, end_position=end_position, cost=optimal_moves[0][2], moves=optimal_moves)
     update_instruction_label_balance_and_unload(optimal_moves, total_time)
-    
-    add_comment_section()
+
     
 #gets the containers to unload, and leads to load_menu
 def unload_menu(parsed_data, unloadable_containers):
@@ -185,7 +187,7 @@ def unload_menu(parsed_data, unloadable_containers):
             containers_to_unload.append(unloadable_containers[idx])
         tk.Label(root, text="Selected containers for unloading.",
                  font=("Arial", 10), fg="red").pack(pady=5)
-        utils.updateLog(f"Unloaded containers: {', '.join([unloadable_containers[idx].description for idx in selected_indices])}")
+        utils.updateLog(f"Unloading containers: {', '.join([unloadable_containers[idx].description for idx in selected_indices])}")
 
     tk.Button(root, text="Unload", font=("Arial", 14), command=unload_containers).pack(pady=10)
     def go_to_load_menu():
@@ -215,11 +217,11 @@ def load_menu(parsed_data):
             weight = int(weight)
             new_container = Container(None, weight, name)
             containers_to_load.append(new_container)
-            tk.Label(root, text=f"Loaded container: {name} with weight {weight}",
+            tk.Label(root, text=f"Loading container: {name} with weight {weight}",
                      font=("Arial", 10), fg="red").pack(pady=5)
             name_input.delete(0, tk.END)
             weight_input.delete(0, tk.END)
-            utils.updateLog(f"Loaded container: {name} with weight {weight}")
+            utils.updateLog(f"Loading container: {name} with weight {weight}")
         else:
             tk.Label(root, text="Invalid input. Please enter a valid name and numeric weight.",
                      font=("Arial", 10), fg="red").pack(pady=5)
@@ -251,6 +253,7 @@ def update_instruction_label(load_list, load_moved_positions, total_time_load):
     global current_instruction
     if current_instruction < len(load_list):
         instruction_label.config(text=f"Move container {load_list[current_instruction].description} to position {load_moved_positions[current_instruction+1]}, total time for all load operations: {total_time_load} minutes.")
+        utils.updateLog(f"Move container {load_list[current_instruction].description} to position {load_moved_positions[current_instruction+1]}, total time for all load operations: {total_time_load} minutes.")
     else:
         instruction_label.config(text="All containers moved!")
         done_with_operations()
@@ -323,11 +326,15 @@ def draw_grid(parsed_manifest, highlight_position=None, new_description=None, ne
 # Function to go to the next screen
 def go_to_file_selector():
     global parsed_manifest #declare that it's global so that we can access it again
-    entered_name = name_entry.get()
-    if entered_name.strip():
-        sign_in_message = entered_name + " signed in"
-        print(sign_in_message)
-        utils.updateLog(sign_in_message)
+    global current_crane_operator_name
+    # Only get the name if we don't already have one
+    if not current_crane_operator_name:
+        entered_name = name_entry.get()
+        current_crane_operator_name = entered_name
+        if entered_name.strip():
+            sign_in_message = entered_name + " signed in"
+            print(sign_in_message)
+            utils.updateLog(sign_in_message) #update log with sign in only if there's a new crane operator
 
     for widget in root.winfo_children():
         widget.destroy()
@@ -372,8 +379,7 @@ def get_instructions_unload(parsed_manifest_data):
     # Perform unload operations
     final_unload_state, unload_moves, blocking_containers = load_unload.unload(start_state, containers_to_unload, (8,0))
     trace, time_for_unload = load_unload.unload_time_trace(final_unload_state, unload_moves, blocking_containers)
-    
-    trace = [[(0, 3), (8, 0)], [(1, 1), (1, 0)], [(0, 1), (8, 0)]]
+
     utils.updateMaifest(final_unload_state, output_manifest_filename)
     
     # Initialize visualization
@@ -615,8 +621,10 @@ def update_instruction_label_balance_and_unload(moves, total_time):
         end_position = convert_to_grid_indices(*end)
         if chosen_option =="balance":
             instruction_label.config(text=f"Move container at {start_position} to {end_position} (Total Time for Balance Operations: {total_time} min)")
+            utils.updateLog(f"Move container at {start_position} to {end_position} (Total Time for Balance Operations: {total_time} min)")
         else:
             instruction_label.config(text=f"Move container at {start_position} to {end_position} (Total Time for Unload Operations: {total_time} min)")
+            utils.updateLog(f"Move container at {start_position} to {end_position} (Total Time for Unload Operations: {total_time} min)")
 
     else:
         instruction_label.config(text="All moves completed!")
@@ -649,6 +657,42 @@ def done_with_operations():
     tk.Label(root, text=f"Success! Manifest: {output_manifest_filename}, has been saved.", font=("Arial", 15)).pack(pady=50)
     tk.Label(root, text=f"Don't forget to send an email to the captain of the ship!", font=("Arial", 15)).pack(pady=30)
 
+    def return_to_sign_in():
+        # reset global variables
+        global chosen_option, containers_to_load, containers_to_unload, parsed_manifest, current_crane_operator_name
+        chosen_option = None
+        containers_to_load = []
+        containers_to_unload = []
+        parsed_manifest = []
+        current_crane_operator_name = ""
+        
+        # Clear screen and show initial sign-in
+        for widget in root.winfo_children():
+            widget.destroy()
+            
+        tk.Label(root, text="Enter Your Name:", font=("Arial", 14)).pack(pady=10)
+        global name_entry
+        name_entry = tk.Entry(root, width=30)
+        name_entry.pack(pady=5)
+        tk.Button(root, text="Next", command=go_to_option_selection).pack(pady=20)
+    
+    def go_to_new_ship():
+        # Reset necessary global variables
+        global chosen_option, containers_to_load, containers_to_unload, parsed_manifest
+        chosen_option = None
+        containers_to_load = []
+        containers_to_unload = []
+        parsed_manifest = []
+        
+        global name_entry
+        name_entry = ""
+        # Go directly to file selector
+        go_to_option_selection()
+    
+    # buttons for sign in, and lead back to new ship(if the crane operator stays the same)
+    tk.Button(root, text="Return to Sign In", command=return_to_sign_in, font=("Arial", 12)).pack(pady=20)
+    tk.Button(root, text="New Ship", command=go_to_new_ship,font=("Arial", 12)).pack(pady=20)
+    
     print("done with all operations")
     print(manifest_filename)
     add_comment_section()

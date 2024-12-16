@@ -2248,3 +2248,200 @@ December 15th 2024: 12:58 Loaded container: Hat with weight 54356
 December 15th 2024: 12:58 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
 December 15th 2024: 12:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt is opened
 December 15th 2024: 12:58 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 13:49 a signed in
+December 15th 2024: 13:49 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 13:50 Unloaded containers: Catfish, Batons
+December 15th 2024: 13:50 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 13:50 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt is opened
+December 15th 2024: 13:52 a signed in
+December 15th 2024: 13:52 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 13:52 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 13:52 Ship balancer initialized with manifest
+December 15th 2024: 13:52 Starting A* search for optimal balance solution
+December 15th 2024: 13:52 Found solution for balancing
+December 15th 2024: 13:52 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 15th 2024: 13:52 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 15th 2024: 13:55 a signed in
+December 15th 2024: 13:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 13:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 13:56 Ship balancer initialized with manifest
+December 15th 2024: 13:56 Starting A* search for optimal balance solution
+December 15th 2024: 13:56 Found solution for balancing
+December 15th 2024: 13:56 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 15th 2024: 13:56 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 15th 2024: 14:03 a signed in
+December 15th 2024: 14:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 14:03 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 14:03 Ship balancer initialized with manifest
+December 15th 2024: 14:03 Starting A* search for optimal balance solution
+December 15th 2024: 14:03 Found solution for balancing
+December 15th 2024: 14:03 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 15th 2024: 14:03 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 15th 2024: 14:45 a signed in
+December 15th 2024: 14:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5.txt is opened
+December 15th 2024: 14:45 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5.txt is opened
+December 15th 2024: 14:45 Ship balancer initialized with manifest
+December 15th 2024: 14:45 Starting A* search for optimal balance solution
+December 15th 2024: 14:46 h signed in
+December 15th 2024: 14:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 14:46 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 14:46 Ship balancer initialized with manifest
+December 15th 2024: 14:46 Starting A* search for optimal balance solution
+December 15th 2024: 14:46 Found solution for balancing
+December 15th 2024: 14:46 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 15th 2024: 14:46 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 15th 2024: 14:59 a signed in
+December 15th 2024: 14:59 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:00 Loaded container: qa with weight 24
+December 15th 2024: 15:00 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:00 hello signed in
+December 15th 2024: 15:00 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:01 a signed in
+December 15th 2024: 15:01 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:01 a signed in
+December 15th 2024: 15:01 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:02 Unloaded containers: Rations for US Army
+December 15th 2024: 15:02 Loaded container: a with weight 32
+December 15th 2024: 15:02 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:02 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt is opened
+December 15th 2024: 15:02 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:02 a signed in
+December 15th 2024: 15:02 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase4.txt is opened
+December 15th 2024: 15:05 a signed in
+December 15th 2024: 15:05 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase3.txt is opened
+December 15th 2024: 15:07 a signed in
+December 15th 2024: 15:07 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 15th 2024: 15:18 a signed in
+December 15th 2024: 15:18 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 15th 2024: 15:19 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase5.txt is opened
+December 15th 2024: 15:19 ba signed in
+December 15th 2024: 15:24 suhani signed in
+December 15th 2024: 15:24 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 15th 2024: 15:25 suhani🐬 signed in
+December 15th 2024: 15:25 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:25 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:25 Ship balancer initialized with manifest
+December 15th 2024: 15:25 Starting A* search for optimal balance solution
+December 15th 2024: 15:25 Found solution for balancing
+December 15th 2024: 15:25 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (0, 4) to (0, 5) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (0, 2) to (1, 2) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (0, 1) to (0, 2) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (0, 2) to (0, 3) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (0, 3) to (0, 4) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (0, 4) to (1, 4) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (1, 4) to (1, 5) (Cost: 1 mins)
+December 15th 2024: 15:25 Move container from (1, 5) to (1, 6) (Cost: 1 mins)
+December 15th 2024: 15:26 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase2.txt is opened
+December 15th 2024: 15:38 a signed in
+December 15th 2024: 15:38 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:38 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:38 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 0 min)
+December 15th 2024: 15:40 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 0 min)
+December 15th 2024: 15:43 a signed in
+December 15th 2024: 15:43 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:44 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:44 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 0 min)
+December 15th 2024: 15:45 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 0 min)
+December 15th 2024: 15:48 a signed in
+December 15th 2024: 15:48 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:48 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:48 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:48 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:48 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:49 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:49 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:49 Loaded container: Nat with weight 2345
+December 15th 2024: 15:49 Loaded container: Rat with weight 6457
+December 15th 2024: 15:50 a signed in
+December 15th 2024: 15:50 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:50 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:50 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:50 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:50 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:50 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:50 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:50 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:50 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:51 Loaded container: Rat with weight 534
+December 15th 2024: 15:52 a signed in
+December 15th 2024: 15:52 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:52 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:52 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:52 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase1.txt is opened
+December 15th 2024: 15:54 Unloaded containers: Dog
+December 15th 2024: 15:54 Loaded container: rat with weight 525
+December 15th 2024: 15:54 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase1OUTBOUND.txt
+December 15th 2024: 15:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase1OUTBOUND.txt is opened
+December 15th 2024: 15:54 Move container at (1, 3) to (9, 1) (Total Time for Unload Operations: 24 min)
+December 15th 2024: 15:54 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/ShipCase1OUTBOUND.txt
+December 15th 2024: 15:54 Move container rat to position (2, 1), total time for all load operations: 11 minutes.
+December 15th 2024: 15:54 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:55 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:55 Loaded container: aaa with weight 254
+December 15th 2024: 15:55 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:55 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt is opened
+December 15th 2024: 15:55 Move container at (1, 4) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:55 Move container at (2, 2) to (2, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:55 Move container at (1, 2) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:55 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:55 Move container aaa to position (3, 1), total time for all load operations: 10 minutes.
+December 15th 2024: 15:55 a signed in
+December 15th 2024: 15:55 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:56 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:56 Loaded container: rat with weight 456
+December 15th 2024: 15:56 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt is opened
+December 15th 2024: 15:56 Move container at (1, 4) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:56 Move container at (2, 2) to (2, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:56 Move container at (1, 2) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:56 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:56 Move container rat to position (3, 1), total time for all load operations: 10 minutes.
+December 15th 2024: 15:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:56 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:56 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:56 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:57 a signed in
+December 15th 2024: 15:57 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:57 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:57 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:57 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 15:57 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueen.txt is opened
+December 15th 2024: 15:58 Unloaded containers: Catfish, Batons
+December 15th 2024: 15:58 Loaded container: rat with weight 143
+December 15th 2024: 15:58 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:58 Manifest /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt is opened
+December 15th 2024: 15:58 Move container at (1, 4) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:58 Move container at (2, 2) to (2, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:58 Move container at (1, 2) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 15:58 Manifest successfully updated in /Users/aditithanekar/Documents/packerooExpress/packarooExpress/test_cases/SilverQueenOUTBOUND.txt
+December 15th 2024: 15:58 Move container rat to position (3, 1), total time for all load operations: 10 minutes.
