@@ -7,38 +7,8 @@ from load_unload import unload
 import load_unload
 import unittest
 from balance2 import ShipBalancer
+import time
 
-# ##### For general decoding testing #######################################################################
-
-# MANIFEST = utils.parseManifest("test_cases/SilverQueen.txt")
-
-# state = State()
-# state = state.init_start_state(MANIFEST)
-# state.print_state_representation()
-
-# # UNLOADING
-# target1 = Container([1,4], 20, "Batons")
-# target2 = Container([1,2], 60, "Catfish")
-# unload_targets = [target1, target2]
-# unloaded_state, trace, blocking_containers = load_unload.unload(state, unload_targets, (8,0))
-#     # unload() now returns a state, a trace without blocking containers, and a list of blocking containers
-# use_this_trace, time = load_unload.unload_time_trace(unloaded_state, trace, blocking_containers)
-#     # unload_time_trace() returns a total time and a list of pairs of coordinates showing old&new location of each container moved (unloaded containers AND moving blocking containers)
-# print(use_this_trace)
-# print("Total unload time = ", time)
-
-# # LOADING
-# # containers = [Container(position=None, weight=10.0 + i, description=f"Box{i}") for i in range(0)]
-# containers = [Container(None, 5435, "Nat")]
-# loaded_state, operations = load(unloaded_state, containers)
-# print(operations) # operations is a list of coordinates where each container was loaded (IGNORE THE FIRST ONE, ITS JUST 8,0)
-
-# loaded_state.print_state_representation()
-# print(loaded_state.time)
-
-# utils.updateMaifest(loaded_state, "updatedManifest.txt")
-
-# # BALANCE (TIME) w/ random input
 # balance_input = [((0, 3), (0, 4), 1), ((0, 4), (0, 5), 1), ((0, 2), (1, 2), 1), ((0, 1), (0, 2), 1), ((0, 2), (0, 3), 1), ((0, 3), (0, 4), 1), ((0, 4), (1, 4), 1), ((1, 4), (1, 5), 1), ((1, 5), (1, 6), 1)]
 # def get_balance_time(balance_input):
 #     first_start = balance_input[0][0]
@@ -57,8 +27,44 @@ from balance2 import ShipBalancer
 #     return total_cost
 
 # print(get_balance_time(balance_input))
-# #################################################################################################################################
+#################################################################################################################################
+class timeTests(unittest.TestCase):
+    def setUp(self):
+        
+        self.manifest = utils.parseManifest("test_cases/SilverQueen.txt")
+        self.initial_state = State()
+        self.initial_state = self.initial_state.init_start_state(self.manifest)
 
+    def test_load_time(self):
+        """Test that loading 90 containers takes less than 15 minutes"""
+
+        containers = [Container(position=None, weight=10.0 + i, description=f"Box{i}") for i in range(90)]
+        starttime = time.time()
+        loaded_state, operations = load(self.initial_state, containers)
+        endTime = time.time()
+        elapseTime = endTime-starttime
+        self.assertLessEqual(elapseTime, 900, "Load time is not less than 15 min")
+        
+    def test_unload_time(self):
+        """Test that unloading 90 containers takes less than 15 minutes"""
+
+        containers = [Container(position=None, weight=10.0 + i, description=f"Box{i}") for i in range(90)]
+        loaded_state, operations = load(self.initial_state, containers)
+        starttime = time.time()
+        unloaded_state, trace, blocking_containers = load_unload.unload(loaded_state, containers, (8,0))
+        endTime = time.time()
+        elapseTime = endTime-starttime
+        self.assertLessEqual(elapseTime, 900, "Unload time is not less than 15 min")
+
+    def test_balance_time(self):
+        """Test that balancing 34 containers takes less than 15 minutes"""
+
+        starttime = time.time()
+        balancer = ShipBalancer("updatedManifest.txt")
+        optimal_moves, final_state = balancer.balance_ship()
+        endTime = time.time()
+        elapseTime = endTime-starttime
+        self.assertLessEqual(elapseTime, 900, "Balance time is not less than 15 min")
 
 class ShipTests(unittest.TestCase):
     def setUp(self):
