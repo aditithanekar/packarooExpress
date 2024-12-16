@@ -1,0 +1,13 @@
+December 15th 2024: 16:23 Bob  signed in
+December 15th 2024: 16:23 Manifest /Users/aditithanekar/Desktop/SilverQueen.txt is opened
+December 15th 2024: 16:23 Move container at (2, 2) to (2, 1) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 16:24 Move container at (1, 2) to (1, 7) (Total Time for Balance Operations: 32 min)
+December 15th 2024: 16:24 Manifest /Users/aditithanekar/Desktop/SilverQueen.txt is opened
+December 15th 2024: 16:25 Unloading containers: Catfish, Batons
+December 15th 2024: 16:25 Loading container: Nat with weight 5435
+December 15th 2024: 16:25 Move container at (1, 4) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 16:26 Move container at (2, 2) to (2, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 16:26 Move container at (1, 2) to (9, 1) (Total Time for Unload Operations: 50 min)
+December 15th 2024: 16:26 Move container Nat to position (3, 1), total time for all load operations: 10 minutes.
+December 15th 2024: 16:26 Manifest successfully updated in /Users/aditithanekar/Desktop/SilverQueenOUTBOUND.txt
+December 15th 2024: 16:27 All the containers made it to the port

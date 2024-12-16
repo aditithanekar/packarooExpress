@@ -10,7 +10,6 @@ class ShipBalancer:
     def __init__(self, manifest_path):
         self.manifest = parseManifest(manifest_path)
         self.initial_state = State().init_start_state(self.manifest)
-        updateLog("Ship balancer initialized with manifest")
 
     def manhattan_distance(self, x1, y1, x2, y2):
         return abs(x1 - x2) + abs(y1 - y2)
@@ -144,13 +143,11 @@ class ShipBalancer:
         self.initial_state.priority = initial_priority
         heapq.heappush(open_set, (initial_priority, id(self.initial_state), self.initial_state, []))  # (priority, unique_id, state, path)
         visited = set()
-        updateLog("Starting A* search for optimal balance solution")
 
         while open_set:
             priority, _, current_state, path = heapq.heappop(open_set)
             
             if self.is_goal(current_state):
-                updateLog("Found solution for balancing")
                 return path, current_state
             
             state_tuple = self.state_to_tuple(current_state)
@@ -165,7 +162,7 @@ class ShipBalancer:
                 new_state.priority = new_priority
                 heapq.heappush(open_set, (new_priority, id(new_state), new_state, new_path))
         
-        updateLog("No solution found for balancing")
+        #would use SIFT here? if there's no soln
         return None, None
 
     def balance_ship(self):
@@ -199,7 +196,6 @@ class ShipBalancer:
             for move in optimal_moves:
                 move_msg = f"Move container from {move[0]} to {move[1]} (Cost: {move[2]} mins)"
                 print(f"  {move_msg}")
-                updateLog(move_msg)
             
             print(f"\nFinal Left Weight: {final_left} kg")
             print(f"Final Right Weight: {final_right} kg")
@@ -291,21 +287,21 @@ class ShipBalancer:
 
 
 
-def main():
-    manifest_path = "SilverQueen.txt"
+# def main():
+#     manifest_path = "SilverQueen.txt"
     
-    try:
-        balancer = ShipBalancer(manifest_path)
-        optimal_moves, final_state = balancer.balance_ship()
+#     try:
+#         balancer = ShipBalancer(manifest_path)
+#         optimal_moves, final_state = balancer.balance_ship()
         
-        if optimal_moves:
-            updateLog("Ship successfully balanced")
-        else:
-            updateLog("Failed to find balancing solution")
+#         if optimal_moves:
+#             updateLog("Ship successfully balanced")
+#         else:
+#             updateLog("Failed to find balancing solution")
             
-    except Exception as e:
-        updateLog(f"Error during ship balancing: {str(e)}")
-        raise
+#     except Exception as e:
+#         updateLog(f"Error during ship balancing: {str(e)}")
+#         raise
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
