@@ -1,6 +1,9 @@
 # packarooExpress
 CS179M Group Project 
 
+Watch a demo of our software here: </br>
+[![Watch our demo video](https://img.shields.io/badge/YouTube-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/8EYWmo59iGQ?feature=shared)
+
 Project Website Submission:
 https://jade-biscuit-d57fd1.netlify.app/
 
